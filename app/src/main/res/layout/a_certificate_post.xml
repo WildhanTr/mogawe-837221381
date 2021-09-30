@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.content.acreditation.CertificatePostActivity">
+
+    <LinearLayout
+        android:id="@+id/lnrCongrats"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:padding="@dimen/space_triple"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <com.mogawe.mosurvei.util.ui.GalanoTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Data Berhasil Terkirim"
+            android:textSize="@dimen/font_xmedium"
+            android:textStyle="bold" />
+
+        <com.mogawe.mosurvei.util.ui.GalanoTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space"
+            android:gravity="center"
+            android:text="Kami akan melakukan review terhadap verifikasi yang sudah kamu kirim. Kamu akan mendapatkan notifikasi pemberitahuan lolos atau tidak dalam waktu maks. 2 hari kerja.\n\nSelagi menunggu, kamu dapat mengerjakan gawean lainnya.\n\nTerima kasih." />
+
+        <com.mogawe.mosurvei.util.ui.GalanoButton
+            android:id="@+id/btnSubmit"
+            style="@style/GenericRaisedButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_quadruple"
+            android:text="Verifikasi Asset Lainnya"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_xmedium" />
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/space"
+    android:layout_marginTop="@dimen/space"
+    android:id="@+id/lnrProductItem">
+
+    <com.mogawe.mosurvei.util.ui.GalanoTextView
+        android:id="@+id/txvProductName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SGM EKSPLOR"
+        android:textColor="@color/black"
+        android:layout_marginBottom="@dimen/space"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/grey_400"
+        android:layout_marginTop="@dimen/space"/>
+
+</LinearLayout>

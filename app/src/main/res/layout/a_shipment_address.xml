@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".view.content.supplier.shipment.ShipmentAddressActivity">
+
+    <include
+        android:id="@+id/appBar"
+        layout="@layout/appbar_light" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_rounded_white">
+
+        <LinearLayout
+            android:id="@+id/layoutProvince"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/space_double">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="30dp"
+                android:contentDescription="@string/province"
+                android:src="@drawable/icon_region" />
+
+            <com.mogawe.mosurvei.util.ui.LatoTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/space_double"
+                android:layout_weight="1"
+                android:text="@string/province"
+                android:textAllCaps="false"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/txvProvince"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/black" />
+
+            <ProgressBar
+                android:id="@+id/rolling"
+                style="?android:attr/progressBarStyleSmallInverse"
+                android:layout_width="15dp"
+                android:layout_height="30dp"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:contentDescription="@string/province"
+                android:src="@drawable/ic_baseline_chevron_right_24" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutCity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layoutProvince"
+            android:orientation="horizontal"
+            android:padding="@dimen/space_double">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="40dp"
+                android:contentDescription="@string/city"
+                android:src="@drawable/icon_city" />
+
+            <com.mogawe.mosurvei.util.ui.LatoTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/space_double"
+                android:layout_weight="1"
+                android:text="@string/city"
+                android:textAllCaps="false"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/txvCity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                />
+
+
+<!--            <AutoCompleteTextView-->
+<!--                android:id="@+id/txvCity"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:layout_marginStart="@dimen/space_double"-->
+<!--                android:layout_weight="1"-->
+<!--                android:hint="@string/city"-->
+<!--                android:text=""-->
+<!--                android:textAllCaps="false"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textSize="15dp"-->
+<!--                android:completionThreshold="1"/>-->
+
+            <ProgressBar
+                android:id="@+id/rolling2"
+                style="?android:attr/progressBarStyleSmallInverse"
+                android:layout_width="15dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:contentDescription="@string/city"
+                android:src="@drawable/ic_baseline_chevron_right_24" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layoutCity"
+            android:orientation="horizontal"
+            android:padding="@dimen/space_double">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="30dp"
+                android:contentDescription="@string/full_address"
+                android:src="@drawable/icon_home" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/space_double"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <com.mogawe.mosurvei.util.ui.LatoTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/full_address"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/txvAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:visibility="gone"/>
+
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:contentDescription="@string/full_address"
+                android:src="@drawable/ic_baseline_chevron_right_24" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/layoutAddNotes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layoutAddress"
+            android:orientation="vertical"
+            android:padding="@dimen/space_double">
+
+            <com.mogawe.mosurvei.util.ui.LatoTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/add_note_shipment"
+                android:textAllCaps="false"
+                android:gravity="center"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/edtNoteShipment"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_marginTop="@dimen/space_half"
+                android:layout_marginEnd="@dimen/space"
+                android:layout_weight="1"
+                android:background="@drawable/custom_input"
+                android:textSize="@dimen/font_reg"
+                android:inputType="textShortMessage"
+                android:paddingStart="4dp"
+                android:paddingEnd="12dp"
+                android:text=""
+                tools:ignore="Autofill,LabelFor" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layoutAddress"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/space_double"
+            android:gravity="bottom"
+            android:orientation="horizontal"
+            android:padding="@dimen/space_double">
+
+            <Button
+                android:id="@+id/btnSave"
+                style="@style/GenericRaisedButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/action.save"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</LinearLayout>

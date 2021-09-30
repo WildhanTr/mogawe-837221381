@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.shared.error_page.ErrorActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginStart="@dimen/space_double"
+        android:layout_marginEnd="@dimen/space_double">
+
+        <com.mogawe.mosurvei.util.ui.ModulusTextView
+            android:id="@+id/txvMogawe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ooops.."
+            android:textColor="@color/grey_600"
+            android:textSize="@dimen/font_xxbig"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/lottieanimview"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/space_double"
+            android:layout_marginBottom="@dimen/space_double"
+            android:src="@drawable/wrencherrorimage"/>
+
+        <com.mogawe.mosurvei.util.ui.GalanoTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="There is something wrong!"
+            android:textColor="@color/grey_600"
+            android:textStyle="bold"
+            android:textSize="@dimen/font_medium"/>
+
+        <com.mogawe.mosurvei.util.ui.GalanoTextView
+            android:layout_marginTop="@dimen/space_double"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kami menemukan kegagalan pada aplikasi kami, semua error sudah tercatat otomatis di sistem kami, agar segera kami tindak lanjuti. \n\n Untuk info lebih lanjut, hubungi call center."
+            android:textAlignment="center"
+            android:textColor="@color/grey_600"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/space_double"
+            android:paddingBottom="@dimen/space">
+
+            <com.mogawe.mosurvei.util.ui.GalanoButton
+                android:id="@+id/btnCall"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/button_primary"
+                android:textColor="@color/white"
+                android:text="Telepon"
+                android:textAllCaps="false"
+                android:paddingStart="@dimen/space"
+                android:drawableLeft="@drawable/ic_call_toon"
+                android:layout_marginEnd="@dimen/space_half"
+                android:textAlignment="center"/>
+
+            <com.mogawe.mosurvei.util.ui.GalanoButton
+                android:id="@+id/btnWhatsApp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/button_primary"
+                android:textColor="@color/white"
+                android:text="WhatsApp"
+                android:textAllCaps="false"
+                android:paddingStart="@dimen/space"
+                android:textAlignment="center"
+                android:drawableLeft="@drawable/ic_wa_toon"
+                android:layout_marginStart="@dimen/space_half"/>
+
+
+        </LinearLayout>
+
+        <com.mogawe.mosurvei.util.ui.GalanoButton
+            android:id="@+id/btnBack"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_primary"
+            android:textColor="@color/white"
+            android:text="Kembali ke MoGawe"
+            android:layout_marginTop="@dimen/space_double"
+            android:textAllCaps="false"
+            android:paddingStart="@dimen/space"
+            android:drawableLeft="@drawable/btn_mogawexxxhdpi"
+            android:layout_marginBottom="@dimen/space"/>
+
+        <com.mogawe.mosurvei.util.ui.GalanoButton
+            android:id="@+id/btnSeeError"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:text="Lihat Error"
+            android:layout_marginTop="@dimen/space_double"
+            android:textAllCaps="false"
+            android:layout_marginBottom="@dimen/space"
+            android:textColor="@color/colorPrimary"/>
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rltErrorPreview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:background="@color/black_transparent"
+        android:paddingLeft="@dimen/space_double"
+        android:paddingTop="@dimen/space_quadruple"
+        android:paddingRight="@dimen/space_double"
+        android:paddingBottom="@dimen/space_double"
+        android:visibility="gone">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_rounded_white"
+            android:padding="@dimen/space_double">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/space"
+                    android:orientation="horizontal"
+                    android:gravity="end">
+
+                    <ImageView
+                        android:id="@+id/closeErrorReview"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:padding="@dimen/space_quarter"
+                        android:background="@drawable/bg_circle_black_transparent"
+                        android:src="@drawable/ic_close_black_24dp"
+                        android:tint="@color/white" />
+
+                </LinearLayout>
+
+                <com.mogawe.mosurvei.util.ui.GalanoTextView
+                    android:id="@+id/txvErrorMessage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+</RelativeLayout>

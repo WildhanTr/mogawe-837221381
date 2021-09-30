@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardBanner"
+    android:layout_width="match_parent"
+    android:layout_height="228dp"
+    android:foreground="?attr/selectableItemBackground"
+    app:cardCornerRadius="@dimen/space"
+    card_view:cardElevation="3dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imvAds"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            card_view:srcCompat="@drawable/ic_interview_marker" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/space_double">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <com.mogawe.mosurvei.util.ui.GalanoTextView
+                        android:id="@+id/txvTitleAds"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="Undian Berhadiah Di MoGawe!"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_medium" />
+
+                    <com.mogawe.mosurvei.util.ui.GalanoTextView
+                        android:id="@+id/txvMessageAds"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:ellipsize="end"
+                        android:maxLines="3"
+                        android:text="Undian Berhadiah Di MoGawe!"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_small" />
+                </LinearLayout>
+
+                <com.mogawe.mosurvei.util.ui.GalanoButton
+                    android:id="@+id/btnAds"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/button_primary"
+                    android:paddingStart="@dimen/space"
+                    android:paddingEnd="@dimen/space"
+                    android:text="Mau"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lnrLike"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:clipToPadding="false"
+                android:visibility="gone">
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/crdLike"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/space_double"
+                    app:cardCornerRadius="@dimen/space_double">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingStart="@dimen/space"
+                        android:paddingTop="@dimen/space_xhalf"
+                        android:paddingEnd="@dimen/space"
+                        android:paddingBottom="@dimen/space_xhalf">
+
+                        <ImageView
+                            android:id="@+id/imvLike"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_favorite_active_red_24dp" />
+
+                        <com.mogawe.mosurvei.util.ui.GalanoTextView
+                            android:id="@+id/txvLikeCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/space"
+                            android:text="@string/action.example_number"
+                            android:textSize="@dimen/font_small"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shmAds"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone"
+            tools:duration="800">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <include layout="@layout/shm_load_single_ads" />
+            </LinearLayout>
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
+
+

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/bottom_sheet_container"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="280dp"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+    android:paddingTop="40dp"
+    android:background="@drawable/bg_dialog_top_rounded"
+    android:clickable="false"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="@dimen/space_xtra"
+        android:layout_height="@dimen/space_xhalf"
+        android:src="@drawable/round_corner"
+        app:tint="@color/grey_500"
+        android:layout_gravity="center"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/space_double">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvSkillDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:padding="@dimen/space_double"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txvInfo"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <com.mogawe.mosurvei.util.ui.GalanoLightTextView
+                android:id="@+id/txvInfo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="Job ini memerlukan beberapa kemampuan / skill yang harus dimiliki oleh MoGawers sebelum mengerjakannya. \n\n *Masih ada 3 skill yang harus Anda miliki dari 5 skill yang dibutuhkan dalam mengerjakan job ini"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageView9"
+                app:layout_constraintTop_toBottomOf="@+id/imageButton2"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:id="@+id/imageView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:tint="@color/red_300"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageButton2"
+                app:srcCompat="@drawable/ic_info_outline_black_24dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/space_double">
+
+        <Button
+            android:id="@+id/btnPlayAndStopRecord"
+            android:layout_width="@dimen/space_xtra"
+            android:layout_height="@dimen/space_xtra"
+            android:drawableLeft="@drawable/ic_mic_black_24dp"
+            android:drawableTint="@color/white"
+            android:padding="@dimen/spacex"
+            android:background="@drawable/circle"
+            android:backgroundTint="@color/colorPrimary"
+            android:gravity="center_horizontal|top"/>
+
+        <Chronometer
+            android:id="@+id/chronometer"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/space_xtra"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:layout_marginStart="@dimen/space"/>
+
+        <com.mogawe.mosurvei.util.ui.GalanoTextView
+            android:id="@+id/btnCancelRecord"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Stop"
+            android:layout_gravity="center_vertical"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"/>
+
+    </LinearLayout>
+
+</LinearLayout>

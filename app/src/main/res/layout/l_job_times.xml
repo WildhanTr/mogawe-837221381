@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginVertical="@dimen/space"
+    android:elevation="@dimen/space_triple"
+    app:cardCornerRadius="@dimen/spacexx"
+    android:layout_margin="@dimen/space"
+    android:foreground="?attr/selectableItemBackground">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:padding="@dimen/space_double">
+        <LinearLayout
+            android:id="@+id/layout1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_toLeftOf="@+id/layout2"
+            >
+            <com.mogawe.mosurvei.util.ui.GalanoTextView
+                android:id="@+id/txvLocationName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="IDM ASEM BARIS"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+                <com.mogawe.mosurvei.util.ui.GalanoTextView
+                    android:id="@+id/txvTimeFrom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="13.00"/>
+
+                <com.mogawe.mosurvei.util.ui.GalanoTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" - "/>
+
+                <com.mogawe.mosurvei.util.ui.GalanoTextView
+                    android:id="@+id/txvTimeTo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="15.00"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout2"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:gravity="end"
+            android:orientation="vertical">
+            <com.mogawe.mosurvei.util.ui.GalanoTextView
+                android:id="@+id/txvDistance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="200 KM"/>
+
+            <com.mogawe.mosurvei.util.ui.GalanoTextView
+                android:id="@+id/txvScheduleTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:text=""/>
+        </LinearLayout>
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

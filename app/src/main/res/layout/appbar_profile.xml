@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.google.android.material.appbar.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/appBar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:background="@color/white"
+    android:paddingTop="@dimen/space_triple"
+    android:theme="@style/ToolbarMogaweTheme"
+    app:elevation="0dp">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        app:popupTheme="@style/AppTheme.PopupOverlay">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/toolbarTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Profil"
+                    android:textColor="@color/black"
+                    android:gravity="center|start"
+                    android:textSize="@dimen/font_big" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btn_id_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="56dp"
+                android:orientation="horizontal"
+                android:layout_marginEnd="@dimen/space_double">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="ID CARD"
+                    android:textColor="@color/colorPrimary" />
+
+            </LinearLayout>
+
+
+            <!--<LinearLayout-->
+            <!--android:id="@+id/btn_edit_profile"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:minHeight="56dp"-->
+            <!--android:orientation="horizontal">-->
+
+            <!--<ImageView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:src="@drawable/ic_edit_white_24dp"-->
+            <!--android:tint="@color/colorPrimary" />-->
+
+            <!--</LinearLayout>-->
+
+
+        </LinearLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+</com.google.android.material.appbar.AppBarLayout>

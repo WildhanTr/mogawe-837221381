@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imvAccreditation"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/image_placeholder" />
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/space_double"
+        android:layout_marginRight="@dimen/space_double"
+        android:layout_marginBottom="@dimen/space_xtra"
+        android:elevation="@dimen/space_triple"
+        android:foreground="?attr/selectableItemBackground"
+        app:cardCornerRadius="@dimen/spacexx">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/space_triple">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardElevation="0dp"
+                    app:cardCornerRadius="@dimen/space_double">
+
+                    <ImageView
+                        android:id="@+id/imvIcon"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:padding="@dimen/space_half"
+                        android:src="@drawable/ic_camera" />
+
+                </androidx.cardview.widget.CardView>
+
+                <com.mogawe.mosurvei.util.ui.LatoTextView
+                    android:id="@+id/txvName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space_double"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:text="Foto Produk"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_big" />
+            </LinearLayout>
+
+            <com.mogawe.mosurvei.util.ui.LatoTextView
+                android:id="@+id/txvDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_double"
+                android:text="Lorem ipsum dolor sit amet upa mosnet daraui duiasdl asdlkasdl aklwoeo pf aisodop"
+                android:textColor="@color/grey_700"
+                android:textSize="@dimen/font_small" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space"
+                android:layout_marginBottom="@dimen/space"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/space_half"
+                    android:layout_weight="1"
+                    android:elevation="0dp"
+                    app:cardBackgroundColor="@color/grey_200"
+                    app:cardCornerRadius="@dimen/space"
+                    app:cardElevation="0dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/space">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginEnd="@dimen/space_half"
+                            android:src="@drawable/ic_linked_to" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/space_half"
+                            android:orientation="vertical">
+
+                            <com.mogawe.mosurvei.util.ui.LatoTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Linked to"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/font_small" />
+
+                            <com.mogawe.mosurvei.util.ui.LatoTextView
+                                android:id="@+id/txvPotentialJob"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0 potential jobs"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="@dimen/font_small" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/space_half"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="@color/grey_200"
+                    app:cardCornerRadius="@dimen/space"
+                    app:cardElevation="0dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/space">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginEnd="@dimen/space_half"
+                            android:src="@drawable/ic_coin" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/space_half"
+                            android:orientation="vertical">
+
+                            <com.mogawe.mosurvei.util.ui.LatoTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Start from"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/font_small" />
+
+                            <com.mogawe.mosurvei.util.ui.LatoTextView
+                                android:id="@+id/txvMinimumJobFee"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Rp. 0"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="@dimen/font_small" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <com.mogawe.mosurvei.util.ui.LatoMaterialButton
+        android:id="@+id/btnStart"
+        style="@style/GenericRaisedButtonStyle"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/space_double"
+        android:text="Mulai"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_medium" />
+
+</RelativeLayout>
+
+    <!--<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    android:layout_height="match_parent"-->
+    <!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--    android:layout_margin="@dimen/space"-->
+    <!--    android:elevation="@dimen/space_triple"-->
+    <!--    app:cardCornerRadius="@dimen/spacexx"-->
+    <!--    android:foreground="?attr/selectableItemBackground">-->
+
+    <!--    <LinearLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:gravity="center_vertical"-->
+    <!--        android:orientation="horizontal"-->
+    <!--        android:padding="@dimen/space_double">-->
+
+    <!--        <ImageView-->
+    <!--            android:id="@+id/imvIcon"-->
+    <!--            android:layout_width="40dp"-->
+    <!--            android:layout_height="40dp"-->
+    <!--            android:src="@drawable/ic_camera" />-->
+
+    <!--        <com.mogawe.mosurvei.util.ui.GalanoTextView-->
+    <!--            android:id="@+id/txvName"-->
+    <!--            android:layout_width="0dp"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_weight="1"-->
+    <!--            android:text="Foto Produk"-->
+    <!--            android:maxLines="2"-->
+    <!--            android:ellipsize="end"-->
+    <!--            android:textColor="@color/black"-->
+    <!--            android:layout_marginStart="@dimen/space_double"/>-->
+
+    <!--        <com.mogawe.mosurvei.util.ui.GalanoTextView-->
+    <!--            android:id="@+id/txvStatus"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:textSize="@dimen/font_small"-->
+    <!--            android:text="Terverifikasi" />-->
+
+    <!--    </LinearLayout>-->
+
+    <!--</androidx.cardview.widget.CardView>-->

@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/container"
+    tools:context=".view.content.hire_me.instant.GaweanInstantInfomationActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/appBar"
+            layout="@layout/appbar_light"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <LinearLayout
+            android:id="@+id/layoutConfirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <LinearLayout
+                android:id="@+id/lnrPrb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible"
+                android:layout_marginBottom="@dimen/space_double">
+
+                <com.mogawe.mosurvei.util.ui.GalanoTextView
+                    android:id="@+id/txvLoading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="@dimen/space_xhalf"
+                    android:text="Memuat..."
+                    android:visibility="visible" />
+
+                <ProgressBar
+                    android:id="@+id/prbLoading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center" />
+
+            </LinearLayout>
+
+            <com.ebanx.swipebtn.SwipeButton
+                android:id="@+id/btnSwipe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_double"
+                android:layout_marginStart="@dimen/space_double"
+                android:layout_marginEnd="@dimen/space_double"
+                android:layout_marginBottom="@dimen/space"
+                app:button_background="@drawable/shape_button_swipe"
+                app:button_bottom_padding="20dp"
+                app:button_image_disabled="@drawable/ic_keyboard_arrow_right_black_24dp"
+                app:button_image_enabled="@drawable/ic_check"
+                app:button_left_padding="20dp"
+                app:button_right_padding="20dp"
+                app:button_top_padding="20dp"
+                app:has_activate_state="true"
+                app:initial_state="disabled"
+                app:inner_text="Geser Untuk Mulai"
+                app:inner_text_background="@drawable/bg_circle_swipe_button"
+                app:inner_text_bottom_padding="18dp"
+                app:inner_text_color="@android:color/white"
+                app:inner_text_size="16sp"
+                app:inner_text_top_padding="18dp"
+                android:visibility="gone"/>
+
+            <com.mogawe.mosurvei.util.ui.GalanoButton
+                android:id="@+id/btnApply"
+                style="@style/GenericRaisedButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/space_double"
+                android:text="Ambil Gawean"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+        <com.mogawe.mosurvei.util.ui.FlexSwipeRefreshLayout
+            android:id="@+id/swipeRefreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/layoutConfirm"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appBar">
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/scrollViewContainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/space_double">
+
+                    <FrameLayout
+                        android:id="@+id/frameWebView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/imvJobPicture"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:scaleType="centerCrop"
+                            tools:srcCompat="@tools:sample/avatars" />
+
+                        <ProgressBar
+                            android:id="@+id/pbTutorial"
+                            android:layout_width="@dimen/space_quadruple"
+                            android:layout_height="@dimen/space_quadruple"
+                            android:layout_gravity="center" />
+
+                    </FrameLayout>
+
+                    <com.mogawe.mosurvei.util.ui.GalanoTextView
+                        android:id="@+id/txvIdJob"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="12dp"
+                        android:text="No. 2121021"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/font_small"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/frameWebView" />
+
+                    <com.mogawe.mosurvei.util.ui.GalanoTextView
+                        android:id="@+id/txvBatchName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="16dp"
+                        android:text="Komando"
+                        android:textSize="@dimen/font_small"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:visibility="gone"
+                        app:layout_constraintTop_toBottomOf="@+id/txvIdJob" />
+
+
+                    <com.mogawe.mosurvei.util.ui.GalanoTextView
+                        android:id="@+id/txvTitleJobName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="16dp"
+                        android:text="SAT AMD IDM Asem Baris Selatan"
+                        android:textSize="@dimen/font_big"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txvBatchName" />
+
+                    <com.mogawe.mosurvei.util.ui.GalanoTextView
+                        android:id="@+id/txvJobDescription"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="16dp"
+                        android:text="Tulisan ini hanyalah deskripsinya saja"
+                        android:textSize="@dimen/font_small"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txvTitleJobName" />
+
+
+                    <LinearLayout
+                        android:id="@+id/lnrNecessarySkill"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="@dimen/space"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txvJobDescription">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="@dimen/space_double">
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="@dimen/space_double"
+                                android:layout_marginBottom="@dimen/space_double"
+                                android:background="@color/grey_300" />
+
+                            <com.mogawe.mosurvei.util.ui.GalanoTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Akreditasi yang dibutuhkan"
+                                android:textSize="@dimen/font_small"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/space_double"
+                                android:orientation="horizontal">
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/rvNecessarySkill"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:scrollbars="vertical"
+                                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+        </com.mogawe.mosurvei.util.ui.FlexSwipeRefreshLayout>
+
+        <!-- This initially-hidden ImageView will hold the expanded/zoomed version of
+           the images above. Without transformations applied, it takes up the entire
+           screen. To achieve the "zoom" animation, this view's bounds are animated
+           from the bounds of the thumbnail button above, to its final laid-out
+           bounds.
+           -->
+        <ImageView
+            android:id="@+id/expanded_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black_transparent"
+            android:contentDescription="description_zoom_touch_close"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RelativeLayout
+            android:id="@+id/rltMap"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="26dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <Button
+                android:id="@+id/btnCloseMap"
+                android:layout_width="@dimen/space_triple"
+                android:layout_height="@dimen/space_triple"
+                android:layout_marginStart="@dimen/spacexx"
+                android:layout_marginTop="@dimen/spacex"
+                android:background="@drawable/ic_arrow_back_black_24dp" />
+
+            <FrameLayout
+                android:id="@+id/containerMap"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:touchscreenBlocksFocus="true"
+                android:visibility="visible">
+
+                <com.mogawe.mosurvei.util.ui.GalanoTextView
+                    android:id="@+id/txvLoadingMap"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Memuat Map..."
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/font_xbig" />
+            </FrameLayout>
+
+        </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

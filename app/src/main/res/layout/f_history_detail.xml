@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.content.gawean.history.HistoryDetailFragment"
+    android:id="@+id/layout_container"
+    android:background="@color/white"
+    android:clickable="true">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+        <ImageView
+            android:id="@+id/thumbnailGawean"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/noimagefound"
+            android:scaleType="centerCrop" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@color/white_transparent"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/space_double"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/buttonBack"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="0dp"
+            android:padding="@dimen/space_quarter"
+            android:background="@drawable/bg_circle_black_transparent"
+            app:srcCompat="@drawable/ic_close_black_24dp"
+            app:tint="@color/white"
+            android:layout_marginTop="@dimen/space_triple"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/space_quadruple">
+
+            <com.mogawe.mosurvei.util.ui.GalanoTextView
+                android:id="@+id/txvJobName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:padding="@dimen/space"
+                android:text="Observasi ppgyg SAT 45"
+                android:textColor="@color/black"/>
+
+            <ImageView
+                android:id="@+id/imvPoll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_poll_red_24dp"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal"
+           android:layout_marginTop="@dimen/space_double">
+
+           <com.mogawe.mosurvei.util.ui.GalanoLightTextView
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_weight="1"
+               android:text="Selesai pada :"
+               android:textStyle="bold"
+               android:gravity="center|start"
+               android:padding="@dimen/space"/>
+
+           <com.mogawe.mosurvei.util.ui.GalanoLightTextView
+               android:id="@+id/txvJobTimestamp"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_weight="1"
+               android:text="timestamp"
+               android:textStyle="bold"
+               android:gravity="center|end"
+               android:padding="@dimen/space"
+               android:textColor="@color/black"/>
+
+       </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/space_double">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/space_double">
+
+                <com.mogawe.mosurvei.util.ui.GalanoLightTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Gawean status detail :"
+                    android:textStyle="bold"
+                    android:gravity="center|start"
+                    android:padding="@dimen/space"/>
+
+                <com.mogawe.mosurvei.util.ui.GalanoLightTextView
+                    android:id="@+id/txvStatusQC"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Status"
+                    android:paddingStart="@dimen/space"
+                    android:paddingEnd="@dimen/space"
+                    android:textStyle="bold"
+                    android:background="@drawable/round_corner"
+                    android:backgroundTint="@color/green_200"
+                    android:textColor="@color/green_900"
+                    android:layout_centerVertical="true"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="@dimen/space_double">
+
+                <ImageView
+                    android:id="@+id/imvPending"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_sent"
+                    android:maxHeight="24dp"
+                    android:maxWidth="24dp"/>
+
+                <View
+                    android:id="@+id/firstLine"
+                    android:layout_width="1dp"
+                    android:layout_height="@dimen/space_quadruple"
+                    android:background="@color/grey_300"
+                    android:layout_gravity="center" />
+
+                <ImageView
+                    android:id="@+id/imvApproved"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_approved"
+                    android:maxHeight="24dp"
+                    android:maxWidth="24dp"/>
+
+                <View
+                    android:id="@+id/secondLine"
+                    android:layout_width="1dp"
+                    android:layout_height="@dimen/space_quadruple"
+                    android:background="@color/grey_300"
+                    android:layout_gravity="center" />
+
+                <ImageView
+                    android:id="@+id/imvSendToSaldo"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_credited"
+                    android:maxHeight="24dp"
+                    android:maxWidth="24dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/space_double">
+
+            <com.mogawe.mosurvei.util.ui.GalanoLightTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pesan :"
+                android:textStyle="bold"
+                android:gravity="center|start"
+                android:padding="@dimen/space"/>
+
+            <com.mogawe.mosurvei.util.ui.GalanoLightTextView
+                android:id="@+id/txvJobDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="timestamp"
+                android:textStyle="bold"
+                android:gravity="center|start"
+                android:padding="@dimen/space"
+                android:textColor="@color/black"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey_500"
+            android:layout_marginTop="@dimen/space_double"/>
+
+        <LinearLayout
+            android:id="@+id/lnrPoint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/space_quadruple">
+
+            <com.mogawe.mosurvei.util.ui.GalanoLightTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Point :"
+                android:textStyle="bold"
+                android:gravity="center|start"
+                android:padding="@dimen/space"/>
+
+            <com.mogawe.mosurvei.util.ui.GalanoLightTextView
+                android:id="@+id/txvPoint"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="10 pts"
+                android:textStyle="bold"
+                android:gravity="center|end"
+                android:padding="@dimen/space"
+                android:textColor="@color/black"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lnrFee"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/space_quadruple">
+
+            <com.mogawe.mosurvei.util.ui.GalanoLightTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Harga :"
+                android:textStyle="bold"
+                android:gravity="center|start"
+                android:padding="@dimen/space"/>
+
+            <com.mogawe.mosurvei.util.ui.GalanoLightTextView
+                android:id="@+id/txvJobFee"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Rp. 20.000"
+                android:textStyle="bold"
+                android:gravity="center|end"
+                android:padding="@dimen/space"
+                android:textColor="@color/black"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

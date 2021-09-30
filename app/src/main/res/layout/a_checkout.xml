@@ -1,0 +1,803 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.content.supplier.product.CheckoutActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/appBar"
+            layout="@layout/appbar_light" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/appBar"
+            tools:ignore="UselessParent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/labelDetailPembeli"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Detail Pembeli"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Nama Pembeli"
+                            android:textSize="@dimen/font_small" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="10dp"
+                            android:orientation="horizontal">
+
+                            <EditText
+                                android:id="@+id/edtBuyersName"
+                                android:layout_width="0dp"
+                                android:layout_height="35dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/custom_input"
+                                android:drawableEnd="@drawable/ic_baseline_contacts_24"
+                                android:drawableTint="@color/colorPrimary"
+                                android:enabled="true"
+                                android:focusableInTouchMode="true"
+                                android:paddingStart="4dp"
+                                android:paddingEnd="12dp"
+                                android:text=""
+                                tools:ignore="Autofill,LabelFor" />
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="No.Hp Pembeli"
+                            android:textSize="@dimen/font_small" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="15dp"
+                            android:orientation="horizontal">
+
+                            <EditText
+                                android:id="@+id/edtBuyersPhone"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginRight="10dp"
+                                android:background="@drawable/custom_input"
+                                android:focusable="true"
+                                android:focusableInTouchMode="true"
+                                android:inputType="phone"
+                                android:paddingStart="4dp"
+                                android:paddingEnd="12dp"
+                                android:text=""
+                                tools:ignore="Autofill,LabelFor" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top"
+                            android:layout_marginBottom="10dp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/destination_address"
+                                android:textSize="@dimen/font_small" />
+
+                            <TextView
+                                android:id="@+id/btnPickLocation"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Pilih Alamat Pengiriman"
+                                android:layout_marginRight="10dp"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="@dimen/font_small"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:layout_gravity="top"
+                            android:layout_marginBottom="10dp"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+
+                            <TextView
+                                android:id="@+id/edtBuyersAddress"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/font_reg"
+                                android:gravity="center|start"
+                                android:drawableStart="@drawable/ic_placeholder"
+                                android:drawableTint="@color/colorPrimary"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/font_reg"
+                                android:layout_marginTop="10dp"
+                                android:text="Catatan Alamat Pengiriman: "
+                                android:textStyle="bold"/>
+
+                            <TextView
+                                android:id="@+id/edtCatatanAlamat"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/font_reg"
+                                android:text="-"/>
+
+                        </LinearLayout>
+                        <!--
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="top"
+                            android:layout_marginBottom="10dp"
+                            android:gravity="top"
+                            android:orientation="horizontal">
+
+                            <EditText
+                                android:id="@+id/edtBuyersAddress"
+                                android:layout_width="0dp"
+                                android:layout_height="36dp"
+                                android:layout_marginTop="@dimen/space_half"
+                                android:layout_marginEnd="@dimen/space"
+                                android:layout_weight="1"
+                                android:background="@drawable/custom_input"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:inputType="textEmailAddress"
+                                android:paddingStart="4dp"
+                                android:paddingEnd="12dp"
+                                android:text=""
+                                tools:ignore="Autofill,LabelFor" />
+
+
+                            <Button
+                                android:id="@+id/btnPickLocation"
+                                android:layout_width="wrap_content"
+                                android:layout_height="36dp"
+                                android:layout_gravity="bottom"
+                                android:background="@drawable/button_primary"
+                                android:text="@string/choose"
+                                android:textAllCaps="false"
+                                android:textColor="@color/white"
+                                android:visibility="visible" />
+
+
+                        </LinearLayout>
+                        -->
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space"
+                        android:layout_marginBottom="@dimen/space"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/imvThumbnailOrder"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:layout_marginRight="10dp"
+                            />
+
+                        <TextView
+                            android:id="@+id/txvProductName"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginRight="10dp"
+                            android:text="@string/dash" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="10dp"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/btnMinProduk"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:background="@drawable/button_primary"
+                                android:text="-"
+                                android:textAllCaps="false"
+                                android:textColor="@color/white" />
+
+                            <EditText
+                                android:id="@+id/edtQuantity"
+                                android:layout_width="30dp"
+                                android:layout_height="25dp"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:background="@android:color/transparent"
+                                android:text="1"
+
+                                android:textAlignment="center"
+                                tools:ignore="Autofill,LabelFor" />
+
+                            <Button
+                                android:id="@+id/btnPlusProduk"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:background="@drawable/button_primary"
+                                android:text="+"
+                                android:textAllCaps="false"
+                                android:textColor="@color/white" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Catatan Pesanan"
+                            android:textSize="@dimen/font_small" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="10dp"
+                            android:orientation="horizontal">
+
+                            <EditText
+                                android:id="@+id/edtAdditionalNotes"
+                                android:layout_width="0dp"
+                                android:layout_height="60dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/custom_input"
+                                android:enabled="true"
+                                android:focusableInTouchMode="true"
+                                android:hint="@string/additional_notes"
+                                android:paddingStart="4dp"
+                                android:paddingEnd="12dp"
+                                android:text=""
+                                tools:ignore="Autofill,LabelFor" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_rounded_white"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/space_double">
+
+                            <com.mogawe.mosurvei.util.ui.LatoTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:text="Metode Pengiriman"
+                                android:textAllCaps="false"
+                                android:textColor="@color/black"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/lnOpsiAmbilSendiri"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/space_double"
+                            android:layout_marginEnd="9dp"
+                            android:layout_marginBottom="@dimen/space"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_ambil_sendiri" />
+
+                            <com.mogawe.mosurvei.util.ui.LatoTextView
+                                android:layout_width="236dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="@dimen/space_double"
+                                android:layout_weight="1"
+                                android:text="Ambil Sendiri"
+                                android:textAllCaps="false"
+                                android:textColor="@color/black" />
+
+                            <CheckBox
+                                android:id="@+id/checkAmbilSendiri"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginRight="10dp"
+                                android:padding="2dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/lnOpsiKurirToko"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/space_double"
+                            android:layout_marginTop="@dimen/space"
+                            android:layout_marginEnd="9dp"
+                            android:layout_marginBottom="@dimen/space"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_kurir_toko" />
+
+                            <com.mogawe.mosurvei.util.ui.LatoTextView
+                                android:layout_width="236dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="@dimen/space_double"
+                                android:layout_weight="1"
+                                android:text="Kurir Toko"
+                                android:textAllCaps="false"
+                                android:textColor="@color/black" />
+
+                            <CheckBox
+                                android:id="@+id/checkKurirToko"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginRight="10dp"
+                                android:padding="2dp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layoutEkspedisi"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/space_double"
+                            android:layout_marginTop="@dimen/space"
+                            android:layout_marginEnd="9dp"
+                            android:layout_marginBottom="@dimen/space_double"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_logistik" />
+
+                            <com.mogawe.mosurvei.util.ui.LatoTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="@dimen/space_double"
+                                android:layout_weight="1"
+                                android:text="Ekspedisi"
+                                android:textAllCaps="false"
+                                android:textColor="@color/black" />
+
+                            <TextView
+                                android:id="@+id/txvLogistic"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginRight="5dp"
+                                android:layout_toLeftOf="@id/checkEkspedisi"
+                                android:gravity="center_vertical"
+                                android:textColor="@color/grey_800" />
+
+                            <TextView
+                                android:id="@+id/txvEditLogistic"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginRight="5dp"
+                                android:layout_toLeftOf="@id/checkEkspedisi"
+                                android:gravity="center_vertical"
+                                android:text="[edit]"
+                                android:textColor="@color/colorPrimary"
+                                android:visibility="gone" />
+
+                            <CheckBox
+                                android:id="@+id/checkEkspedisi"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginRight="10dp"
+                                android:padding="2dp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/space_double"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="@dimen/space_double"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:text="Harga"
+                            android:textColor="@color/black" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/space_double"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="@dimen/space_double"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Harga Produk" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txvProductPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="Rp. 100.000" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/space_double"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="@dimen/space_double"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Ongkir" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txvShippingFee"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="Gratis" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/space_double"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="@dimen/space_double"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Total Pembayaran"
+                            android:textColor="@color/green_900" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txvTotal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="Rp. 115.000"
+                            android:textColor="@color/green_900" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <CheckBox
+                    android:id="@+id/cbxDropship"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/space_double"
+                    android:layout_marginTop="@dimen/space_double"
+                    android:layout_marginRight="@dimen/space_double"
+                    android:text="@string/send_as_dropship" />
+
+                <LinearLayout
+                    android:id="@+id/lnrSender"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="20dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:text="@string/sender_detail"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Nama Pengirim"
+                            android:textSize="@dimen/font_small" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="@dimen/space_double"
+                            android:layout_marginBottom="10dp"
+                            android:orientation="horizontal">
+
+                            <EditText
+                                android:id="@+id/edtDropshipperName"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginRight="10dp"
+                                android:background="@drawable/custom_input"
+                                android:focusable="true"
+                                android:focusableInTouchMode="true"
+                                android:inputType="textEmailAddress"
+                                android:paddingStart="4dp"
+                                android:paddingEnd="12dp"
+                                android:text=""
+                                tools:ignore="Autofill,LabelFor" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="No.Hp Pengirim"
+                            android:textSize="@dimen/font_small" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="10dp"
+                            android:orientation="horizontal">
+
+                            <EditText
+                                android:id="@+id/edtDropshipperPhone"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginRight="10dp"
+                                android:background="@drawable/custom_input"
+                                android:focusable="true"
+                                android:focusableInTouchMode="true"
+                                android:inputType="textEmailAddress"
+                                android:paddingStart="4dp"
+                                android:paddingEnd="12dp"
+                                android:text=""
+                                tools:ignore="Autofill,LabelFor" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Alamat Pengirim"
+                            android:textSize="@dimen/font_small" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="10dp"
+                            android:orientation="horizontal">
+
+                            <EditText
+                                android:id="@+id/edtDropshipperAddress"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginRight="10dp"
+                                android:background="@drawable/custom_input"
+                                android:focusable="true"
+                                android:focusableInTouchMode="true"
+                                android:inputType="textEmailAddress"
+                                android:paddingStart="4dp"
+                                android:paddingEnd="12dp"
+                                android:text=""
+                                tools:ignore="Autofill,LabelFor" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+
+                    <Button
+                        android:id="@+id/btnTunai"
+                        style="@style/GenericRaisedButtonStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="@dimen/space_double"
+                        android:layout_marginRight="@dimen/space_double"
+                        android:layout_weight="1"
+                        android:text="Kirim Tagihan"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white" />
+
+                    <Button
+                        android:id="@+id/btnTransfer"
+                        style="@style/GenericRaisedButtonStyle"
+                        android:layout_width="175dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="bottom"
+                        android:layout_marginLeft="5dp"
+                        android:text="Transfer"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:visibility="gone" />
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+</FrameLayout>

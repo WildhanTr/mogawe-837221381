@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/btnRekName"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp">
+    <com.mogawe.mosurvei.util.ui.GalanoLightTextView
+        android:textStyle="bold"
+        android:id="@+id/txvItemCashName"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="?android:attr/expandableListPreferredChildPaddingLeft"
+        android:text="Mandiri E-Cash"
+        android:textSize="16sp"/>
+    <com.mogawe.mosurvei.util.ui.GalanoLightTextView
+        android:textStyle="bold"
+        android:id="@+id/txvItemCashRek"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="?android:attr/expandableListPreferredChildPaddingLeft"
+        android:text="lorem ipsum dolor sit amet"/>
+    <com.mogawe.mosurvei.util.ui.GalanoLightTextView
+        android:textStyle="bold"
+        android:id="@+id/txvItemCashPersonName"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="?android:attr/expandableListPreferredChildPaddingLeft"
+        android:text="lorem ipsum dolor sit amet"/>
+</LinearLayout>

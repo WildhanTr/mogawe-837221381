@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="100dp"
+    android:orientation="vertical"
+    android:id="@+id/lnrProductFacing"
+    android:foreground="?attr/selectableItemBackground"
+    android:gravity="bottom">
+
+    <LinearLayout
+        android:id="@+id/btnProduct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imvProductFacing"
+            android:layout_width="60dp"
+            android:layout_height="80dp"
+            android:src="@color/grey_300" />
+
+        <com.mogawe.mosurvei.util.ui.GalanoTextView
+            android:id="@+id/txvGramasi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="150gr"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_small"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>

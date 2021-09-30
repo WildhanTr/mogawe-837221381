@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space"
+        android:background="@drawable/bg_dialog_top_rounded"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/space_double"
+        android:paddingEnd="@dimen/space_double">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imvDownlineProfile"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:src="@color/grey_200"
+            app:civ_border_color="@color/grey_400"
+            app:civ_border_width="1dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_double"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/space">
+
+            <com.mogawe.mosurvei.util.ui.GalanoTextView
+                android:id="@+id/txvDownlineCode"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="MO-865UHG"
+                android:gravity="left"
+                android:textSize="@dimen/font_small"/>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/grey_300"/>
+
+            <com.mogawe.mosurvei.util.ui.GalanoTextView
+                android:id="@+id/txvDownlinePhoneNumber"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="0813-XXXX-XXXX"
+                android:gravity="right"
+                android:textSize="@dimen/font_small"/>
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_dialog_bottom_rounded"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/space"
+        android:paddingStart="@dimen/space_double"
+        android:paddingEnd="@dimen/space_double"
+        android:paddingBottom="@dimen/space">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey_300"/>
+
+        <com.mogawe.mosurvei.util.ui.GalanoTextView
+            android:id="@+id/txvDownlineName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Muhammad Abidzar Abdussalam"
+            android:textSize="@dimen/font_small"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:layout_marginTop="@dimen/space"/>
+
+        <com.mogawe.mosurvei.util.ui.GalanoTextView
+            android:id="@+id/txvDownlineEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="abidzarmuhammad25@gmail.com"
+            android:layout_marginTop="@dimen/space_half"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textSize="@dimen/font_small"/>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.appbar.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/homeAppBar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:theme="@style/ToolbarMogaweTheme"
+    app:elevation="0dp">
+
+    <com.google.android.material.appbar.CollapsingToolbarLayout
+        android:id="@+id/collapsing_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        app:contentScrim="@color/white"
+        app:expandedTitleTextAppearance="@android:color/transparent"
+        app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed"
+        app:statusBarScrim="@color/white"
+        app:toolbarId="@+id/toolbar">
+
+        <ImageView
+            android:id="@+id/imvDeals"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:background="@color/black_transparent"
+            android:scaleType="centerCrop"
+            android:src="@color/grey_500" />
+
+
+    </com.google.android.material.appbar.CollapsingToolbarLayout>
+</com.google.android.material.appbar.AppBarLayout>

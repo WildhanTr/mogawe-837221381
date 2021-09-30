@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="@dimen/space_double"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imvTutorial"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_marginBottom="@dimen/space_double"
+            android:scaleType="centerInside"
+            android:visibility="gone"
+            android:src="@color/grey_600"/>
+
+        <FrameLayout
+            android:id="@+id/frameWebView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginBottom="@dimen/space_double">
+
+            <WebView
+                android:id="@+id/webviewYoutubeTutorial"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                tools:ignore="WebViewLayout" />
+
+            <ProgressBar
+                android:id="@+id/pbFact"
+                android:layout_width="@dimen/space_quadruple"
+                android:layout_height="@dimen/space_quadruple"
+                android:layout_gravity="center" />
+
+        </FrameLayout>
+
+        <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+            android:id="@+id/youtube_player_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:showSeekBar="false"
+            app:showYouTubeButton="false"/>
+
+        <com.mogawe.mosurvei.util.ui.LatoTextView
+            android:id="@+id/txvFactName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_half"
+            android:text="a. Siapa nama kamu?"
+            android:textColor="@color/black"
+            android:textSize="24dp"
+            android:layout_marginTop="@dimen/space_double"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="vertical">
+
+            <com.mogawe.mosurvei.util.ui.LatoTextView
+                android:id="@+id/txvHint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Nama harus lengkap"
+                android:textColor="@color/grey_600"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginStart="@dimen/space_half"/>
+
+
+        </LinearLayout>
+
+        <com.mogawe.mosurvei.util.ui.GalanoButton
+            android:id="@+id/btnAddNotes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add Notes"
+            android:layout_marginTop="@dimen/space_double"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:layout_marginLeft="@dimen/space_double"
+            android:layout_marginRight="@dimen/space_double"
+            android:background="@drawable/button_primary"/>
+
+        <LinearLayout
+            android:id="@+id/linearChild"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/space_double"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

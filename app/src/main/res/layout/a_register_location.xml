@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!--tools:context="com.mogawe.mosurvei.view.activity.RegisterLocationActivity">-->
+
+    <include
+        android:id="@+id/appBar"
+        layout="@layout/appbar" />
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/lnrFooter"
+        android:layout_below="@+id/appBar" />
+
+
+    <LinearLayout
+        android:id="@+id/lnrFooter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/lnrLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:minHeight="56dp"
+            android:orientation="horizontal">
+
+            <com.mogawe.mosurvei.util.ui.GalanoButton
+                android:id="@+id/btnLoc1"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:text="1"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/font_big" />
+
+            <com.mogawe.mosurvei.util.ui.GalanoButton
+                android:id="@+id/btnLoc2"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:text="2"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/font_big" />
+
+            <com.mogawe.mosurvei.util.ui.GalanoButton
+                android:id="@+id/btnLoc3"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:text="3"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/font_big" />
+
+            <com.mogawe.mosurvei.util.ui.GalanoButton
+                android:id="@+id/btnLoc4"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:text="4"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/font_big" />
+
+            <com.mogawe.mosurvei.util.ui.GalanoButton
+                android:id="@+id/btnLoc5"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:text="5"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/font_big" />
+
+        </LinearLayout>
+
+        <com.mogawe.mosurvei.util.ui.GalanoButton
+            android:id="@+id/btnRegister"
+            style="@style/GenericRaisedButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/action.please_choose_locations"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

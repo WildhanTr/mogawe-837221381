@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/space_double"
+    android:orientation="vertical">
+
+    <com.mogawe.mosurvei.util.ui.LatoTextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_half"
+        android:textSize="@dimen/font_medium" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+</LinearLayout>
+

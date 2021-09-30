@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.content.timeline.TimelineActivity">
+
+    <include
+        android:id="@+id/appBar"
+        layout="@layout/appbar_light" />
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:layout_below="@+id/appBar"
+        android:id="@+id/swipe_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/footBarLayout">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvTimeline"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/footBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:clipToPadding="false"
+        android:paddingTop="@dimen/space_double"
+        app:cardElevation="@dimen/space_triple">
+
+        <include
+            android:id="@+id/footBar"
+            layout="@layout/l_menu_v3" />
+
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/lnrSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/space_double"
+        android:background="@drawable/button_disabled"
+        android:backgroundTint="@color/colorPrimary"
+        android:clickable="true"
+        android:descendantFocusability="blocksDescendants"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:visibility="visible">
+
+
+        <com.mogawe.mosurvei.util.ui.GalanoTextView
+            android:id="@+id/txvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Penghasilan yang Kamu inginkan hari ini"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_xmedium"
+            android:gravity="center"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/space_double"
+            android:gravity="center">
+
+            <com.mogawe.mosurvei.util.ui.GalanoTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Penghasilan"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_small"/>
+
+            <SeekBar
+                android:id="@+id/rangePenghasilan"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/space_quadruple"
+                android:layout_weight="1"
+                android:max="40"
+                android:progress="20"
+                android:progressBackgroundTint="@color/white"
+                android:progressTint="@color/white"
+                android:thumbTint="@color/white" />
+
+            <com.mogawe.mosurvei.util.ui.GalanoTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_small"/>
+
+            <com.mogawe.mosurvei.util.ui.GalanoTextView
+                android:id="@+id/txvPenghasilan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="100.000"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_small" />
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/space_double">
+
+            <com.mogawe.mosurvei.util.ui.GalanoButton
+                android:id="@+id/btnCariGawean"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/space_quadruple"
+                android:text="@string/action.cariGawean"
+                android:textAllCaps="false"
+                android:textColor="@color/colorPrimary"
+                android:paddingTop="@dimen/space"
+                android:paddingBottom="@dimen/space"
+                android:paddingStart="@dimen/space_double"
+                android:paddingEnd="@dimen/space_double"
+                android:background="@drawable/button_primary_outlined"
+                android:foreground="?attr/selectableItemBackground"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

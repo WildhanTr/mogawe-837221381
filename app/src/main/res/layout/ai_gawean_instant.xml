@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/crdInstantGawean"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space"
+        android:layout_marginTop="@dimen/space"
+        android:layout_marginEnd="@dimen/space"
+        android:layout_marginBottom="@dimen/space"
+        app:cardCornerRadius="@dimen/space_double">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_double"
+                android:layout_marginEnd="@dimen/space_double"
+                android:layout_marginTop="@dimen/space_double"
+                android:orientation="horizontal">
+
+                <com.mogawe.mosurvei.util.ui.LatoTextView
+                    android:id="@+id/txvGaweanName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:maxLines="1"
+                    android:textSize="@dimen/font_medium"
+                    android:text="Kurir pengiriman Mola Box"
+                    android:textStyle="bold"
+                    android:textColor="@color/black" />
+
+                <ImageView
+                    android:id="@+id/imvInformation"
+                    app:tint="@color/black"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_baseline_info_black"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="@dimen/space_double">
+                <TextView
+                    android:id="@+id/txvDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="Mengantarkan barang ke tujuan yang ditentukan" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:layout_margin="@dimen/space_double">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/round_corner"
+                    android:backgroundTint="@color/grey_200"
+                    android:orientation="vertical"
+                    android:paddingStart="@dimen/space_double"
+                    android:paddingTop="@dimen/space_half"
+                    android:paddingEnd="@dimen/space_double"
+                    android:paddingBottom="@dimen/space_half">
+
+                    <com.mogawe.mosurvei.util.ui.LatoTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Start Task"
+                        android:textSize="@dimen/font_tiny" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="14dp"
+                            android:layout_height="14dp"
+                            android:src="@drawable/ic_baseline_date_range_24"
+                            app:tint="@color/black" />
+
+                        <com.mogawe.mosurvei.util.ui.LatoTextView
+                            android:id="@+id/txvStartDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/space_half"
+                            android:maxLines="1"
+                            android:text="Hari ini"
+                            android:textColor="@color/black" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="14dp"
+                            android:layout_height="14dp"
+                            android:src="@drawable/ic_baseline_timer_24"
+                            app:tint="@color/black" />
+
+                        <com.mogawe.mosurvei.util.ui.LatoTextView
+                            android:id="@+id/txvStartTime"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/space_half"
+                            android:maxLines="1"
+                            android:text="08.00"
+                            android:textColor="@color/black" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="0.2" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/round_corner"
+                    android:backgroundTint="@color/grey_200"
+                    android:orientation="vertical"
+                    android:paddingStart="@dimen/space_double"
+                    android:paddingTop="@dimen/space_half"
+                    android:paddingEnd="@dimen/space_double"
+                    android:paddingBottom="@dimen/space_half">
+
+                    <com.mogawe.mosurvei.util.ui.LatoTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="End Task"
+                        android:textSize="@dimen/font_tiny" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="14dp"
+                            android:layout_height="14dp"
+                            android:src="@drawable/ic_baseline_date_range_24"
+                            app:tint="@color/black" />
+
+                        <com.mogawe.mosurvei.util.ui.LatoTextView
+                            android:id="@+id/txvEndDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/space_half"
+                            android:maxLines="1"
+                            android:text="Hari ini"
+                            android:textColor="@color/black" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="14dp"
+                            android:layout_height="14dp"
+                            android:src="@drawable/ic_baseline_timer_24"
+                            app:tint="@color/black" />
+
+                        <com.mogawe.mosurvei.util.ui.LatoTextView
+                            android:id="@+id/txvEndTime"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/space_half"
+                            android:maxLines="1"
+                            android:text="23.59"
+                            android:textColor="@color/black" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_double"
+                android:layout_marginEnd="@dimen/space_double"
+                android:layout_marginBottom="@dimen/space_double"
+                android:orientation="horizontal">
+
+                <HorizontalScrollView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:id="@+id/lnrNecessarySkill"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                       <androidx.recyclerview.widget.RecyclerView
+                           android:id="@+id/rvCertificate"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:orientation="horizontal"
+                           app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:orientation="horizontal">
+
+                        <com.mogawe.mosurvei.util.ui.LatoTextView
+                            android:id="@+id/txvPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="end"
+                            android:text="50.000"
+                            android:textSize="@dimen/font_medium"
+                            android:textColor="@color/colorPrimary" />
+
+                        <com.mogawe.mosurvei.util.ui.LatoTextView
+                            android:id="@+id/taskType"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" / task"
+                            android:textSize="@dimen/font_medium"
+                            android:textColor="@color/black"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lnrSignMeUp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:padding="@dimen/space_double"
+                android:background="@color/colorPrimary">
+
+                <com.mogawe.mosurvei.util.ui.GalanoTextView
+                    android:id="@+id/txvSignMeUp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sign Me Up!"
+                    android:textColor="@color/white"
+                    android:drawableStart="@drawable/ic_baseline_add_task_24"
+                    android:gravity="center"
+                    android:textSize="@dimen/font_medium"
+                    android:drawablePadding="@dimen/space_double"
+                    android:drawableTint="@color/white"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lnrOffer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:visibility="visible"
+                android:paddingHorizontal="@dimen/space_double"
+                android:paddingVertical="@dimen/space"
+                android:background="@color/colorSuccess">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/imvDecline"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:layout_centerInParent="true"
+                        android:layout_alignParentStart="true"
+                        android:padding="@dimen/space_half"
+                        android:background="@drawable/circle"
+                        android:backgroundTint="@color/black"
+                        app:tint="@color/colorSuccess"
+                        android:src="@drawable/ic_close_black_24dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="@dimen/spacex"
+                        android:layout_toStartOf="@id/imvAccept"
+                        android:layout_toEndOf="@id/imvDecline">
+                        <com.mogawe.mosurvei.util.ui.GalanoTextView
+                            android:id="@+id/txvJobName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Jl. Kartini, Cilandak"
+                            android:textColor="@color/white"
+                            android:gravity="center"
+                            android:textSize="@dimen/font_medium"
+                            android:textStyle="bold"
+                            android:drawablePadding="@dimen/space_double"
+                            android:drawableTint="@color/white"/>
+                        <com.mogawe.mosurvei.util.ui.GalanoTextView
+                            android:id="@+id/txvRemainingTime"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="sisa waktu 15 detik"
+                            android:textColor="@color/white"
+                            android:gravity="center"
+                            android:textSize="@dimen/font_small"
+                            android:drawablePadding="@dimen/space_double"
+                            android:drawableTint="@color/white"/>
+                    </LinearLayout>
+
+
+                    <ImageView
+                        android:id="@+id/imvAccept"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_centerInParent="true"
+                        android:layout_alignParentEnd="true"
+                        android:src="@drawable/ic_baseline_check_circle_white"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/space"
+        android:gravity="left">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/space"
+            android:text="Total"/>
+        <TextView
+            android:id="@+id/txvTotalPending"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/font_medium"/>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvPendingPayment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:id="@+id/lnrPendingNotFound"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/space_double"
+        android:visibility="gone"
+        android:gravity="center">
+        <com.mogawe.mosurvei.util.ui.GalanoTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|top"
+            android:text="@string/pending_payment_not_found"
+            android:textSize="@dimen/font_medium"
+            android:textStyle="italic"/>
+    </LinearLayout>
+
+</LinearLayout>

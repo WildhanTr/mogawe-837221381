@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mogawe.mosurvei.view.shared.map.MapActivity">
+
+    <include
+        android:id="@+id/appBar"
+        layout="@layout/appbar_light" />
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/appBar" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardSetLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="invisible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/cardSetLocation"
+            android:layout_alignTop="@+id/cardSetLocation"
+            android:orientation="vertical"
+            android:padding="@dimen/space_double">
+
+            <ImageView
+                android:id="@+id/btnCloseEdit"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="right"
+                android:background="@drawable/bg_circle_black_transparent"
+                android:src="@drawable/ic_close_black_24dp"
+                app:tint="@color/white"/>
+
+            <com.mogawe.mosurvei.util.ui.GalanoTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/space"
+                android:text="Lat Long :" />
+
+            <com.mogawe.mosurvei.util.ui.GalanoTextView
+                android:id="@+id/txvLatLong"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/space_double"
+                android:text="-"
+                android:textColor="@color/black" />
+
+            <com.mogawe.mosurvei.util.ui.GalanoTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Alamat :" />
+
+
+            <EditText
+                android:id="@+id/edtAlamat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/space"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:inputType="textMultiLine" />
+
+
+            <com.mogawe.mosurvei.util.ui.GalanoButton
+                android:id="@+id/btnSetLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:text="Set Lokasi"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

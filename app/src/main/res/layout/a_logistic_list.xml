@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.content.supplier.shipment.LogisticListActivity">
+
+    <include
+        android:id="@+id/appBar"
+        layout="@layout/appbar_light" />
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/appBar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/space"
+            android:paddingTop="@dimen/space"
+            android:paddingEnd="@dimen/space">
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</RelativeLayout>

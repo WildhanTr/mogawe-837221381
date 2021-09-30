@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.shared.webview.WebViewStreamActivity"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include android:id="@+id/appBar"
+            layout="@layout/appbar_light" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <im.delight.android.webview.AdvancedWebView
+                android:id="@+id/webview_player_view"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="6"
+                android:background="@color/grey_300"/>
+
+            <ScrollView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginRight="@dimen/space_double"
+                    android:layout_marginLeft="@dimen/space_double">
+
+                    <com.mogawe.mosurvei.util.ui.LatoTextView
+                        android:id="@+id/txvFactName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/space_half"
+                        android:text="a. Siapa nama kamu?"
+                        android:textColor="@color/black"
+                        android:textSize="24dp"
+                        android:layout_marginTop="@dimen/space_double"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:orientation="vertical"
+                        android:paddingLeft="@dimen/space_double"
+                        android:paddingRight="@dimen/space_double">
+
+                        <com.mogawe.mosurvei.util.ui.LatoTextView
+                            android:id="@+id/txvHint"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:text="Nama harus lengkap"
+                            android:textColor="@color/grey_600"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+
+
+                    </LinearLayout>
+
+                    <com.mogawe.mosurvei.util.ui.GalanoButton
+                        android:id="@+id/btnAddNotes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Add Notes"
+                        android:layout_marginTop="@dimen/space_double"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:layout_marginLeft="@dimen/space_double"
+                        android:layout_marginRight="@dimen/space_double"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:background="@drawable/button_primary"/>
+
+                    <LinearLayout
+                        android:id="@+id/linearChild"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="@dimen/space_double"
+                        android:layout_marginBottom="@dimen/space_double"/>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

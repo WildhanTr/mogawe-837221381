@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/space_double">
+
+    <ImageView
+        android:id="@+id/imvTutorial"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_marginBottom="@dimen/space_double"
+        android:scaleType="centerInside"
+        android:src="@color/grey_600"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:id="@+id/frameWebView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space_double"
+        android:visibility="gone">
+
+        <WebView
+            android:id="@+id/webviewYoutubeTutorial"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            tools:ignore="WebViewLayout" />
+
+        <ProgressBar
+            android:id="@+id/pbFact"
+            android:layout_width="@dimen/space_quadruple"
+            android:layout_height="@dimen/space_quadruple"
+            android:layout_gravity="center" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imvPreviewMatrix"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="centerInside"
+            android:src="@color/grey_600"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <com.mogawe.mosurvei.util.ui.LatoTextView
+                android:id="@+id/txvFactName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_half"
+                android:layout_marginEnd="@dimen/space_half"
+                android:text="a. Siapa nama kamu?"
+                android:textColor="@color/black"
+                android:textSize="24sp"/>
+
+            <com.mogawe.mosurvei.util.ui.LatoTextView
+                android:id="@+id/txtHint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_half"
+                android:textColor="@color/grey_600"
+                android:layout_gravity="center"
+                android:paddingLeft="@dimen/space_triple"
+                android:paddingRight="@dimen/space_triple"
+                android:layout_marginTop="12dp" />
+
+        </LinearLayout>
+
+        <com.mogawe.mosurvei.util.ui.GalanoButton
+            style="@style/GenericSmallButtonStyle"
+            android:id="@+id/btnInput"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:text="Input"
+            android:textColor="@color/white"
+            android:background="@drawable/button_disabled"
+            android:textAllCaps="false"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>
+
+

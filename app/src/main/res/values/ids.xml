@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="input" type="id" />
+    <item name="send_by_intent" type="id" />
+    <item name="imvChat" type="id" />
+    <item name="imvBanner" type="id" />
+</resources>

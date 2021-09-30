@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/space_double"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/imvTutorial"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_marginBottom="@dimen/space_double"
+        android:scaleType="centerInside"
+        android:src="@color/grey_600"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:id="@+id/frameWebView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space_double"
+        android:visibility="gone">
+
+        <WebView
+            android:id="@+id/webviewYoutubeTutorial"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            tools:ignore="WebViewLayout" />
+
+        <ProgressBar
+            android:id="@+id/pbFact"
+            android:layout_width="@dimen/space_quadruple"
+            android:layout_height="@dimen/space_quadruple"
+            android:layout_gravity="center" />
+
+    </FrameLayout>
+
+    <com.mogawe.mosurvei.util.ui.LatoTextView
+        android:id="@+id/txvHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="ini adalah hint"
+        android:textColor="@color/grey_600"
+        android:textSize="16dp"
+        android:textStyle="italic" />
+
+    <com.mogawe.mosurvei.util.ui.GalanoButton xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/button"
+        style="@style/GenericRaisedButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/space_double"
+        android:background="@drawable/button_disabled"
+        android:text="@string/action.touch_search_location"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_xmedium"/>
+
+    <com.mogawe.mosurvei.util.ui.GalanoTextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space"
+        android:layout_marginTop="@dimen/space_half"
+        android:textSize="@dimen/font_medium"
+        tools:text="Description" />
+
+    <!--<EditText-->
+    <!--android:id="@+id/edtEdit"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:visibility="gone" />-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/btnEdit"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="right"-->
+    <!--android:background="@drawable/button_disabled"-->
+    <!--android:padding="@dimen/space_half"-->
+    <!--android:src="@drawable/ic_edit_white_24dp"-->
+    <!--android:visibility="gone" />-->
+
+</LinearLayout>

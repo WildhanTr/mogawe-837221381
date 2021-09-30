@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/layoutSearch"
+    android:background="@color/grey_50"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.content.commerce.ProductCategoryFragment"
+    android:clickable="true">
+
+    <include
+        android:id="@+id/appBar"
+        layout="@layout/appbar_light" />
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:layout_below="@+id/appBar"
+        android:id="@+id/scrollBody"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:visibility="visible">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/mScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/appBar"
+            android:overScrollMode="never">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/lnrAdvanceSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_double"
+                android:layout_marginTop="@dimen/space_triple"
+                android:layout_marginEnd="@dimen/space_double"
+                android:background="@drawable/button_disabled"
+                android:backgroundTint="@color/grey_200"
+                android:orientation="horizontal"
+                android:padding="@dimen/space">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/places_ic_search"
+                    android:tint="@color/black" />
+
+                <EditText
+                    android:id="@+id/edtProjectName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space"
+                    android:layout_marginEnd="@dimen/space"
+                    android:layout_weight="1"
+                    android:background="@color/transparent"
+                    android:hint="Cari gawean"
+                    android:imeOptions="actionSearch"
+                    android:inputType="text" />
+
+                <ImageView
+                    android:id="@+id/imvClearEdtText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_close_black_24dp"
+                    android:tint="@color/black" />
+
+            </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:descendantFocusability="blocksDescendants">
+
+                    <com.mogawe.mosurvei.util.ui.GalanoTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Lokasi : "
+                        android:textSize="@dimen/font_small"
+                        android:layout_marginTop="@dimen/space"
+                        android:layout_marginStart="@dimen/space"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvLocationTag"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clipToPadding="false"
+                        android:orientation="horizontal"
+                        android:paddingEnd="@dimen/space_xdouble"
+                        android:paddingStart="@dimen/space"
+                        android:paddingTop="@dimen/space"
+                        android:scrollbars="vertical"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+                    <com.mogawe.mosurvei.util.ui.GalanoTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Kategori : "
+                        android:textSize="@dimen/font_small"
+                        android:layout_marginTop="@dimen/space"
+                        android:layout_marginStart="@dimen/space"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvCategoryTag"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clipToPadding="false"
+                        android:orientation="horizontal"
+                        android:paddingEnd="@dimen/space_xdouble"
+                        android:paddingTop="@dimen/space"
+                        android:paddingStart="@dimen/space"
+                        android:scrollbars="vertical"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:visibility="gone"
+                        android:id="@+id/rvGaweanResult"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/space_double"
+                        android:clipToPadding="false"
+                        android:nestedScrollingEnabled="false"
+                        app:layoutManager="LinearLayoutManager"
+                        android:paddingBottom="@dimen/space_xxtra"
+                        android:layout_marginBottom="@dimen/space_triple"
+                        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+                </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/lnrPrb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/space_double"
+                android:layout_below="@id/scrollBody">
+
+                <ProgressBar
+                    android:id="@+id/prbLoading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/space_triple"
+                    android:visibility="gone" />
+
+                <com.mogawe.mosurvei.util.ui.GalanoTextView
+                    android:id="@+id/txvPrbLoading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:visibility="gone" />
+
+                <com.mogawe.mosurvei.util.ui.GalanoTextView
+                    android:id="@+id/txvSearchNotFound"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/space"
+                    android:gravity="center"
+                    android:text="Gawean Tidak Ditemukan"
+                    android:textSize="@dimen/font_small"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rltMap"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="30dp"
+                android:visibility="gone">
+
+                <Button
+                    android:id="@+id/btnCloseMap"
+                    android:layout_width="@dimen/space_triple"
+                    android:layout_height="@dimen/space_triple"
+                    android:layout_marginStart="@dimen/spacexx"
+                    android:layout_marginTop="@dimen/spacex"
+                    android:background="@drawable/ic_arrow_back_black_24dp" />
+
+                <FrameLayout
+                    android:id="@+id/containerMap"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="visible"
+                    app:layout_collapseMode="parallax" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <LinearLayout
+        android:layout_below="@+id/appBar"
+        android:id="@+id/lnrMap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/space_double">
+
+        <com.mogawe.mosurvei.util.ui.GalanoTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="@dimen/space_double"
+            android:layout_marginBottom="@dimen/space_double"
+            android:text="" />
+
+        <Button
+            android:id="@+id/btnSeeMaps"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="34dp"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_menu_balance_half"
+            android:drawableLeft="@drawable/ic_map_black_24dp"
+            android:textSize="@dimen/font_small"
+            android:text="Lihat Peta"
+            android:textColor="@color/white"
+            android:drawableTint="@color/white"
+            android:textAllCaps="false"
+            android:padding="@dimen/space"
+            android:drawablePadding="@dimen/space"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lnrFilter"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:padding="@dimen/space_half"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="@dimen/space_double"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/lnrChangeCategory"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:padding="@dimen/space_half"
+            android:background="@drawable/bg_menu_points_half_left"
+            android:gravity="center">
+
+            <com.mogawe.mosurvei.util.ui.GalanoTextView
+                android:id="@+id/txvJobFee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/font_small"
+                android:text="Kategori"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:drawablePadding="@dimen/space"
+                android:drawableEnd="@drawable/ic_filter_list_black_24dp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/lnrFilterLocation"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:padding="@dimen/space_half"
+            android:background="@drawable/bg_menu_points_half"
+            android:gravity="center">
+
+            <com.mogawe.mosurvei.util.ui.GalanoTextView
+                android:id="@+id/txvJobPoint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/font_small"
+                android:text="Lokasi"
+                android:gravity="center"
+                android:drawablePadding="@dimen/space"
+                android:textStyle="bold"
+                android:drawableEnd="@drawable/ic_filter_list_black_24dp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black_transparent"
+        android:id="@+id/rltPilihKategori"
+        android:visibility="gone"
+        android:clickable="true">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/crdCategory"
+            android:layout_width="match_parent"
+            android:layout_height="550dp"
+            android:layout_alignParentBottom="true"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <me.zhanghai.android.materialprogressbar.MaterialProgressBar
+                    android:id="@+id/progressBarHorizontal"
+                    style="@style/Widget.MaterialProgressBar.ProgressBar.Horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/space_half"
+                    android:indeterminate="true"
+                    app:mpb_progressStyle="horizontal"
+                    app:mpb_useIntrinsicPadding="false"
+                    android:outlineAmbientShadowColor="@color/white"
+                    android:visibility="invisible"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="@dimen/space">
+
+                    <com.mogawe.mosurvei.util.ui.GalanoTextView
+                        android:id="@+id/txvPilih"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Pilih Kategori : "
+                        android:textSize="@dimen/font_big"/>
+
+                </LinearLayout>
+
+
+                <androidx.appcompat.widget.SearchView
+                    android:id="@+id/searchLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/rvKategori"
+                    android:layout_margin="@dimen/space"
+                    android:layout_marginTop="@dimen/space_double"
+                    android:paddingBottom="@dimen/space_xtra"
+                    android:clipToPadding="false"/>
+
+                <com.mogawe.mosurvei.util.ui.GalanoTextView
+                    android:id="@+id/txvErrorLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:visibility="gone"
+                    android:text="Lokasi tidak ditemukan" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnSetLocation"
+                android:background="@color/colorPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Set Lokasi"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:layout_gravity="bottom"/>
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

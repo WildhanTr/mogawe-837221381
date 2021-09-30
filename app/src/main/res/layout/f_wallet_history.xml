@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:visibility="invisible">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3">
+
+            <!--<com.mogawe.mosurvei.util.ui.ModulusTextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:gravity="center"-->
+            <!--android:text="Transaksi"-->
+            <!--android:textColor="@color/black"-->
+            <!--android:textSize="16sp"-->
+            <!--android:textStyle="bold" />-->
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="7"
+            android:gravity="right|center_vertical">
+
+            <Spinner
+                android:id="@+id/spinnerFilterWalletHistory"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:entries="@array/filter_wallet_history"
+                android:padding="0dip" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvWalletHistory"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:id="@+id/rltWalleyHistoryKosong"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <com.mogawe.mosurvei.util.ui.LatoTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/space_double"
+            android:layout_marginTop="@dimen/space"
+            android:layout_marginRight="@dimen/space_double"
+            android:gravity="center"
+            android:text="@string/walletHistory"
+            android:textSize="@dimen/font_big" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

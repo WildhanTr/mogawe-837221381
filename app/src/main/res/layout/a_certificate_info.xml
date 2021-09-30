@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="@dimen/box_inset_layout_padding"
+    tools:context=".view.content.acreditation.CertificateInfoActivity">
+
+    <include
+        android:id="@+id/appBar"
+        layout="@layout/appbar_light" />
+
+
+    <com.mogawe.mosurvei.util.ui.FlexSwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:layout_constraintBottom_toTopOf="@+id/layoutConfirm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBar">
+
+    <ScrollView
+        android:id="@+id/scrollViewContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imvGaweanImage"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:scaleType="centerCrop"
+                android:src="@color/grey_600"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/space_triple">
+
+                <com.mogawe.mosurvei.util.ui.GalanoTextView
+                    android:id="@+id/txvName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kemampuan Persuasi"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_medium"
+                    android:textStyle="bold" />
+
+                <com.mogawe.mosurvei.util.ui.GalanoLightTextView
+                    android:id="@+id/txvDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_half"
+                    android:text="Untuk mendapatkan kemampuan ini, kamu harus membuktikan kepada kami bahwa kamu bisa"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+                <FrameLayout
+                    android:id="@+id/frameWebView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_double"
+                    android:visibility="gone"
+                    tools:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/imvTutorial"
+                        android:layout_width="match_parent"
+                        android:layout_height="160dp"
+                        android:scaleType="centerInside"
+                        android:src="@color/grey_600"
+                        android:visibility="visible" />
+
+                    <ProgressBar
+                        android:id="@+id/pbFact"
+                        android:layout_width="@dimen/space_quadruple"
+                        android:layout_height="@dimen/space_quadruple"
+                        android:layout_gravity="center" />
+
+                </FrameLayout>
+
+
+<!--                <com.mogawe.mosurvei.util.ui.GalanoTextView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="@dimen/space_double"-->
+<!--                    android:text="Caranya?"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:textSize="@dimen/font_medium" />-->
+
+                <com.mogawe.mosurvei.util.ui.GalanoLightTextView
+                    android:id="@+id/txvHowTo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_double"
+                    android:text="1. Cari minimarket di titik lokasi yang sudah ditentukan. \n2. Cari produk susu bubuk merk A, B, dan C.\n3. Buka kuesioner gawean MoGawe.\n4. Lakukan sesuai petunjuk kuesioner"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    </com.mogawe.mosurvei.util.ui.FlexSwipeRefreshLayout>
+
+    <com.mogawe.mosurvei.util.ui.GalanoButton
+        android:id="@+id/btnStart"
+        style="@style/GenericRaisedButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/space_triple"
+        android:layout_marginTop="@dimen/space_double"
+        android:layout_marginRight="@dimen/space_triple"
+        android:layout_marginBottom="@dimen/space_double"
+        android:text="Mulai Verifikasi"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_xmedium"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+</LinearLayout>
+
+
+

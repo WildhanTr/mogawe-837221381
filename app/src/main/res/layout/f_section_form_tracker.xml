@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clickable="true"
+    tools:context=".view.content.form.tracker.SectionFormTrackerFragment"
+    android:focusable="true">
+
+    <include
+        android:id="@+id/pala"
+        layout="@layout/appbar_multiline" />
+
+    <LinearLayout
+        android:id="@+id/lnrSectionState"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/space_double"
+        android:paddingVertical="@dimen/space"
+        android:layout_below="@+id/pala">
+
+        <com.mogawe.mosurvei.util.ui.LatoTextView
+            android:id="@+id/txtSectionState"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Progress 0/5"
+            android:textSize="@dimen/font_reg"
+            android:textColor="@color/black"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding=".5dp"
+            android:layout_marginTop="@dimen/space">
+
+            <ProgressBar
+                android:id="@+id/progressSectionPage"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="100"
+                android:padding="0dp"
+                android:progress="10" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scvFact"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </ScrollView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewSection"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/crdBottom"
+        android:layout_below="@+id/lnrSectionState"
+        android:orientation="horizontal" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/crdBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_margin="@dimen/space_double">
+
+            <com.mogawe.mosurvei.util.ui.GalanoButton
+                android:id="@+id/btnKembali"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:text="Sebelumnya"
+                android:textAllCaps="false"
+                android:textColor="@color/grey_500"
+                android:drawableStart="@drawable/ic_baseline_arrow_back_ios_24" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"/>
+
+            <com.mogawe.mosurvei.util.ui.GalanoButton
+                android:id="@+id/btnLanjut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:text="Berikutnya"
+                android:textAllCaps="false"
+                android:textColor="@color/grey_500"
+                android:drawablePadding="@dimen/space_half"
+                android:drawableEnd="@drawable/ic_baseline_arrow_forward_ios_24" />
+
+            <com.mogawe.mosurvei.util.ui.LatoMaterialButton
+                android:id="@+id/btnSimpan"
+                style="@style/GenericRaisedButtonStylePrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Lanjut"
+                android:textAllCaps="false"
+                android:background="@drawable/button_primary"
+                android:layout_marginStart="@dimen/space"
+                android:layout_marginEnd="@dimen/space"
+                android:paddingBottom="@dimen/space"
+                android:paddingTop="@dimen/space"
+                android:textSize="@dimen/font_medium"/>
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

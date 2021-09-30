@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingTop="@dimen/space_triple">
+    <!--card_view:cardElevation="3dp"-->
+    <!--card_view:cardUseCompatPadding="true"-->
+    <!--card_view:contentPadding="10dp"-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/space_triple"
+            android:paddingRight="@dimen/space_triple">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="8"
+                android:orientation="vertical">
+
+                <com.mogawe.mosurvei.util.ui.GalanoTextView
+                    android:id="@+id/txvGroupName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="Next Gawean"
+                    android:textSize="@dimen/font_big" />
+
+<!--                <com.mogawe.mosurvei.util.ui.GalanoLightTextView-->
+<!--                    android:id="@+id/txvDesc"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="@dimen/space"-->
+<!--                    android:ellipsize="end"-->
+<!--                    android:maxLines="3"-->
+<!--                    android:text="Description" />-->
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/txvSeeAll"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/button_primary">
+
+                <com.mogawe.mosurvei.util.ui.GalanoTextView
+                    android:id="@+id/tulisanMerah"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="More"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/space"
+                    android:layout_marginEnd="@dimen/space"/>
+<!--                <Button-->
+<!--                    android:id="@+id/buttontulisanMerah"-->
+<!--                    android:layout_width="50dp"-->
+<!--                    android:layout_height="15dp"-->
+<!--                    android:text="More"-->
+<!--                    android:background="@drawable/shape_rounded_circle"-->
+<!--                    android:gravity="center"-->
+<!--                    android:textAllCaps="false"-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:textSize="10dp"-->
+<!--                    />-->
+
+
+<!--                <Button-->
+<!--                    android:id="@+id/button1"-->
+<!--                    android:layout_width="50dp"-->
+<!--                    android:layout_height="15dp"-->
+<!--                    android:gravity="center"-->
+<!--                    android:background="@drawable/shape_rounded_circle"-->
+<!--                    android:text="More"-->
+<!--                    android:textAllCaps="false"-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:textSize="10dp"></Button>-->
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <!--<HorizontalScrollView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:scrollbars="none">-->
+
+
+<!--        <androidx.recyclerview.widget.RecyclerView-->
+<!--            android:id="@+id/rvGawean"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:clipToPadding="false"-->
+<!--            android:paddingLeft="@dimen/space_triple"-->
+<!--            android:paddingTop="@dimen/space"-->
+<!--            android:paddingRight="@dimen/space_triple"-->
+<!--            android:paddingBottom="@dimen/space"-->
+<!--            android:scrollbars="vertical"-->
+<!--            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />-->
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvGawean"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:clipToPadding="false"
+            android:paddingLeft="5dp"
+            android:paddingTop="5dp"
+            android:scrollbars="vertical"
+            android:visibility="visible"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+
+        <!--</HorizontalScrollView>-->
+
+
+        <!--<LinearLayout-->
+        <!--android:id="@+id/lnrClearGawean"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="200dp"-->
+        <!--android:gravity="center"-->
+        <!--android:orientation="vertical">-->
+
+        <!--<com.mogawe.mosurvei.util.ui.LatoTextView-->
+        <!--android:id="@+id/txvMessageNotFoundTask"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Yahh! Kamu belum punya gawean. \n Ayo cari gawean sekarang!"-->
+        <!--android:textAlignment="center"-->
+        <!--android:textSize="@dimen/font_medium" />-->
+
+        <!--<Button-->
+        <!--android:id="@+id/btnCariGaweanSecondary"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="8dp"-->
+        <!--android:background="@drawable/bg_primary_rounded"-->
+        <!--android:paddingLeft="@dimen/space"-->
+        <!--android:paddingRight="@dimen/space"-->
+        <!--android:text="@string/action.cariGawean"-->
+        <!--android:textColor="@color/white" />-->
+        </LinearLayout>
+ 
+</RelativeLayout>

@@ -1,0 +1,783 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.content.supplier.product.EditProductActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/appBar"
+            layout="@layout/appbar_light"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="81dp"
+            tools:ignore="UselessParent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:focusable="true"
+                android:focusableInTouchMode="true">
+
+                <LinearLayout
+                    android:id="@+id/labelDetailPembeli"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:padding="@dimen/space_double">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:text="@string/product_image"
+                        android:textSize="@dimen/font_small" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/uploadImage"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:layout_marginEnd="10dp"
+                                android:src="@drawable/add_image" />
+
+                            <ImageView
+                                android:id="@+id/uploadImage2"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:layout_marginEnd="10dp"
+                                android:src="@drawable/add_image" />
+
+                            <ImageView
+                                android:id="@+id/uploadImage3"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:layout_marginEnd="10dp"
+                                android:src="@drawable/add_image" />
+
+                            <ImageView
+                                android:id="@+id/uploadImage4"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:layout_marginEnd="10dp"
+                                android:src="@drawable/add_image" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/labelDetailPembeli"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_rounded_white"
+                    android:orientation="vertical"
+                    android:padding="@dimen/space_double">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Nama Produk *"
+                            android:textSize="@dimen/font_small" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="10dp"
+                            android:orientation="horizontal">
+
+                            <EditText
+                                android:id="@+id/namaProduk"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginRight="10dp"
+                                android:background="@drawable/custom_input"
+                                android:focusable="true"
+                                android:focusableInTouchMode="true"
+                                android:paddingLeft="10dp"
+                                android:text=""
+                                android:inputType="textCapSentences|textMultiLine"
+                                android:hint="@string/hint_nama_produk"
+                                android:textSize="15sp"
+                                tools:ignore="Autofill,LabelFor" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/labelDetailPembeli"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_rounded_white"
+                    android:orientation="vertical"
+                    android:padding="@dimen/space_double">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Deskripsi Produk *"
+                            android:textSize="@dimen/font_small" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="10dp"
+                            android:orientation="horizontal">
+
+                            <EditText
+                                android:id="@+id/deskripsiProduk"
+                                android:layout_width="match_parent"
+                                android:layout_height ="wrap_content"
+                                android:minHeight="70dp"
+                                android:inputType="textCapSentences|textMultiLine"
+                                android:maxLines ="15"
+                                android:maxLength ="2000"
+                                android:scrollHorizontally="true"
+                                android:scrollbars="vertical"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginRight="10dp"
+                                android:background="@drawable/custom_input"
+                                android:focusable="true"
+                                android:focusableInTouchMode="true"
+                                android:paddingLeft="10dp"
+                                android:text=""
+                                android:hint="@string/hint_deskripsi_produk"
+                                android:textSize="15sp"
+                                tools:ignore="Autofill,LabelFor"
+                                android:gravity="top"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_rounded_white"
+                    android:orientation="vertical"
+                    android:padding="@dimen/space_double">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Youtube Url"
+                            android:textSize="@dimen/font_small" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="10dp"
+                            android:orientation="horizontal">
+
+                            <EditText
+                                android:id="@+id/txtYoutubeUrl"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginRight="10dp"
+                                android:background="@drawable/custom_input"
+                                android:focusable="true"
+                                android:focusableInTouchMode="true"
+                                android:paddingLeft="10dp"
+                                android:text=""
+                                android:hint="@string/hint_youtube_url"
+                                android:textSize="15sp"
+                                tools:ignore="Autofill,LabelFor" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_rounded_white"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Brand Produk *"
+                            android:textSize="@dimen/font_small" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="10dp"
+                            android:orientation="horizontal">
+
+                            <EditText
+                                android:id="@+id/txtBrandProduk"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginRight="10dp"
+                                android:background="@drawable/custom_input"
+                                android:focusable="true"
+                                android:focusableInTouchMode="true"
+                                android:paddingLeft="10dp"
+                                android:text=""
+                                android:inputType="textCapSentences|textMultiLine"
+                                android:hint="@string/hint_brand_produk"
+                                android:textSize="15sp"
+                                tools:ignore="Autofill,LabelFor" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_rounded_white"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/layoutCategory"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/space_double">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/list" />
+
+                        <com.mogawe.mosurvei.util.ui.LatoTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/space_double"
+                            android:layout_weight="1"
+                            android:text="Kategori Produk *"
+                            android:textAllCaps="false"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/txtKategoriProduk"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="@color/black" />
+
+                        <ImageView
+                            android:id="@+id/kategoriProdukClick"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_baseline_chevron_right_24" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layoutIsDangerous"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/space_double">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/alert" />
+
+                        <com.mogawe.mosurvei.util.ui.LatoTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/space_double"
+                            android:text="Produk Berbahaya *"
+                            android:textAllCaps="false"
+                            android:textColor="@color/black" />
+
+                        <ImageView
+                            android:id="@+id/helpEditProdukBerbahaya"
+                            android:layout_width="17dp"
+                            android:layout_height="17dp"
+                            android:src="@drawable/ic_help_red_24dp"
+                            android:tint="@color/black"
+                            android:layout_gravity="center"/>
+
+                        <com.mogawe.mosurvei.util.ui.LatoTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text=""
+                            android:layout_weight="1"
+                            android:textAllCaps="false"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/txtProdukBerbahaya"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="@color/black" />
+
+                        <ImageView
+                            android:id="@+id/produkBerbahayaClick"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_baseline_chevron_right_24" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layoutPrice"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/space_double">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/dollar_tag" />
+
+                        <com.mogawe.mosurvei.util.ui.LatoTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/space_double"
+                            android:layout_weight="1"
+                            android:text="Harga *"
+                            android:textAllCaps="false"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/txtHargaProduk"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="@color/black" />
+
+
+                        <ImageView
+                            android:id="@+id/hargaProdukClick"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_baseline_chevron_right_24" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layoutComission"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/space_double">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/commission" />
+
+                        <com.mogawe.mosurvei.util.ui.LatoTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/space_double"
+                            android:text="Komisi *"
+                            android:textAllCaps="false"
+                            android:textColor="@color/black" />
+
+                        <ImageView
+                            android:id="@+id/helpKomisi"
+                            android:layout_width="17dp"
+                            android:layout_height="17dp"
+                            android:src="@drawable/ic_help_red_24dp"
+                            android:tint="@color/black"
+                            android:layout_gravity="center"/>
+
+                        <com.mogawe.mosurvei.util.ui.LatoTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text=""
+                            android:layout_weight="1"
+                            android:textAllCaps="false"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/txtFeeProduk"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="@color/black" />
+
+
+                        <ImageView
+                            android:id="@+id/feeProdukClick"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_baseline_chevron_right_24" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layoutStock"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/space_double">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/packages" />
+
+                        <com.mogawe.mosurvei.util.ui.LatoTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/space_double"
+                            android:layout_weight="1"
+                            android:text="Stok *"
+                            android:textAllCaps="false"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/txtStokProduk"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="@color/black" />
+
+
+                        <ImageView
+                            android:id="@+id/stokProdukClick"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_baseline_chevron_right_24" />
+
+                    </LinearLayout>
+
+                    //pengiriman
+                    <LinearLayout
+                        android:id="@+id/layoutPengiriman"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/space_double">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/ic_package"/>
+
+                        <com.mogawe.mosurvei.util.ui.LatoTextView
+                            android:layout_width="236dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/space_double"
+                            android:layout_weight="1"
+                            android:text="Pengiriman *"
+                            android:textAllCaps="false"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/txtPengiriman"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="@color/black"/>
+
+                        <ImageView
+                            android:id="@+id/pengirimanClickClick"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_baseline_chevron_right_24" />
+
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:id="@+id/layoutWeight"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/space_double"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/weight" />
+
+                        <com.mogawe.mosurvei.util.ui.LatoTextView
+                            android:layout_width="236dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/space_double"
+                            android:layout_weight="1"
+                            android:text="Berat *"
+                            android:textAllCaps="false"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/txtBeratProduk"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="@color/black" />
+
+
+                        <ImageView
+                            android:id="@+id/beratProdukClick"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_baseline_chevron_right_24" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layoutWidth"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/space_double"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/width" />
+
+                        <com.mogawe.mosurvei.util.ui.LatoTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/space_double"
+                            android:layout_weight="1"
+                            android:text="Lebar"
+                            android:textAllCaps="false"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/txtLebarProduk"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="@color/black" />
+
+
+                        <ImageView
+                            android:id="@+id/lebarProdukClick"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_baseline_chevron_right_24" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layoutLength"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/space_double"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/length" />
+
+                        <com.mogawe.mosurvei.util.ui.LatoTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/space_double"
+                            android:layout_weight="1"
+                            android:text="Panjang "
+                            android:textAllCaps="false"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/txtPanjangProduk"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="@color/black" />
+
+
+                        <ImageView
+                            android:id="@+id/panjangProdukClick"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_baseline_chevron_right_24" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layoutHeight"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/space_double"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/height" />
+
+                        <com.mogawe.mosurvei.util.ui.LatoTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/space_double"
+                            android:layout_weight="1"
+                            android:text="Tinggi"
+                            android:textAllCaps="false"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/txtTinggiProduk"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="@color/black" />
+
+
+                        <ImageView
+                            android:id="@+id/tinggiProdukClick"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_baseline_chevron_right_24" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layoutCondition"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/space_double"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/view" />
+
+                        <com.mogawe.mosurvei.util.ui.LatoTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/space_double"
+                            android:layout_weight="1"
+                            android:text="Kondisi *"
+                            android:textAllCaps="false"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/txtKondisiProduk"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="@color/black" />
+
+
+                        <ImageView
+                            android:id="@+id/kondisiProdukClick"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_baseline_chevron_right_24" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/space_double">
+
+                    <Button
+                        android:id="@+id/btnSimpan"
+                        style="@style/GenericRaisedButtonStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Simpan"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+</FrameLayout>

@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.content.gawean.history.HistoryActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/tab_layout">
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_gravity="center"
+            android:background="@color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/toolbarTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@string/riwayat"
+                        android:gravity="center|start"
+                        style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/imgShowMap"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/space_double"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/imvShowMap"
+                        android:layout_width="@dimen/space_double"
+                        android:layout_height="@dimen/space_triple"
+                        android:src="@drawable/ic_marker_red"
+                        android:contentDescription="TODO" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/font_tiny"
+                        android:text="@string/map"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:layout_marginTop="-4dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/imgPendingGawean"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/space_double"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/imvPendingGawean"
+                        android:layout_width="@dimen/space_double"
+                        android:layout_height="@dimen/space_triple"
+                        android:src="@drawable/ic_baseline_pending_actions_24"
+                        android:contentDescription="Pending" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/font_tiny"
+                        android:text="Pending"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:layout_marginTop="-4dp"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+<!--        <include-->
+<!--            android:id="@+id/appBar"-->
+<!--            layout="@layout/appbar_gawean" />-->
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/toolbar">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar"
+                app:elevation="0dp"
+                android:background="@color/white">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/space_double"
+                    android:layout_marginBottom="@dimen/space_double"
+                    android:visibility="gone">
+
+                        <LinearLayout
+                            android:id="@+id/lnrButtonTypeCategory"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:visibility="visible">
+
+                            <com.mogawe.mosurvei.util.ui.GalanoButton
+                                android:id="@+id/btnToday"
+                                style="?android:attr/borderlessButtonStyle"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="40dp"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="@dimen/space_double"
+                                android:background="@drawable/bg_status_gawean_active_left"
+                                android:text="Hari ini"
+                                android:textAllCaps="false"
+                                android:textColor="@color/white" />
+
+                            <com.mogawe.mosurvei.util.ui.GalanoButton
+                                android:id="@+id/btnRoute"
+                                style="?android:attr/borderlessButtonStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/bg_status_gawean_off_middle"
+                                android:text="Rute"
+                                android:textAlignment="center"
+                                android:textAllCaps="false"
+                                android:textColor="@color/grey_500"
+                                android:textSize="@dimen/font_small"
+                                android:visibility="gone"/>
+
+                            <com.mogawe.mosurvei.util.ui.GalanoButton
+                                android:id="@+id/btnWorking"
+                                style="?android:attr/borderlessButtonStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/bg_status_gawean_off_middle"
+                                android:text="Pengerjaan"
+                                android:textAlignment="center"
+                                android:textAllCaps="false"
+                                android:textColor="@color/grey_500"
+                                android:textSize="@dimen/font_small"
+                                android:paddingStart="@dimen/space"
+                                android:paddingEnd="@dimen/space"
+                                android:visibility="gone"/>
+
+                            <com.mogawe.mosurvei.util.ui.GalanoButton
+                                android:id="@+id/btnQC"
+                                style="?android:attr/borderlessButtonStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/bg_status_gawean_off_middle"
+                                android:text="Pemeriksaan"
+                                android:textAlignment="center"
+                                android:textAllCaps="false"
+                                android:textColor="@color/grey_500"
+                                android:textSize="@dimen/font_small"
+                                android:paddingStart="@dimen/space"
+                                android:paddingEnd="@dimen/space"
+                                android:visibility="gone"/>
+
+                            <com.mogawe.mosurvei.util.ui.GalanoButton
+                                android:id="@+id/btnHistory"
+                                style="?android:attr/borderlessButtonStyle"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="40dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/bg_status_gawean_off_right"
+                                android:text="Riwayat"
+                                android:textAlignment="center"
+                                android:textAllCaps="false"
+                                android:textColor="@color/grey_500"
+                                android:layout_marginEnd="@dimen/space_double"/>
+                        </LinearLayout>
+
+                </LinearLayout>
+
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <RelativeLayout
+                android:id="@+id/gaweanStatusContainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior" />
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    </RelativeLayout>
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shmGaweanKu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/space_triple"
+        android:orientation="vertical"
+        tools:duration="800"
+        android:visibility="visible"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include layout="@layout/shm_gawean_ku" />
+        </LinearLayout>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <LinearLayout
+        android:id="@+id/rltLoadMapGaweanku"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:background="@color/white">
+        <com.mogawe.mosurvei.util.ui.ModulusTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/memuat_map"
+            android:textSize="30sp"
+            android:textColor="@color/colorPrimary"/>
+        <ProgressBar
+            android:id="@+id/progressBar2"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/footBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/transparent"
+        android:clipToPadding="false"
+        android:paddingTop="@dimen/space_double">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:paddingTop="@dimen/space_double"
+            app:cardElevation="@dimen/space_triple"
+            android:visibility="gone">
+
+            <include
+                android:id="@+id/footBar"
+                layout="@layout/l_menu_v3" />
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/containerMap"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <com.mogawe.mosurvei.util.ui.ModulusToggleButton
+            android:id="@+id/btnCreateRoute"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textOn="Sembunyikan Rute"
+            android:textOff="Tampilkan Rute"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:padding="@dimen/space"
+            android:layout_gravity="center|bottom"
+            android:layout_marginBottom="@dimen/space_quadruple"
+            android:background="@drawable/bg_primary_rounded"/>
+
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="@dimen/space_triple"
+            android:layout_height="@dimen/space_triple"
+            android:layout_marginLeft="@dimen/spacexx"
+            android:layout_marginTop="@dimen/spacexx"
+            android:background="@drawable/ic_arrow_back_black_24dp" />
+
+    </FrameLayout>
+
+</RelativeLayout>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/listContainer">
+
+    <TextView
+        android:id="@+id/txvOrderNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="No. Order : 12334"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txvOrderDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="25 Agustus 2021"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txvOrderNumber" />
+
+    <com.mogawe.mosurvei.util.ui.GalanoTextView
+        android:id="@+id/txvStatusProduk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/shape_rounded"
+        android:backgroundTint="@color/green_500"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:paddingStart="@dimen/space"
+        android:paddingEnd="@dimen/space"
+        android:paddingTop="@dimen/space_quarter"
+        android:paddingBottom="@dimen/space_quarter"
+        android:text="Published"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_tiny"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/txvOrderDate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imvProduct"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:scaleType="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txvOrderDate"
+        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+    <TextView
+        android:id="@+id/txvProductName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="Kemeja Kece 2021"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/btnAction"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imvProduct"
+        app:layout_constraintTop_toBottomOf="@+id/txvOrderDate" />
+
+    <TextView
+        android:id="@+id/txvProductPrice"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="Rp. 40.000"
+        app:layout_constraintEnd_toStartOf="@+id/btnAction"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imvProduct"
+        android:textColor="@color/colorPrimary"/>
+
+    <Button
+        android:id="@+id/btnAction"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/button_primary"
+        android:paddingStart="@dimen/space_double"
+        android:paddingEnd="@dimen/space_double"
+        android:text="Proses Order"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imvProduct" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/round_corner"
+        android:backgroundTint="@color/grey_300"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnAction" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

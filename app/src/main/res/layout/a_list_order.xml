@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.content.supplier.home.ListOrderActivity">
+
+    <include
+        android:id="@+id/appBar"
+        layout="@layout/appbar_light" />
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:layout_below="@+id/appBar"
+        android:id="@+id/swipe_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/space"
+            android:paddingEnd="@dimen/space"
+            android:paddingTop="@dimen/space">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/space"
+                android:background="@drawable/bg_stroke_grey_rectangle_white_color">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingEnd="@dimen/space_half">
+
+                    <ImageView
+                        android:id="@+id/imvSearch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/places_ic_search"
+                        android:layout_marginStart="@dimen/space_half"
+                        app:tint="@color/grey_500" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="@dimen/space_half"
+                        android:backgroundTint="@color/grey_200"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/space"
+                        android:visibility="visible"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:paddingStart="-2dp">
+
+                        <EditText
+                            android:id="@+id/edtOrderSearch"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/space"
+                            android:layout_marginEnd="@dimen/space"
+                            android:layout_weight="1"
+                            android:background="@color/transparent"
+                            android:hint="Cari Order"
+                            android:imeOptions="actionSearch"
+                            android:inputType="text"/>
+
+                        <ImageView
+                            android:id="@+id/imvClearEdtText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_close_black_24dp"
+                            app:tint="@color/black"
+                            android:visibility="gone"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/lnrSpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="@dimen/space"
+                android:background="@drawable/bg_status_gawean_tab"
+                android:layout_marginTop="@dimen/space"
+                android:layout_marginBottom="@dimen/space"
+                android:visibility="visible">
+
+                <Spinner
+                    android:id="@+id/spinnerSortByStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/sortby_order_status"
+                    android:padding="@dimen/space_half"/>
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvOrder"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_margin="@dimen/space"
+                android:id="@+id/lnrNotFound"
+                android:visibility="gone">
+
+                <com.mogawe.mosurvei.util.ui.GalanoTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/info.product_not_found"/>
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/shop"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/space_double"
+                    app:tint="@color/grey_600"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <RelativeLayout
+        android:id="@+id/rltInputResi"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent_black"
+        android:clickable="true"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/lnrChatBackground"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="300dp"
+            android:background="@drawable/bg_dialog_top_rounded"
+            android:clickable="true"
+            android:orientation="vertical"
+            android:paddingTop="80dp"
+            android:visibility="invisible">
+
+            <com.mogawe.mosurvei.util.ui.GalanoTextView
+                android:id="@+id/txvProductName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/space_double"
+                android:text="Yamaha Mio"
+                android:textColor="@color/black"/>
+
+            <com.mogawe.mosurvei.util.ui.GalanoTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/space_double"
+                android:text="Resi : " />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textContainer"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_marginStart="@dimen/space_double"
+                android:layout_marginEnd="@dimen/space_double"
+                app:counterEnabled="true"
+                app:counterMaxLength="40">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtResi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLength="40"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.mogawe.mosurvei.util.ui.GalanoButton
+                android:id="@+id/btnInputResi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_double"
+                android:background="@color/red_500"
+                android:text="@string/action.inputResi"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

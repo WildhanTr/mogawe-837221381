@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_gravity="center">
+
+    <com.mogawe.mosurvei.util.ui.ModulusTextView
+        android:id="@+id/txvQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_half"
+        android:gravity="center_horizontal"
+        android:textColor="@color/grey_600"
+        android:textSize="@dimen/font_xxbig" />
+
+    <com.mogawe.mosurvei.util.ui.LatoTextView
+        android:id="@+id/txvHint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_half"
+        android:gravity="center_horizontal"
+        android:textColor="@color/grey_600"
+        android:textSize="@dimen/font_medium" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/editTextYear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/space_half"
+            android:layout_marginRight="@dimen/space_half"
+            android:background="@android:color/transparent"
+            android:gravity="center_horizontal"
+            android:hint="@string/hint.year_yyyy"
+            android:inputType="phone"
+            android:maxLength="4"
+            android:selectAllOnFocus="true"
+            android:textColor="@color/grey_800"
+            android:textSize="@dimen/font_xbig"
+            tools:ignore="Autofill" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/char.slash"
+            android:textColor="@color/grey_800"
+            android:textSize="@dimen/font_xbig" />
+
+        <EditText
+            android:id="@+id/editTextMonth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/space_half"
+            android:layout_marginRight="@dimen/space_half"
+            android:background="@android:color/transparent"
+            android:gravity="center_horizontal"
+            android:hint="@string/hint.month_mm"
+            android:inputType="phone"
+            android:maxLength="2"
+            android:selectAllOnFocus="true"
+            android:textColor="@color/grey_800"
+            android:textSize="@dimen/font_xbig"
+            tools:ignore="Autofill" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/char.slash"
+            android:textColor="@color/grey_800"
+            android:textSize="@dimen/font_xbig" />
+
+        <EditText
+            android:id="@+id/editTextDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/space_half"
+            android:layout_marginRight="@dimen/space_half"
+            android:background="@android:color/transparent"
+            android:gravity="center_horizontal"
+            android:hint="@string/hint.date_dd"
+            android:inputType="phone"
+            android:maxLength="2"
+            android:selectAllOnFocus="true"
+            android:textColor="@color/grey_800"
+            android:textSize="@dimen/font_xbig"
+            tools:ignore="Autofill,TextFields" />
+
+    </LinearLayout>
+
+
+    <com.mogawe.mosurvei.util.ui.LatoTextView
+        android:id="@+id/txvError"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_half"
+        android:gravity="center_horizontal"
+        android:textColor="@color/red_500"
+        android:textSize="@dimen/font_medium" />
+</LinearLayout>

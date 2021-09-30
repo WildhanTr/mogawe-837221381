@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/lnrTopSide"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/space_triple"
+            android:paddingRight="@dimen/space_triple"
+            android:visibility="visible"
+            android:paddingTop="@dimen/space_triple">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="8"
+                android:orientation="vertical">
+
+                <com.mogawe.mosurvei.util.ui.GalanoTextView
+                    android:id="@+id/txvTitleAd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Tittle"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_big" />
+
+                <com.mogawe.mosurvei.util.ui.GalanoLightTextView
+                    android:id="@+id/txvDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space"
+                    android:ellipsize="end"
+                    android:maxLines="3"
+                    android:text="Description" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/txvSeeAll"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <com.mogawe.mosurvei.util.ui.GalanoTextView
+                    android:id="@+id/tulisanMerah"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lihat Semua"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!--        <View-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="@dimen/space_quarter"-->
+        <!--            android:layout_marginBottom="@dimen/space_double"-->
+        <!--            android:layout_marginStart="@dimen/space"-->
+        <!--            android:layout_marginEnd="@dimen/space"-->
+        <!--            android:background="@color/grey_300"/>-->
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_ads"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/space_xdouble"
+            android:paddingTop="@dimen/space"
+            android:paddingEnd="@dimen/space_triple"
+            android:paddingBottom="@dimen/space"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+        <!--        <View-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="@dimen/space_quarter"-->
+        <!--            android:layout_marginTop="@dimen/space_double"-->
+        <!--            android:layout_marginStart="@dimen/space"-->
+        <!--            android:layout_marginEnd="@dimen/space"-->
+        <!--            android:background="@color/grey_300"/>-->
+
+    </LinearLayout>
+</LinearLayout>

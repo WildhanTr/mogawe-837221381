@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <com.mogawe.mosurvei.util.ui.GalanoButton
+        android:id="@+id/btnAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="Tambah Produk"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:padding="@dimen/space"
+        android:background="@drawable/button_primary"
+        android:textSize="@dimen/font_small"
+        android:layout_marginBottom="@dimen/space"
+        android:textAllCaps="false"/>
+
+    <com.mogawe.mosurvei.util.ui.GalanoButton
+        android:id="@+id/btnAddNull"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="Tambah Produk Kosong"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:padding="@dimen/space"
+        android:background="@drawable/button_primary"
+        android:layout_marginBottom="@dimen/space"
+        android:textAllCaps="false"
+        android:textSize="@dimen/font_small" />
+
+    <com.mogawe.mosurvei.util.ui.GalanoButton
+        android:id="@+id/btnDuplicate"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="Tambah Produk Sebelumnya"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:padding="@dimen/space"
+        android:background="@drawable/button_primary"
+        android:layout_marginBottom="@dimen/space"
+        android:textAllCaps="false"
+        android:textSize="@dimen/font_small" />
+
+</LinearLayout>

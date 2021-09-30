@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.content.gawean.gaweanku.GaweanKuFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <include
+        android:id="@+id/appBar"
+        layout="@layout/appbar_light"/>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_below="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/coorLayout"
+        android:visibility="visible">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/contentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/space_xdouble">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight=".5"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="@dimen/spacex">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:id="@+id/sortBy"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Sort By : "
+                                android:textSize="14dp" />
+
+                            <Spinner
+                                android:id="@+id/spinnerSortBy"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:entries="@array/sortby_gawean"/>
+                        </LinearLayout>
+
+
+                        <!--<TextView-->
+                        <!--android:id="@+id/sortType"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_weight="3"-->
+                        <!--android:gravity="right"-->
+                        <!--android:text="ASC"-->
+                        <!--android:textSize="14dp" />-->
+                        <!--<com.mogawe.mosurvei.util.ui.ModulusToggleButton-->
+                        <!--android:id="@+id/sortGaweanType"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:textStyle="bold"-->
+                        <!--android:textOff="Asc"-->
+                        <!--android:textOn="Desc"-->
+                        <!--android:textAllCaps="false"-->
+                        <!--android:backgroundTint="@color/red_400"-->
+                        <!--android:textColor="@color/white"/>-->
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/contentGaweanAll"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight=".9"
+                    android:orientation="vertical">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvGaweanAll"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingBottom="75dp"
+                        android:paddingStart="@dimen/space"
+                        android:paddingEnd="@dimen/space"/>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</RelativeLayout>

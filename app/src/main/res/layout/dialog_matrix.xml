@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/round_corner"
+    android:orientation="vertical"
+    android:backgroundTint="@color/white"
+    android:padding="@dimen/space">
+
+    <com.mogawe.mosurvei.util.ui.GalanoTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:text="Isi jawaban langsung semua pertanyaan "
+        android:layout_margin="@dimen/space_double"/>
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/space_double">
+
+
+
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/space_double"
+        android:orientation="horizontal">
+
+        <com.mogawe.mosurvei.util.ui.GalanoButton
+            android:id="@+id/btnBatal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Batal"
+            android:background="@null"
+            android:textAllCaps="false"
+            android:textColor="@color/grey_500"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <com.mogawe.mosurvei.util.ui.GalanoButton
+            android:id="@+id/btnSimpan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Simpan"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:background="@drawable/button_primary"/>
+
+    </LinearLayout>
+
+</LinearLayout>

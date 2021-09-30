@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/a_webview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mogawe.mosurvei.view.shared.webview.WebviewActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/appBar"
+            layout="@layout/appbar_light" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <im.delight.android.webview.AdvancedWebView
+                android:id="@+id/webview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <ProgressBar
+                android:id="@+id/pb"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center" />
+
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imvScreenCapture"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/space_quadruple"
+        android:visibility="gone"
+        android:background="@color/black2_transparent"/>
+
+    <LinearLayout
+        android:id="@+id/lnrButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <ImageButton
+            android:id="@+id/btnCancel"
+            android:padding="@dimen/space_double"
+            android:background="@drawable/button_disabled"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/abc_ic_clear_material"
+            android:layout_margin="@dimen/space_double"/>
+
+        <ImageButton
+            android:id="@+id/btnCheck"
+            android:layout_margin="@dimen/space_double"
+            android:padding="@dimen/space_double"
+            android:background="@drawable/button_primary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_check_black_24dp"
+            android:tint="@color/white"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

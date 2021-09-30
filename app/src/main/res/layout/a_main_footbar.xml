@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lnrMenu"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:background="@color/white"
+    android:baselineAligned="false"
+    android:gravity="bottom"
+    android:minHeight="56dp"
+    android:orientation="horizontal"
+    android:padding="@dimen/space">
+
+    <LinearLayout
+        android:id="@+id/btnHistory"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imvHistory"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:contentDescription="@string/action.history"
+            android:src="@drawable/ic_bayaran"
+            android:tint="@color/grey_600" />
+
+        <com.mogawe.mosurvei.util.ui.GalanoLightTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_half"
+            android:text="@string/action.history"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/btnGawean"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imvGawean"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:contentDescription="MoGawe"
+            android:src="@drawable/ic_gawean"
+            android:tint="@color/grey_600" />
+
+
+        <com.mogawe.mosurvei.util.ui.GalanoLightTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_half"
+            android:text="MoGawe"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/btnProfile"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imvProfile"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:contentDescription="@string/action.profile"
+            android:src="@drawable/ic_profile"
+            android:tint="@color/grey_600" />
+
+        <com.mogawe.mosurvei.util.ui.GalanoLightTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_half"
+            android:text="Bantuan"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

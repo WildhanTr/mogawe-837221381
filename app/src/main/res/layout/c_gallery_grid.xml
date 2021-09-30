@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mogawe.mosurvei.util.ui.SquareLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/thumbnail"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_margin="@dimen/space_double"
+        android:background="@drawable/bg_white_rounded_stroke"
+        android:contentDescription="@string/app_name"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_camera" />
+
+    <ImageView
+        android:id="@+id/imvShare"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/button_white_oval"
+        android:contentDescription="@string/action.share"
+        android:padding="@dimen/space"
+        android:src="@drawable/ic_share_red_24dp" />
+</com.mogawe.mosurvei.util.ui.SquareLayout>
+
+

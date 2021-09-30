@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.mogawe.mosurvei.playground.AutoFitTextureView
+        android:id="@+id/texture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp" />
+
+    <LinearLayout
+        android:paddingTop="@dimen/space_quadruple"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/btnFlash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_flash_off_black_24dp"/>
+
+    </LinearLayout>
+
+    <com.mogawe.mosurvei.util.ui.ModulusTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MoGawe Camera"
+        android:layout_above="@+id/line"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="@dimen/space"
+        android:textStyle="bold"
+        android:textSize="@dimen/font_medium"/>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/grey_300"
+        android:layout_above="@+id/picture"
+        android:layout_marginBottom="@dimen/space_double"/>
+
+    <ImageView
+        android:id="@+id/picture"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/space_quadruple"
+        android:text="Photo"
+        android:src="@drawable/bg_circle_camera"/>
+
+    <ImageButton
+        android:id="@+id/btnSwitchCamera"
+        style="@android:style/Widget.Material.Light.Button.Borderless"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center_vertical|right"
+        android:layout_marginBottom="40dp"
+        android:contentDescription="@string/app_name"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_cached_white_32dp"
+        android:tint="@color/black"
+        android:layout_marginRight="@dimen/space_double"/>
+
+    <ImageButton
+        android:id="@+id/btnBackCamera"
+        style="@android:style/Widget.Material.Light.Button.Borderless"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center_vertical|left"
+        android:layout_marginBottom="40dp"
+        android:contentDescription="@string/app_name"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_arrow_back_black_24dp"
+        android:layout_marginLeft="@dimen/space_double"/>
+
+
+</RelativeLayout>

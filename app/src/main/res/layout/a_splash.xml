@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.mogawe.mosurvei.view.content.intro.SplashActivity">
+
+
+    <com.mogawe.mosurvei.util.MutedVideoView
+        android:id="@+id/videoView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"/>
+
+    <FrameLayout
+        android:id="@+id/placeholder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" android:background="@color/white">
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/lnrUpdateApp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black_transparent"
+        android:visibility="gone">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="@dimen/space_double"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/space_double"
+                android:gravity="center"
+                android:text="@string/update_available"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/font_xbig" />
+
+            <TextView
+                android:id="@+id/txvMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/space_double"
+                android:gravity="center"
+                android:text="@string/update_available_message"
+                android:textSize="@dimen/font_medium" />
+
+            <TextView
+                android:id="@+id/txvMessageForced"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/space_double"
+                android:gravity="center"
+                android:text="@string/update_force"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/font_medium"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btnUpdateApp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/space_double"
+                android:background="@color/colorPrimary"
+                android:text="@string/update_now"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/tvAbaikan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/space"
+                android:gravity="center"
+                android:text="@string/update_later"
+                android:textColor="@color/colorPrimary" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+    <com.mogawe.mosurvei.util.ui.LatoTextView
+        android:id="@+id/txvVersion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/space_quadruple"
+        android:gravity="center_horizontal"
+        android:textColor="@color/colorPrimary"
+        tools:text="Versi 1.0.3" />
+</RelativeLayout>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/coorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/containerMap"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="400dp"
+        app:layout_collapseMode="parallax">
+
+        <!--<com.mogawe.mosurvei.util.ui.ModulusButton-->
+        <!--android:id="@+id/btnFitBounds"-->
+        <!--android:textAllCaps="false"-->
+        <!--android:background="@drawable/button_primary"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="bottom|right"-->
+        <!--android:layout_margin="@dimen/space"-->
+        <!--android:text="Fit Bounds"-->
+        <!--android:textColor="@color/white"-->
+        <!--android:textStyle="bold"/>-->
+
+    </FrameLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/contentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        app:behavior_hideable="false"
+        app:behavior_peekHeight="400dp"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/space_xdouble">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/titleGroup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:text="Gaweanku"
+                        android:textSize="20dp" />
+                    <!--<com.mogawe.mosurvei.util.ui.ModulusButton-->
+                    <!--android:id="@+id/btnCreateRoute"-->
+                    <!--android:layout_toRightOf="@id/fitBounds"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="Route"/>-->
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="right">
+
+                        <Switch
+                            android:id="@+id/btnCreateRoute"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="false"
+                            android:text="Tampilkan Rute"
+                            android:textOff="No"
+                            android:textOn="Yes" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="@dimen/spacex"
+                    android:layout_weight=".5"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/sortBy"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Sort By : "
+                            android:textSize="14dp" />
+
+                        <Spinner
+                            android:id="@+id/spinnerSortBy"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/sortby_gawean" />
+                    </LinearLayout>
+
+
+                    <!--<TextView-->
+                    <!--android:id="@+id/sortType"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_weight="3"-->
+                    <!--android:gravity="right"-->
+                    <!--android:text="ASC"-->
+                    <!--android:textSize="14dp" />-->
+                    <!--<com.mogawe.mosurvei.util.ui.ModulusToggleButton-->
+                    <!--android:id="@+id/sortGaweanType"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:textStyle="bold"-->
+                    <!--android:textOff="Asc"-->
+                    <!--android:textOn="Desc"-->
+                    <!--android:textAllCaps="false"-->
+                    <!--android:backgroundTint="@color/red_400"-->
+                    <!--android:textColor="@color/white"/>-->
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/contentGaweanAll"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".9"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvGaweanAll"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

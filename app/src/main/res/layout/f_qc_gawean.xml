@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.content.gawean.history.QCGaweanFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabRecycle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="@dimen/fab_margin"
+        android:layout_marginBottom="75dp"
+        android:src="@drawable/ic_refresh" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/contentHistoryGawean"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <!--<ScrollView-->
+            <!--android:id="@+id/scrGaweanHistory"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:scrollbars="none">-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvGaweanHistory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clipToPadding="false"
+                    android:paddingBottom="75dp"
+                    android:paddingTop="62dp"
+                    android:paddingStart="@dimen/space_double"
+                    android:paddingEnd="@dimen/space_double"/>
+
+                <com.mogawe.mosurvei.util.ui.LatoTextView
+                    android:id="@+id/txvNoHistory"
+                    android:layout_marginTop="@dimen/space_double"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tidak ada history"
+                    android:textStyle="italic"
+                    android:layout_gravity="center"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/lnrFooterLoadMoreHistory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rvGaweanHistory"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <com.mogawe.mosurvei.util.ui.LatoMaterialButton
+                        android:id="@+id/btnLoadMore"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:background="@color/colorPrimary"
+                        android:text="Load More"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white" />
+
+                    <RelativeLayout
+                        android:id="@+id/rltLoadingLoadMore"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ProgressBar
+                            android:id="@+id/progressBarLoadMore"
+                            style="?android:attr/progressBarStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--</ScrollView>-->
+
+
+            <RelativeLayout
+                android:id="@+id/rltloading"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:visibility="gone">
+
+                <ProgressBar
+                    android:id="@+id/progressBarHistory"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center" />
+
+                <com.mogawe.mosurvei.util.ui.LatoTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/progressBarHistory"
+                    android:gravity="center"
+                    android:text="Please Wait..." />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/lnrTryAgain"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <com.mogawe.mosurvei.util.ui.LatoTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gagal memuat" />
+
+                <com.mogawe.mosurvei.util.ui.LatoMaterialButton
+                    android:id="@+id/btnTryAgain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_primary_rounded"
+                    android:padding="@dimen/space_double"
+                    android:text="Coba lagi"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lnrHistorySearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/space_double"
+                android:paddingEnd="@dimen/space_double">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/space"
+                    app:cardCornerRadius="@dimen/space_half">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingEnd="@dimen/space_half">
+
+                        <ImageView
+                            android:id="@+id/imvSearch"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/places_ic_search"
+                            android:layout_marginStart="@dimen/space_half"
+                            app:tint="@color/black" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginEnd="@dimen/space_half"
+                            android:backgroundTint="@color/grey_200"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/space"
+                            android:visibility="visible"
+                            android:paddingStart="-2dp">
+
+                            <EditText
+                                android:id="@+id/edtHistorySearch"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/space"
+                                android:layout_marginEnd="@dimen/space"
+                                android:layout_weight="1"
+                                android:background="@color/transparent"
+                                android:hint="Cari Gawean"
+                                android:imeOptions="actionDone"
+                                android:inputType="text"/>
+
+                            <ImageView
+                                android:id="@+id/imvClearEdtText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_close_black_24dp"
+                                android:tint="@color/black"
+                                android:visibility="gone"/>
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</FrameLayout>

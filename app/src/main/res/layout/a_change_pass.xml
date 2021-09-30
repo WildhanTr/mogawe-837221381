@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mogawe.mosurvei.view.content.user.LoginActivity">
+
+    <include
+        android:id="@+id/appBar"
+        layout="@layout/appbar_light" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/appBar"
+        android:layout_marginTop="@dimen/space_quadruple">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:descendantFocusability="beforeDescendants"
+            android:focusableInTouchMode="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="@dimen/space_quadruple">
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/edtPasswordWrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/edtPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/old_password"
+                    android:inputType="textPassword"
+                    android:text="" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/edtNewPasswordWrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/edtNewPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/new_password"
+                    android:inputType="textPassword"
+                    android:text="" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/edtConfirmPasswordWrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/edtConfirmPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/confirm_new_password"
+                    android:inputType="textPassword"
+                    android:text="" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <Button
+                android:id="@+id/btnChangePassword"
+                style="@style/GenericRaisedButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_quadruple"
+                android:text="@string/action.change_password"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

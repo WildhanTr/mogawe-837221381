@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_gravity="center">
+
+    <com.mogawe.mosurvei.util.ui.ModulusTextView
+        android:id="@+id/txvQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_half"
+        android:gravity="center_horizontal"
+        android:textColor="@color/grey_600"
+        android:textSize="@dimen/font_xxbig" />
+
+    <com.mogawe.mosurvei.util.ui.LatoTextView
+        android:id="@+id/txvHint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_half"
+        android:gravity="center_horizontal"
+        android:textColor="@color/grey_600"
+        android:textSize="@dimen/font_medium" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/space_double"
+        android:layout_marginRight="@dimen/space_double"
+        android:background="@android:color/transparent"
+        android:gravity="center_horizontal"
+        android:hint="@string/type_your_answer"
+        android:textColor="@color/grey_800"
+        android:textSize="@dimen/font_xbig" />
+
+
+    <com.mogawe.mosurvei.util.ui.LatoTextView
+        android:id="@+id/txvError"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_half"
+        android:gravity="center_horizontal"
+        android:textColor="@color/red_500"
+        android:textSize="@dimen/font_medium" />
+</LinearLayout>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/space"
+    android:orientation="vertical"
+    android:id="@+id/lnrButton">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@drawable/im_ig_post_header" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imvTutorial"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_bgform"
+            android:visibility="visible" />
+
+        <com.mogawe.mosurvei.util.ui.GalanoButton
+            android:id="@+id/button"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/action.touch_tag_location"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:background="@color/colorPrimary"
+            android:paddingStart="@dimen/space"
+            android:foreground="?attr/selectableItemBackground"/>
+
+    </LinearLayout>
+
+
+    <FrameLayout
+        android:id="@+id/frameWebView"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:visibility="gone">
+
+        <WebView
+            android:id="@+id/webviewYoutubeTutorial"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ProgressBar
+            android:id="@+id/pbFact"
+            android:layout_width="@dimen/space_quadruple"
+            android:layout_height="@dimen/space_quadruple"
+            android:layout_gravity="center" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey_300" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/im_ig_post_actions" />
+
+        <com.mogawe.mosurvei.util.ui.LatoTextView
+            android:id="@+id/txvHint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_double"
+            android:layout_marginTop="@dimen/space_half"
+            android:layout_marginEnd="@dimen/space_double"
+            android:text="Klik tombol simpan di atas, untuk selesai"
+            android:textColor="@color/black" />
+
+        <com.mogawe.mosurvei.util.ui.LatoTextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_double"
+            android:layout_marginEnd="@dimen/space_double"
+            android:text="Selamat bekerja ^_^" />
+
+    </LinearLayout>
+
+</LinearLayout>

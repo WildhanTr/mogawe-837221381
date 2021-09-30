@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.content.profile.deals.DealsReedemFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/app_bar_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:fitsSystemWindows="true"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+                <com.google.android.material.appbar.CollapsingToolbarLayout
+                    android:id="@+id/collapsing_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fitsSystemWindows="true"
+                    app:contentScrim="@color/white"
+                    app:expandedTitleTextAppearance="@android:color/transparent"
+                    app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                    app:statusBarScrim="@color/white">
+
+                    <ImageView
+                        android:id="@+id/imvDeals"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:background="@color/black_transparent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_bgform" />
+
+                    <androidx.appcompat.widget.Toolbar
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize"
+                        app:layout_collapseMode="pin"
+                        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+                        <ImageView
+                            android:id="@+id/buttonBack"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginStart="0dp"
+                            android:padding="@dimen/space_quarter"
+                            android:background="@drawable/bg_circle_black_transparent"
+                            app:srcCompat="@drawable/ic_arrow_back_white_24dp" />
+
+                    </androidx.appcompat.widget.Toolbar>
+                </com.google.android.material.appbar.CollapsingToolbarLayout>
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.mogawe.mosurvei.util.ui.GalanoLightTextView
+                        android:id="@+id/txvDeals"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/space_double"
+                        android:text="Voucher MoGawe 50.000"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/font_xxbig"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="@dimen/space_double"
+                            android:src="@drawable/ic_card_giftcard_white_24dp"
+                            app:tint="@color/black" />
+
+                        <com.mogawe.mosurvei.util.ui.GalanoLightTextView
+                            android:id="@+id/txvDealsPoint"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/space"
+                            android:text="100 pts"
+                            android:textSize="@dimen/font_big"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.mogawe.mosurvei.util.ui.GalanoLightTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/space_double"
+                            android:layout_weight="1"
+                            android:text="Tersedia dari"
+                            android:textStyle="bold" />
+
+
+                        <com.mogawe.mosurvei.util.ui.GalanoLightTextView
+                            android:id="@+id/txvAvailableDate"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/space_double"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:text="25-08-2019"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.mogawe.mosurvei.util.ui.GalanoLightTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/space_double"
+                            android:layout_marginLeft="@dimen/space_double"
+                            android:layout_weight="1"
+                            android:text="Stock Tersedia"
+                            android:textStyle="bold" />
+
+
+                        <com.mogawe.mosurvei.util.ui.GalanoLightTextView
+                            android:id="@+id/txvStockVoucher"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/space_double"
+                            android:layout_marginLeft="@dimen/space_double"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:text="10"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_margin="@dimen/space"
+                        android:background="@color/grey_300" />
+
+                    <com.mogawe.mosurvei.util.ui.GalanoTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/space_double"
+                        android:layout_marginTop="@dimen/space_double"
+                        android:layout_marginRight="@dimen/space_double"
+                        android:textSize="@dimen/font_medium"
+                        android:text="Deskripsi Penawaran"
+                        android:textColor="@color/black" />
+
+                    <com.mogawe.mosurvei.util.ui.GalanoLightTextView
+                        android:id="@+id/txvDescDeals"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/space_double"
+                        android:text=""
+                        android:textSize="@dimen/font_medium"
+                        android:textColor="@color/grey_600"
+                        android:textStyle="bold" />
+
+                    <com.mogawe.mosurvei.util.ui.GalanoTextView
+                        android:id="@+id/txvTitleTermsAndCondsDeals"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/space_double"
+                        android:layout_marginTop="@dimen/space_double"
+                        android:layout_marginRight="@dimen/space_double"
+                        android:text="Syarat dan ketentuan : "
+                        android:textColor="@color/black"
+                        android:visibility="gone" />
+
+                    <com.mogawe.mosurvei.util.ui.GalanoLightTextView
+                        android:id="@+id/txvTermsAndCondsDeals"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/space_double"
+                        android:text=""
+                        android:textColor="@color/grey_600"
+                        android:textSize="@dimen/font_medium"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                    <com.mogawe.mosurvei.util.ui.GalanoTextView
+                        android:id="@+id/txvTitleHowToUse"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/space_double"
+                        android:layout_marginTop="@dimen/space_double"
+                        android:layout_marginRight="@dimen/space_double"
+                        android:text="Cara Penggunaan :"
+                        android:textSize="@dimen/font_medium"
+                        android:textColor="@color/black"
+                        android:visibility="visible" />
+
+                    <com.mogawe.mosurvei.util.ui.GalanoLightTextView
+                        android:id="@+id/txvHowToUse"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/space_double"
+                        android:text="@string/useVoucher"
+                        android:textColor="@color/grey_600"
+                        android:textStyle="bold"
+                        android:visibility="visible"
+                        android:textSize="@dimen/font_medium"
+                        android:paddingBottom="82dp" />
+
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+        <com.mogawe.mosurvei.util.ui.GalanoButton
+            android:id="@+id/btnRedeemPoint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/space"
+            android:backgroundTint="@color/colorPrimary"
+            android:padding="@dimen/space_triple"
+            android:text="Tukar"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+</FrameLayout>

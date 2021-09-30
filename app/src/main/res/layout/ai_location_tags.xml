@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@drawable/bg_menu_points"
+    android:layout_marginEnd="@dimen/space_half"
+    android:layout_marginStart="@dimen/space"
+    android:layout_marginBottom="@dimen/space"
+    android:layout_marginTop="@dimen/space">
+
+    <com.mogawe.mosurvei.util.ui.GalanoTextView
+        android:id="@+id/locationName"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="Depo Kalimalang"
+        android:padding="@dimen/space"
+        android:textColor="@color/colorPrimary"
+        android:gravity="center"
+        android:textSize="@dimen/font_small"/>
+
+<!--    <ImageView-->
+<!--        android:id="@+id/imvCloseTags"-->
+<!--        android:layout_width="20dp"-->
+<!--        android:layout_height="20dp"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:src="@drawable/ic_close_black_24dp"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:layout_marginEnd="@dimen/space" />-->
+
+
+</LinearLayout>

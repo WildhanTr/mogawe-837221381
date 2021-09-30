@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_section_form"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:layout_below="@+id/appBar"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    tools:context=".view.content.form.basic.SectionFormFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white_transparent_2" />
+
+    <LinearLayout
+        android:id="@+id/pala"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/space_quadruple"
+        android:visibility="gone">
+
+        <com.mogawe.mosurvei.util.ui.GalanoTextView
+            android:id="@+id/txvSectionTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/font_xbig"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewSection"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/pala" />
+
+</RelativeLayout>

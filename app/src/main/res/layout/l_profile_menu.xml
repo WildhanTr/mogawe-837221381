@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="?attr/actionBarSize"
+    android:orientation="vertical"
+    android:id="@+id/lnrProfileMenu"
+    android:gravity="center_vertical"
+    android:layout_marginEnd="@dimen/space_double">
+
+    <com.mogawe.mosurvei.util.ui.LatoTextView
+        android:id="@+id/txvTitleProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/action.saldo"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
+        android:textSize="@dimen/font_small"/>
+
+    <com.mogawe.mosurvei.util.ui.LatoTextView
+        android:id="@+id/txvTitleValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:text="Rp 3.200.000"
+        android:textSize="@dimen/font_reg"/>
+
+</LinearLayout>

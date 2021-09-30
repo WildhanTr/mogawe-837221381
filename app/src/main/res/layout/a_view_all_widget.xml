@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.content.home.ViewAllWidgetActivity"
+    android:clipToPadding="false"
+    android:orientation="vertical"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <include
+        android:id="@+id/appBar"
+        layout="@layout/appbar_light" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/space_double"
+            app:cardCornerRadius="@dimen/spacex"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingEnd="@dimen/space_half">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="@dimen/space_half"
+                    android:backgroundTint="@color/grey_200"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/space"
+                    android:visibility="visible"
+                    android:paddingStart="-2dp"
+                    android:background="@drawable/button_disabled">
+
+                    <EditText
+                        android:id="@+id/edtGaweanSearch"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/space"
+                        android:layout_marginEnd="@dimen/space"
+                        android:layout_weight="1"
+                        android:background="@color/transparent"
+                        android:hint="Cari.."
+                        android:imeOptions="actionDone"
+                        android:inputType="text"
+                        android:textColorHint="@color/grey_600"/>
+
+                    <ImageView
+                        android:id="@+id/imvClearEdtText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_close_black_24dp"
+                        android:tint="@color/black"
+                        android:visibility="gone"/>
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/imvSearch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/places_ic_search"
+                    android:tint="@color/black" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:clipToPadding="false"
+            android:id="@+id/rvWidgetList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="@dimen/space_xxxtra"
+            android:paddingStart="@dimen/space_double"
+            android:paddingEnd="@dimen/space_double"
+            android:paddingBottom="@dimen/space_double"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

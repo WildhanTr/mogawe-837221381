@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingTop="@dimen/space_double"
+    android:paddingEnd="@dimen/space_double"
+    android:paddingStart="@dimen/space"
+    android:paddingBottom="@dimen/space_double"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imvCheck"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_gravity="top"
+                android:src="@drawable/ic_baseline_check_circle_24"
+                android:layout_marginTop="@dimen/space_quarter"
+                android:layout_marginEnd="@dimen/space_quarter"/>
+
+            <com.mogawe.mosurvei.util.ui.LatoTextView
+                android:id="@+id/txvFactName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Periksa QR Code Promo Cash Back"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_medium" />
+
+        </LinearLayout>
+
+        <com.mogawe.mosurvei.util.ui.GalanoButton
+            android:id="@+id/txvClickHere"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:background="@drawable/button_primary"
+            android:text="Scan QR"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:layout_gravity="top"
+            android:textSize="@dimen/font_small"/>
+
+    </LinearLayout>
+
+
+
+    <ImageView
+        android:id="@+id/imvTutorial"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_marginBottom="@dimen/space_double"
+        android:scaleType="centerInside"
+        android:visibility="gone"
+        android:src="@color/grey_600"/>
+
+    <FrameLayout
+        android:id="@+id/frameWebView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_marginBottom="@dimen/space_double">
+
+        <WebView
+            android:id="@+id/webviewYoutubeTutorial"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            tools:ignore="WebViewLayout" />
+
+        <ProgressBar
+            android:id="@+id/pbFact"
+            android:layout_width="@dimen/space_quadruple"
+            android:layout_height="@dimen/space_quadruple"
+            android:layout_gravity="center" />
+
+    </FrameLayout>
+
+
+    <com.mogawe.mosurvei.util.ui.LatoTextView
+        android:id="@+id/txvLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_half"
+        android:textSize="@dimen/font_xbig"
+        android:layout_marginBottom="@dimen/spacex"
+        android:text="Coba scan teman didepan mu!"
+        android:textColor="@color/black"
+        android:visibility="gone"/>
+
+    <com.mogawe.mosurvei.util.ui.LatoTextView
+        android:id="@+id/txvHint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:text="ini adalah hint, scan qr yang terletak pada rak susu"
+        android:textColor="@color/grey_600"
+        android:textStyle="italic"
+        android:layout_marginTop="@dimen/space"
+        android:layout_marginStart="18dp"/>
+
+    <com.mogawe.mosurvei.util.ui.LatoTextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space"
+        tools:text="Description"
+        android:visibility="gone"/>
+
+    <com.mogawe.mosurvei.util.ui.LatoTextView
+        android:layout_marginTop="12dp"
+        android:id="@+id/txvHintOld"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="@color/grey_600"
+        android:layout_marginStart="@dimen/space_half"
+        android:visibility="gone"/>
+
+    <RelativeLayout
+        android:id="@+id/rltScanQr"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/space"
+        android:padding="@dimen/space_half"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/imvScanQr"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/space_double"
+            android:src="@drawable/ic_im_qr_touchme"
+            android:visibility="gone"/>
+
+        <com.mogawe.mosurvei.util.ui.GalanoTextView
+            android:id="@+id/txvClickHereOld"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Click Here!"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_xbig"
+            android:textStyle="bold"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+    <com.mogawe.mosurvei.util.ui.LatoTextView
+        android:id="@+id/txvInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="18dp"/>
+
+</LinearLayout>

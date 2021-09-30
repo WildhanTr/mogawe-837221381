@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.content.chat.ChatListActivity">
+
+    <include
+        android:id="@+id/appBar"
+        layout="@layout/appbar_light" />
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/footBarLayout"
+        android:layout_below="@+id/appBar">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar"
+            app:elevation="0dp">
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                app:tabGravity="fill"
+                app:tabMode="fixed"
+                app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget"
+                app:tabTextColor="@color/colorPrimary" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <LinearLayout
+        android:id="@+id/linEmptyChatRooms"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/qiscus_white"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:layout_below="@+id/appBar">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            app:srcCompat="@drawable/ic_baseline_chat_bubble_outline_24" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:text="Oops!!"
+            android:textColor="#666666"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="40dp"
+            android:gravity="center"
+            android:text="You don’t have any conversation."
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/footBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:clipToPadding="false"
+        android:paddingTop="@dimen/space_double"
+        app:cardElevation="@dimen/space_triple"
+        android:visibility="gone">
+
+        <include
+            android:id="@+id/footBar"
+            layout="@layout/l_menu_v3" />
+
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

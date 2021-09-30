@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <View
+                android:id="@+id/lineView"
+                android:layout_width="1dp"
+                android:layout_height="20dp"
+                android:background="@color/grey_500"
+                android:layout_centerInParent="true"
+                android:layout_below="@+id/thumbnailGawean"/>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/thumbnailGawean"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_interview_marker"
+                android:layout_marginTop="@dimen/space"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.mogawe.mosurvei.util.ui.GalanoTextView
+                android:id="@+id/txvJobName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="center|left"
+                android:maxLines="1"
+                android:padding="4dp"
+                android:text="Observasi SAT 45"
+                android:textColor="@color/black" />
+
+
+            <com.mogawe.mosurvei.util.ui.GalanoLightTextView
+                android:id="@+id/txvJobDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_half"
+                android:layout_marginEnd="@dimen/space_half"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="Lorem ipsumLorem ipsum dolor sit amet.Lorem ipsum dolor sit amet."
+                android:textSize="@dimen/font_small"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvTask"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="13dp" />
+
+</LinearLayout>

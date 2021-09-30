@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:showIn="@layout/a_intro">
+
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/crdLogin"
+        android:background="@color/colorPrimary" />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/crdLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:padding="@dimen/space_double">
+
+            <!--            <LinearLayout-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:orientation="horizontal"-->
+            <!--                android:paddingLeft="15dp"-->
+            <!--                android:paddingTop="@dimen/space_double"-->
+            <!--                android:paddingRight="15dp">-->
+
+            <!--                <com.mogawe.mosurvei.util.ui.GalanoButton-->
+            <!--                    android:id="@+id/btnRegister"-->
+            <!--                    style="?android:attr/borderlessButtonStyle"-->
+            <!--                    android:layout_width="0dp"-->
+            <!--                    android:layout_height="48dp"-->
+            <!--                    android:layout_marginEnd="@dimen/space"-->
+            <!--                    android:layout_weight="1"-->
+            <!--                    android:background="@drawable/button_primary"-->
+            <!--                    android:text="@string/action.register_new"-->
+            <!--                    android:textAllCaps="false"-->
+            <!--                    android:textColor="@color/white" />-->
+
+            <!--                <com.mogawe.mosurvei.util.ui.GalanoButton-->
+            <!--                    android:id="@+id/btnLogin"-->
+            <!--                    style="?android:attr/borderlessButtonStyle"-->
+            <!--                    android:layout_width="0dp"-->
+            <!--                    android:layout_height="48dp"-->
+            <!--                    android:layout_marginStart="@dimen/space"-->
+            <!--                    android:layout_weight="1"-->
+            <!--                    android:background="@drawable/button_white_rounded_white"-->
+            <!--                    android:text="@string/action.login"-->
+            <!--                    android:textAllCaps="false"-->
+            <!--                    android:textColor="@color/colorPrimary" />-->
+
+            <!--            </LinearLayout>-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_double"
+                android:layout_marginBottom="@dimen/space"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/space_double"
+                android:paddingRight="@dimen/space_double">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="@dimen/space_double"
+                    android:layout_marginRight="@dimen/space_double"
+                    android:layout_weight="1"
+                    android:background="@color/grey_600" />
+
+                <com.mogawe.mosurvei.util.ui.GalanoLightTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/or_login_with"
+                    android:textColor="@color/black" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="@dimen/space_double"
+                    android:layout_marginRight="@dimen/space_double"
+                    android:layout_weight="1"
+                    android:background="@color/grey_600" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <LinearLayout
+                    android:id="@+id/btnFacebook"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:background="@drawable/button_blue_fb_oval"
+                        android:contentDescription="@string/app_name"
+                        android:padding="@dimen/space"
+                        android:src="@drawable/ic_facebook" />
+
+                    <com.mogawe.mosurvei.util.ui.GalanoTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/space"
+                        android:text="@string/facebook"
+                        android:textColor="#3c5eaa" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btnGoogle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:background="@drawable/button_white_oval"
+                        android:contentDescription="@string/google"
+                        android:padding="@dimen/space"
+                        android:src="@drawable/ic_google" />
+
+                    <com.mogawe.mosurvei.util.ui.GalanoTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/space"
+                        android:text="@string/google"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btnTwitter"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:background="@drawable/button_blue_twitter_oval"
+                        android:contentDescription="@string/twitter"
+                        android:padding="@dimen/space"
+                        android:src="@drawable/ic_twitter" />
+
+                    <com.mogawe.mosurvei.util.ui.GalanoTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/space"
+                        android:text="@string/twitter"
+                        android:textColor="#55adee" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/crdButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:padding="@dimen/space_double">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:paddingTop="@dimen/space_double"
+                android:paddingRight="15dp">
+
+                <com.mogawe.mosurvei.util.ui.GalanoButton
+                    android:id="@+id/btnMoGawe"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_marginEnd="@dimen/space"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_primary"
+                    android:text="MoGawe"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white" />
+
+                <com.mogawe.mosurvei.util.ui.GalanoButton
+                    android:id="@+id/btnMoBisnis"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="@dimen/space"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_white_rounded_white"
+                    android:text="MoBisnis"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorPrimary" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:id="@+id/lnrIndicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/space_quadruple"
+        android:layout_marginRight="@dimen/space_quadruple"
+        android:layout_marginBottom="@dimen/space_double"
+        android:gravity="center_vertical">
+
+        <com.mogawe.mosurvei.util.ui.GalanoButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:visibility="invisible" />
+
+        <LinearLayout
+            android:id="@+id/layoutDots"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dots_height"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="@dimen/space"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal" />
+
+        <com.mogawe.mosurvei.util.ui.GalanoButton
+            android:id="@+id/btnNext"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:text="@string/action.next"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/lnrLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/space_quadruple"
+        android:layout_marginRight="@dimen/space_quadruple"
+        android:layout_marginBottom="@dimen/space_quadruple"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <com.mogawe.mosurvei.util.ui.GalanoButton
+            android:id="@+id/btnLogin"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/button_primary"
+            android:text="Masuk"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+
+        <com.mogawe.mosurvei.util.ui.GalanoButton
+            android:id="@+id/btnRegister"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="@dimen/space_double"
+            android:background="@drawable/button_white_rounded_white"
+            android:text="Daftar"
+            android:textAllCaps="false"
+            android:textColor="@color/colorPrimary" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

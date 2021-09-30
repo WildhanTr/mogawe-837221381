@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.content.commerce.RequiredAssetsActivity">
+
+    <include
+        android:id="@+id/appBar"
+        layout="@layout/appbar_light" />
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/footBarLayout"
+        android:layout_below="@+id/appBar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/space"
+            android:paddingTop="@dimen/space"
+            android:paddingEnd="@dimen/space">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvCatalog"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:id="@+id/lnrNotFound"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_margin="@dimen/space"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <com.mogawe.mosurvei.util.ui.GalanoTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/info.product_not_found" />
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/space_double"
+                    android:src="@drawable/shop"
+                    app:tint="@color/grey_600" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/footBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:clipToPadding="false"
+        android:paddingTop="@dimen/space_double"
+        app:cardElevation="@dimen/space_triple"
+        android:visibility="gone">
+
+        <include
+            android:id="@+id/footBar"
+            layout="@layout/l_menu_v3" />
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

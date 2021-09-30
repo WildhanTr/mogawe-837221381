@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    tools:context="com.mogawe.mosurvei.view.content.user.RegistrationActivity">
+
+    <include
+        android:id="@+id/appBar"
+        layout="@layout/appbar_translucent" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/appBar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:descendantFocusability="beforeDescendants"
+            android:focusableInTouchMode="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingBottom="32dp"
+            android:paddingRight="32dp"
+            android:paddingLeft="32dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imvProfile"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_gravity="center"
+                android:src="@color/grey_200"
+                android:layout_marginBottom="@dimen/space_double"
+                app:civ_border_color="@color/grey_400"
+                app:civ_border_width="1dp"
+                android:visibility="gone"/>
+
+            <com.mogawe.mosurvei.util.ui.GalanoTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fill_your_data"
+                android:textSize="@dimen/font_xxbig"/>
+
+            <com.mogawe.mosurvei.util.ui.GalanoTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/data_must_be_valid"
+                android:textSize="@dimen/font_medium"/>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/edtFullnameWrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_triple"
+                android:hint="@string/full_name">
+
+                <EditText
+                    android:id="@+id/edtFullname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    tools:ignore="Autofill,LabelFor" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/edtEmailWrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/email">
+
+                <EditText
+                    android:id="@+id/edtEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    tools:ignore="Autofill,LabelFor" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/edtPasswordWrapperWrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/password"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/colorPrimary">
+
+                <EditText
+                    android:id="@+id/edtPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    tools:ignore="Autofill,LabelFor" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.mogawe.mosurvei.util.ui.LatoTextView
+                android:layout_marginTop="@dimen/space_xdouble"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:paddingBottom="0dp"
+                android:text="Punya Kode Referensi? (Optional)"/>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/edtReferalCodeWrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Kode Referensi"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/colorPrimary">
+                <EditText
+                    android:id="@+id/edtReferalCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    tools:ignore="Autofill,LabelFor" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.mogawe.mosurvei.util.ui.LatoTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/optional"
+                android:layout_gravity="left"
+                android:textSize="@dimen/font_small"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_xxtra"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/cbTermsAndConds"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/txvTermsAndConds"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/agree_terms_and_conds"
+                    android:textColor="@color/grey_600"
+                    android:textSize="@dimen/font_small" />
+
+            </LinearLayout>
+
+            <com.mogawe.mosurvei.util.ui.GalanoButton
+                android:id="@+id/btnRegister"
+                style="@style/GenericRaisedButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space"
+                android:layout_marginBottom="@dimen/space_double"
+                android:text="@string/action.register"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_xmedium"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

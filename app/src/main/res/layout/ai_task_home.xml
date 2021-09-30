@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardJobList"
+    android:layout_width="264dp"
+    android:layout_height="148dp"
+    android:layout_marginEnd="@dimen/space_double"
+    card_view:cardCornerRadius="12dp"
+    card_view:cardElevation="3dp"
+    android:foreground="?attr/selectableItemBackground">
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shmGawean"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/space_half"
+        android:orientation="vertical"
+        tools:duration="800"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <include layout="@layout/shm_load_single_gawean" />
+        </LinearLayout>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <LinearLayout
+        android:id="@+id/lnrGawean"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3">
+
+            <ImageView
+                android:id="@+id/imvThumbnailJob"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                card_view:srcCompat="@drawable/ic_interview_marker" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentBottom="true"
+                android:background="@color/black_transparent"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/btnInfoJob"
+                    android:layout_margin="@dimen/space_half"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center|top"
+                    android:tint="@color/white"
+                    card_view:srcCompat="@drawable/ic_info_outline_black_24dp"
+                    android:visibility="gone"/>
+
+                <ImageView
+                    android:id="@+id/btnShare"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_margin="@dimen/space_half"
+                    android:layout_gravity="center|top"
+                    android:tint="@color/white"
+                    card_view:srcCompat="@drawable/ic_share_red_24dp" />
+
+                <ImageView
+                    android:visibility="gone"
+                    android:id="@+id/btnDownloadQuest"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_margin="@dimen/space_half"
+                    android:layout_gravity="center|top"
+                    android:tint="@color/white"
+                    card_view:srcCompat="@drawable/ic_file_download_black_24dp" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="7"
+            android:orientation="vertical">
+
+            <ProgressBar
+                android:id="@+id/pgbLimit"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:max="6"
+                android:progress="6"
+                android:scaleY="2"
+                android:backgroundTint="@color/transparent"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="@dimen/space">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2">
+
+                    <com.mogawe.mosurvei.util.ui.GalanoTextView
+                        android:id="@+id/txvJobName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="Demo"
+                        android:textSize="@dimen/font_medium"/>
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="right">
+
+                        <ImageView
+                            android:id="@+id/btnPinGawean"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            card_view:srcCompat="@drawable/ic_pin_unactive_red_24dp" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+
+                <com.mogawe.mosurvei.util.ui.GalanoLightTextView
+                    android:id="@+id/txvJobDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="4"
+                    android:ellipsize="end"
+                    android:maxLines="3"
+                    android:text="Demo tiger"
+                    android:textSize="12sp"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:id="@+id/txvExpiryDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:maxLines="3"
+                    android:gravity="bottom"
+                    android:text="Berakhir 3 hari lagi"
+                    android:textSize="@dimen/font_tiny" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|bottom">
+
+                        <ImageView
+                            android:id="@+id/btnFavoriteSubmit"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:visibility="gone"
+                            card_view:srcCompat="@drawable/ic_favorite_unactive_red_24dp" />
+
+                        <com.mogawe.mosurvei.util.ui.LatoTextView
+                            android:id="@+id/txvFavoriteCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="200"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center_vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <com.mogawe.mosurvei.util.ui.LatoTextView
+                                android:id="@+id/txvStatusWaiting"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_gravity="right"
+                                android:text="Menunggu.."
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                android:visibility="gone"/>
+
+                            <LinearLayout
+                                android:id="@+id/lnrDistance"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="horizontal"
+                                android:paddingLeft="@dimen/space"
+                                android:paddingRight="@dimen/space"
+                                android:paddingBottom="@dimen/space_half"
+                                android:gravity="right"
+                                android:visibility="gone">
+
+                                <ImageView
+                                    android:id="@+id/imvLocationIcon"
+                                    android:layout_width="10dp"
+                                    android:layout_height="10dp"
+                                    android:src="@drawable/ic_location_on_32px"
+                                    android:tint="@color/green_600" />
+
+                                <com.mogawe.mosurvei.util.ui.LatoTextView
+                                    android:id="@+id/txvDistance"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:ellipsize="end"
+                                    android:maxLines="3"
+                                    android:text="0.7km"
+                                    android:textColor="@color/green_600"
+                                    android:textSize="8dp" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/btnCommitGawean"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/lnrFeePoint"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="4dp"
+                                android:orientation="horizontal">
+                                <LinearLayout
+                                    android:id="@+id/lnrFeePart"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="6"
+                                    android:padding="@dimen/space_half"
+                                    android:background="@drawable/bg_menu_balance_half"
+                                    android:gravity="center">
+                                    <com.mogawe.mosurvei.util.ui.LatoTextView
+                                        android:id="@+id/txvFeePart"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/font_small"
+                                        android:text=""/>
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:id="@+id/lnrPointPart"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="4"
+                                    android:padding="@dimen/space_half"
+                                    android:background="@drawable/bg_menu_points_half"
+                                    android:gravity="center">
+                                    <com.mogawe.mosurvei.util.ui.LatoTextView
+                                        android:id="@+id/txvPointPart"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textColor="@color/colorPrimary"
+                                        android:textSize="@dimen/font_small"
+                                        android:text=""/>
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <!--<com.mogawe.mosurvei.util.ui.LatoMaterialButton-->
+                                <!--android:id="@+id/btnCommitGawean"-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="24dp"-->
+                                <!--android:layout_marginBottom="4dp"-->
+                                <!--android:background="@drawable/bg_menu_on"-->
+                                <!--android:elevation="@dimen/space"-->
+                                <!--android:fontFamily="sans-serif-light"-->
+                                <!--android:gravity="center"-->
+                                <!--android:minWidth="90dp"-->
+                                <!--android:text="Rp.20000"-->
+                                <!--android:textAllCaps="false"-->
+                                <!--android:textColor="@color/white" />-->
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.content.chat.ChatListOpen">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/footBarLayout"
+        android:layout_below="@+id/appBar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvChatList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <LinearLayout
+                android:id="@+id/linEmptyChatRooms"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/qiscus_white"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    app:srcCompat="@drawable/flat_chat" />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:gravity="center"
+                    android:text="Oops!!"
+                    android:textColor="#666666"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginRight="40dp"
+                    android:gravity="center"
+                    android:text="You don’t have any conversation."
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</FrameLayout>

@@ -1,0 +1,748 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">MoGawe</string>
+
+    <string name="hint_nama_produk">Masukkan Nama Produk</string>
+    <string name="hint_deskripsi_produk">Masukkan Deskripsi Produk, deskripsi yang detail akan membantu peluang produk anda terjual lebih besar</string>
+    <string name="hint_youtube_url">Masukkan Youtube Url</string>
+    <string name="hint_brand_produk">Masukkan Brand Produk</string>
+
+    <string name="address">Alamat</string>
+    <string name="address_street">Jalan</string>
+    <string name="address_no">Nomor/Kavling</string>
+    <string name="address_subdistrict">Kelurahan</string>
+    <string name="address_district">Kecamatan</string>
+    <string name="address_city">Kota</string>
+    <string name="address_province">Provinsi</string>
+    <string name="address_post_code">Kode Pos</string>
+    <string name="add_detail_address">Tambah detail alamat</string>
+    <string name="agree_terms_and_conds">Saya sudah membaca dan setuju dengan &lt;u>&lt;b>\"Perjanjian kerja sama kemitraan Mogawe\"&lt;/b>&lt;/u>.</string>
+    <string name="birthdate">Tanggal Lahir</string>
+    <string name="biz_location">Lokasi Kesibukan</string>
+    <string name="building_name">Nama Gedung/Mall/Perkantoran</string>
+    <string name="business_type">Jenis Usaha</string>
+    <string name="choose_location_on_map">Pilih Lokasi Di Peta</string>
+    <string name="company">Perusahaan</string>
+    <string name="confirm_new_password">Konfirmasi Password Baru</string>
+    <string name="confirm_password">Konfirmasi Password</string>
+    <string name="confirmation">Konfirmasi</string>
+    <string name="courier">Anter Barang</string>
+    <string name="date">Tanggal</string>
+    <string name="deliver">Antar</string>
+    <string name="description">Deskripsi</string>
+    <string name="destination_location">Lokasi tujuan</string>
+    <string name="dimension">Dimensi</string>
+    <string name="display">Display</string>
+    <string name="driver">Driver</string>
+    <string name="driver_name">Nama Driver</string>
+    <string name="driver_pickup_here">Driver akan mengambil barang dari lokasi ini</string>
+    <string name="driver_send_here">Driver akan mengirim barang ke lokasi ini</string>
+    <string name="edit">Edit</string>
+    <string name="education">Pendidikan</string>
+    <string name="email">Email</string>
+    <string name="expedition_insurance">Asuransi Perjalanan</string>
+    <string name="extra_service">Laynan Ekstra</string>
+    <string name="fact_id">Fact Id</string>
+    <string name="section_id">Section Id</string>
+    <string name="view_position">View Position</string>
+    <string name="id_fact_type">Id Fact Type</string>
+    <string name="is_visible">Is Visible</string>
+    <string name="is_verified">Is Verified</string>
+    <string name="is_enable">Is Enable</string>
+    <string name="value">value</string>
+    <string name="freight">Jasa Angkut</string>
+    <string name="from">Dari</string>
+    <string name="full_name">Nama Lengkap</string>
+    <string name="nomor_telepon">Nomor Telepon</string>
+    <string name="gawean">Gawean</string>
+    <string name="gaweanKu">GaweanKu</string>
+    <string name="riwayat">Riwayat</string>
+    <string name="gawean_location">Lokasi Gawean</string>
+    <string name="gender">Jenis Kelamin</string>
+    <string name="gender_female">Perempuan</string>
+    <string name="gender_male">Laki-laki</string>
+    <string name="greeting_mogawers">Halo MoGawers!</string>
+    <string name="greeting_login">Masuk aja dengan email kamu</string>
+    <string name="hint">Petunjuk</string>
+    <string name="index">Index</string>
+    <string name="input">Input</string>
+    <string name="input_note">Masukkan Catatan</string>
+    <string name="item">Item</string>
+    <string name="item_id">Item Id</string>
+    <string name="meta_id">Meta Id</string>
+    <string name="item_description_hint_small">Deskripsi paket/berat paket (kg)</string>
+    <string name="item_description_hint_medium">Deskripsi paket/berat paket (kg)</string>
+    <string name="item_description_hint_large">Deskripsi paket/berat paket (kg)</string>
+    <string name="item_type">Jenis Barang</string>
+    <string name="history">Histori</string>
+    <string name="height">T</string>
+    <string name="lets_start">Ayo Mulai</string>
+    <string name="latitude">latitude</string>
+    <string name="longitude">longitude</string>
+    <string name="coordinate">Lokasi</string>
+    <string name="location_full">Lokasi/Provinsi/Kota</string>
+    <string name="max_value">Maximum Value</string>
+    <string name="min_value">Minimum Value</string>
+    <string name="max_length">Maximum Length</string>
+    <string name="min_length">Minimum Length</string>
+    <string name="name">Nama</string>
+    <string name="new_password">Password Baru</string>
+    <string name="note">Catatan</string>
+    <string name="order_number">Order Number</string>
+    <string name="package_delivery">Anter Barang</string>
+    <string name="password">Password</string>
+    <string name="retypepassword">Ketik ulang Password-mu</string>
+    <string name="phone_number">Nomor Handphone</string>
+    <string name="pick_up_date">Tanggal Pick-up</string>
+    <string name="pick_up_now">Pick-up sekarang</string>
+    <string name="pick_up_location">Lokasi pick-up</string>
+    <string name="please_fill_data">Mohon lengkapi data-data Anda</string>
+    <string name="please_wait">Harap tunggu…</string>
+    <string name="order_complete">Pembayaran dan pesanan sudah diteruskan ke pembeli. Yuk kabari pembeli untuk menyelesaikan pembayarannya ya. </string>
+    <string name="profile">Profil</string>
+    <string name="question">Pertanyaan</string>
+    <string name="question_group">Question Group</string>
+    <string name="register_as_user">Daftar sebagai user</string>
+    <string name="register_as_partner">Daftar sebagai mitra</string>
+    <string name="request_failed">Permintaan Gagal</string>
+    <string name="request_success">Permintaan Sukses</string>
+    <string name="research_experience">Pengalaman Riset</string>
+    <string name="road_type">Tipe Jalan</string>
+    <string name="select_date">Pilih Tanggal</string>
+    <string name="select_vehicle">Pilih Kendaraan</string>
+    <string name="selection_validate">Validasi Pilihan</string>
+    <string name="is_mandatory">Kewajiban</string>
+    <string name="fact">Fact</string>
+    <string name="item_view_name">Item View Name</string>
+    <string name="meta_view_name">Meta View Name</string>
+    <string name="settings">Setting</string>
+    <string name="starting_job">Memulai gawean…</string>
+    <string name="sms_with_activation_code_sent">Kode aktifasi telah dikirim melalu SMS ke nomor Anda</string>
+    <string name="sms_with_validation_code_sent">Kode validasi telah dikirim melalu SMS ke nomor Anda</string>
+    <string name="store_name">Nama Toko</string>
+    <string name="store_location">Lokasi Toko (Lantai/Blok)</string>
+    <string name="store_address">Alamat Toko</string>
+    <string name="store_type">Lokasi Sekitar</string>
+    <string name="to">Ke</string>
+    <string name="transportation">Anter Orang</string>
+    <string name="validation_code">Kode Validasi</string>
+    <string name="vehicle">Kendaraan</string>
+    <string name="vehicle_and_services">Kendaraan Dan Layanan</string>
+    <string name="warehouse">Pergudangan</string>
+    <string name="weight">Berat</string>
+    <string name="width">L</string>
+    <string name="what_business">Usaha Lainnya</string>
+    <string name="update_available">Pembaharuan Tersedia</string>
+    <string name="update_available_message"><![CDATA[Versi tebaru aplikasi <b>MoGawe</b> telah tersedia di <i>PlayStore</i>. Segera update aplikasi, dan dapatkan fitur terbaru dari aplikasi <b>MoGawe</b>]]></string>
+    <string name="update_now">Update Sekarang</string>
+    <string name="update_later">Nanti saja?</string>
+    <string name="update_force"><![CDATA[\"Demi kenyamanan <i>MoGawers</i> dalam mengerjakan Gawean. Update aplikasi <b>MoGawe</b> sekarang juga\"]]></string>
+    <string name="mogawe_profile">MoGawe Profil</string>
+    <string name="ubah">Ubah</string>
+    <string name="tambahkan">Tambahkan</string>
+    <string name="item_is_selected">Item is selected</string>
+    <string name="meta_is_selected">Meta is selected</string>
+    <string name="button_is_selected">Button is selected</string>
+    <string name="uri_video">Video Uri</string>
+    <string name="slider_step">slider_step</string>
+    <string name="priority_count">Jumlah Prioritas</string>
+    <string name="saya_mengerti">Saya Mengerti</string>
+
+
+    <string name="action.add" tools:ignore="ExtraTranslation">Tambah</string>
+    <string name="action.add_store" tools:ignore="ExtraTranslation">Tambah Toko</string>
+    <string name="action.activate" tools:ignore="ExtraTranslation">Aktivasi</string>
+    <string name="action.alright" tools:ignore="ExtraTranslation">Siap</string>
+    <string name="action.bursa" tools:ignore="ExtraTranslation">Bursa</string>
+    <string name="action.cancel" tools:ignore="ExtraTranslation">Batal</string>
+    <string name="action.continue" tools:ignore="ExtraTranslation">Lanjut</string>
+    <string name="action.done" tools:ignore="ExtraTranslation">Selesai</string>
+    <string name="action.edit_address" tools:ignore="ExtraTranslation">Edit Alamat</string>
+    <string name="action.edit_profile" tools:ignore="ExtraTranslation">Simpan</string>
+    <string name="action.forgot_password" tools:ignore="ExtraTranslation">Lupa Password?</string>
+    <string name="action.set_up_password" tools:ignore="ExtraTranslation">Simpan Password</string>
+    <string name="action.fulfill_your_profile" tools:ignore="ExtraTranslation">Lengkapi Sekarang</string>
+    <string name="action.finish" tools:ignore="ExtraTranslation">Selesai</string>
+    <string name="action.gawean" tools:ignore="ExtraTranslation">GaweanKu</string>
+    <string name="action.home" tools:ignore="ExtraTranslation">Home</string>
+    <string name="action.cari" tools:ignore="ExtraTranslation">Cari</string>
+    <string name="action.cariGawean" tools:ignore="ExtraTranslation">Cari Gawean</string>
+    <string name="action.bantuan" tools:ignore="ExtraTranslation">Bantuan</string>
+    <string name="action.go_inside" tools:ignore="ExtraTranslation">Masuk Ke Dalam Gedung</string>
+    <string name="action.history" tools:ignore="ExtraTranslation">Histori</string>
+    <string name="action.login" tools:ignore="ExtraTranslation">Log In</string>
+    <string name="action.login_here" tools:ignore="ExtraTranslation"><![CDATA[Sudah punya akun? <b>Log in di sini</b>]]></string>
+    <string name="action.logout" tools:ignore="ExtraTranslation">Log Out</string>
+    <string name="action.sendMessage" tools:ignore="ExtraTranslation">Kirim Pesan</string>
+    <string name="action.inputResi" tools:ignore="ExtraTranslation">Input Resi</string>
+    <string name="action.next" tools:ignore="ExtraTranslation">Lanjut</string>
+    <string name="action.previous" tools:ignore="ExtraTranslation">Sebelumnya</string>
+    <string name="action.nextSms" tools:ignore="ExtraTranslation">Lanjut dengan SMS</string>
+    <string name="action.nextCitcall" tools:ignore="ExtraTranslation">Lanjut dengan Miscall</string>
+    <string name="action.not_my_location" tools:ignore="ExtraTranslation">Bukan, Saya berada di lokasi lain</string>
+    <string name="action.ok" tools:ignore="ExtraTranslation">OK</string>
+    <string name="action.order" tools:ignore="ExtraTranslation">Pesan</string>
+    <string name="action.pause" tools:ignore="ExtraTranslation">Istirahat</string>
+    <string name="action.please_choose_locations" tools:ignore="ExtraTranslation">Pilih 5 Lokasi</string>
+    <string name="action.profile" tools:ignore="ExtraTranslation">Profil</string>
+    <string name="action.register" tools:ignore="ExtraTranslation">Daftar Baru</string>
+    <string name="action.activity" tools:ignore="ExtraTranslation">Activity</string>
+    <string name="action.mood" tools:ignore="ExtraTranslation">Mood</string>
+    <string name="action.catalog" tools:ignore="ExtraTranslation">Katalog</string>
+    <string name="action.moodBooster" tools:ignore="ExtraTranslation">MoodBooster</string>
+    <string name="action.chat" tools:ignore="ExtraTranslation">Chat</string>
+    <string name="action.register_here" tools:ignore="ExtraTranslation">Ayo Gabung!</string>
+    <string name="action.resend_password" tools:ignore="ExtraTranslation">Kirim Password</string>
+    <string name="action.resend_sms" tools:ignore="ExtraTranslation"><![CDATA[Belum dapat SMS? <b>Kirim ulang SMS</b>]]></string>
+    <string name="action.resume" tools:ignore="ExtraTranslation">Lanjut</string>
+    <string name="action.save" tools:ignore="ExtraTranslation">Simpan</string>
+    <string name="action.saldo" tools:ignore="ExtraTranslation">Saldo</string>
+    <string name="action.save_store" tools:ignore="ExtraTranslation">Simpan Data</string>
+    <string name="action.show_list" tools:ignore="ExtraTranslation">Job List</string>
+    <string name="action.show_map" tools:ignore="ExtraTranslation">Lihat Peta</string>
+    <string name="action.start" tools:ignore="ExtraTranslation">Mulai Bekerja</string>
+    <string name="action.select_gawean_lcoation" tools:ignore="ExtraTranslation">Pilih 5 Lokasi Gawean Favorit</string>
+    <string name="action.submit" tools:ignore="ExtraTranslation">Submit</string>
+    <string name="action.touch_select_location" tools:ignore="ExtraTranslation">Pilih Lokasi Ini</string>
+    <string name="action.touch_tag_location" tools:ignore="ExtraTranslation">Pilih Lokasi Disini</string>
+    <string name="action.touch_tag_location2" tools:ignore="ExtraTranslation">Tag Lokasi</string>
+    <string name="action.touch_search_location" tools:ignore="ExtraTranslation">Cari Lokasi Disini</string>
+    <string name="action.validate" tools:ignore="ExtraTranslation">Validasi</string>
+    <string name="action.view_map" tools:ignore="ExtraTranslation">Lihat Peta</string>
+    <string name="action.cash_out" tools:ignore="ExtraTranslation">Tarik Uang</string>
+    <string name="action.example_name" tools:ignore="ExtraTranslation">Example Name</string>
+    <string name="action.example_number" tools:ignore="ExtraTranslation">120</string>
+    <string name="action.lorem_ipsum" tools:ignore="ExtraTranslation">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry</string>
+
+    <string name="info.email_not_valid" tools:ignore="ExtraTranslation">Emailnya jangan asal-asalan ya!\nIni buat kerja, lho. Ayo serius!</string>
+    <string name="info.phone_not_valid" tools:ignore="ExtraTranslation">Nomor handphone tidak boleh asal, ya!\nFormat yang kami terima contohnya: 080123456789.</string>
+    <string name="info.please_agree_terms_and_conds" tools:ignore="ExtraTranslation">Jangan lupa tik checkbox jika kamu sudah menyetujui perjanjian kerja sama yang berlaku.\n\nPastikan kamu membacanya dengan seksama agar tidak ada pihak yang merasa dirugikan!</string>
+    <string name="info.please_check_email" tools:ignore="ExtraTranslation">Mohon cek email Anda</string>
+    <string name="info.please_confirm_new_password" tools:ignore="ExtraTranslation">Password baru Anda tidak sama</string>
+    <string name="info.please_insert_birthdate" tools:ignore="ExtraTranslation">Tanggal lahir harus diisi ya</string>
+    <string name="info.please_fill_activation_code" tools:ignore="ExtraTranslation">Kode aktivasi harus 6 digit.</string>
+    <string name="info.please_fill_address" tools:ignore="ExtraTranslation">Mohon masukkan alamat lengkap</string>
+    <string name="info.please_fill_email" tools:ignore="ExtraTranslation">Email kamu lupa diisi ya?\nCoba cek lagi, ya!</string>
+    <string name="info.please_fill_email_registration" tools:ignore="ExtraTranslation">Email wajib diisi ya!\nHarus benar dan aktif juga. Karena nanti MoGawe akan kirim-kirim info ke sana.</string>
+    <string name="info.please_fill_full_name" tools:ignore="ExtraTranslation">Nama wajib diisi lengkap ya!\nPastikan sama dengan kartu identitas kamu. Ayo, coba cek lagi!</string>
+    <string name="info.please_fill_new_password" tools:ignore="ExtraTranslation">Password kamu lupa diisi ya?\nCoba cek lagi, ya!</string>
+    <string name="info.please_fill_old_password" tools:ignore="ExtraTranslation">Mohon masukkan password lama</string>
+    <string name="info.please_fill_password" tools:ignore="ExtraTranslation">Password kamu lupa diisi ya?\nCoba cek lagi, ya!</string>
+    <string name="info.please_fill_password_registration" tools:ignore="ExtraTranslation">Kamu lupa isi password ya?\nNanti ngga bisa log in, lho!\nSaran MoGawe gunakan kombinasi karakter dan angka supaya password lebih aman.</string>
+    <string name="info.password_not_valid" tools:ignore="ExtraTranslation">Password Anda salah</string>
+    <string name="info.please_fill_phone_number" tools:ignore="ExtraTranslation">Nomor handphone wajib diisi, ya!\nPastikan nomor handphone kamu valid dan aktif, karena pembayaran akan kami lakukan setelah verifikasi nomor handphone.</string>
+    <string name="info.please_insert_activation_code" tools:ignore="ExtraTranslation">Mohon masukkan kode aktivasi</string>
+    <string name="info.please_insert_validation_code" tools:ignore="ExtraTranslation">Mohon masukkan kode validasi</string>
+    <string name="info.please_select_five_location" tools:ignore="ExtraTranslation">Mohon pilih lima lokasi</string>
+    <string name="info.title_all_form_must_valid" tools:ignore="ExtraTranslation">Ayo, isi yang benar!</string>
+    <string name="info.title_fill_all_form" tools:ignore="ExtraTranslation">Ada yang kelewat, nih!</string>
+    <string name="info.title_request_failed" tools:ignore="ExtraTranslation">Permintaanmu gagal, nih!</string>
+    <string name="info.title_request_success" tools:ignore="ExtraTranslation">Yeay! Permintaan berhasil!</string>
+    <string name="info.email_sent" tools:ignore="ExtraTranslation">Email sudah kami kirim, ya!</string>
+    <string name="info.password_cash_out_verification" tools:ignore="ExtraTranslation">Mohon masukkan password akun MoGawe-mu ya!</string>
+    <string name="info.product_not_found" tools:ignore="ExtraTranslation">Tidak menemukan hasil pencarian \n\nNampaknya produk yang kamu cari belum tersedia di Katalog kami</string>
+
+    <string name="permission.send_sms" tools:ignore="ExtraTranslation">Kami membutuhkan izin Anda untuk mengirim SMS</string>
+    <string name="permission.coordinate" tools:ignore="ExtraTranslation">Kami membutuhkan izin Anda untuk mencari lokasi Anda</string>
+
+    <string name="error.no_internet" tools:ignore="ExtraTranslation">Server tidak dapat dijangkau.\nMohon pastikan Kamu terhubung koneksi internet.\nAtau silahkan hubungi Customer Service kami.</string>
+    <string name="error.invalid_activation_code" tools:ignore="ExtraTranslation">Kode aktivasi tidak valid\nMohon masukkan kode aktivasi dengan benar\n\nSilahkan tekan \"Kirim ulang SMS\" jika Anda belum mendapatkan SMS kode aktivasi</string>
+    <string name="error.invalid_validation_code" tools:ignore="ExtraTranslation">Kode validasi tidak valid\nMohon masukkan kode validasi dengan benar\n\nSilahkan tekan \"Kirim ulang SMS\" jika Anda belum mendapatkan SMS kode validasi</string>
+    <string name="error.location_not_found" tools:ignore="ExtraTranslation">Lokasi tidak ditemukan\nMohon cek kembali pengaturan GPS Anda.</string>
+    <string name="error.token_expired" tools:ignore="ExtraTranslation">Token expired</string>
+    <string name="error.token_expired_explain" tools:ignore="ExtraTranslation">Sesi anda habis. harap login ulang</string>
+
+    <string name="number_1">1</string>
+    <string name="multifier">x</string>
+    <string name="my_account">Profil Saya</string>
+    <string name="about_us">Tentang Kami</string>
+    <string name="log_out">Log Out</string>
+    <string name="help">Bantuan</string>
+    <string name="terms_and_conds">Syarat dan Ketentuan</string>
+    <string name="on_the_way_to_pick_up">Driver sedang menuju lokasi pick-up</string>
+    <string name="place_name">Nama Tempat</string>
+    <string name="pic_name">Nama Penanggung Jawab</string>
+    <string name="pic_contact_phone">Kontak Penanggung Jawab</string>
+    <string name="consignee_name">Nama Penerima</string>
+    <string name="consignee_contact_phone">Kontak Penerima</string>
+    <string name="nama_tempat_nomor_rumah_lantai_dll">Nama tempat/ Nomor rumah/ Lantai. dll</string>
+    <string name="small_package">Paket Kecil</string>
+    <string name="small_package_desc">Dokumen, parsel, makan, barang lain dibawah 20 kilogram.\nDiantar menggunakan motor atau mobil.</string>
+    <string name="medium_package">Paket Sedang</string>
+    <string name="medium_package_desc">Barang dengan muatan 20 kilogram hingga 1 ton.\nDiantar menggunakan kendaraan pick-up/mobil box atau kendaraan sejenis.</string>
+    <string name="large_package">Paket Besar</string>
+    <string name="large_package_desc">Barang dengan muatan lebih dari 1 ton.\nKhusus untuk penyewaan truck/tronton/container atau kendaraan sejenis.</string>
+    <string name="order_summary">Rincian Pesanan</string>
+    <string name="about"><u>About</u></string>
+    <string name="edit_foto"><u>Edit Foto</u></string>
+    <string name="versi_aplikasi"><u>Versi Aplikasi</u></string>
+    <string name="rate_app"><u>Rate App</u></string>
+
+    <string name="call">Telepon</string>
+    <string name="send_message">Kirim Pesan</string>
+    <string name="order_history">Histori Pemesanan</string>
+    <string name="action.order_now" tools:ignore="ExtraTranslation">Pesan Sekarang</string>
+    <string name="no_order_list_please_order">Pada saat ini tidak ada Gawean yang dapat ditampilkan, Silahkan lamar melalui halaman Bursa.</string>
+    <string name="no_history_list_please_order">Pada saat ini tidak ada Histori Gawean yang dapat ditampilkan, Silahkan selesaikan Job yang ada di halaman Gawean.</string>
+    <string name="hi">"Hi, "</string>
+    <string name="action.try_again" tools:ignore="ExtraTranslation">Coba Lagi</string>
+    <string name="sms_tariff_applied">Tarif SMS normal berlaku.\nMohon pastikan pulsa Anda cukup dan servis sinyal dalam keadaan baik.</string>
+    <string name="please_give_rate">Mohon berikan penilaian untuk driver.</string>
+    <string name="comment">Komentar</string>
+    <string name="give_rate">Berikan Penilaian</string>
+    <string name="thanks_for_rating">Terima kasih atas penilaian Anda</string>
+    <string name="forgot_your_password">Lupa password kamu?</string>
+    <string name="insert_number_validation">Silahkan masukkan nomor handphone.\nKami akan mengirimkan SMS kode validasi.</string>
+    <string name="action.reset_password" tools:ignore="ExtraTranslation">Reset Password</string>
+    <string name="brought_to_you_by">brought to you by</string>
+    <string name="app_company">PT Anterin Digital Nusantara</string>
+    <string name="version">Versi</string>
+    <string name="please_insert_new_password">Silahkan masukkan password baru.</string>
+    <string name="old_password">Password lama</string>
+    <string name="action.change_password" tools:ignore="ExtraTranslation">Ganti Password</string>
+    <string name="no_detail_address">Detail alamat tidak dicantumkan, pengemudi mungkin dapat terhambat jika alamat kurang jelas.</string>
+
+    <string name="google_directions_key" templateMergeStrategy="preserve" translatable="false">
+        AIzaSyBikUyFbk4v9map2Gf2c-whbQAcXLUCfE0
+    </string>
+
+    <string name="file_provider_authority" translatable="false">com.mogawe.mosurvei.fileprovider</string>
+
+    <string name="title_activity_welcome">Home Screen</string>
+
+    <string name="next">NEXT</string>
+
+    <string name="skip">SKIP</string>
+
+    <string name="start">GOT IT</string>
+
+    <string name="slide_1_title">Selamat Datang di MoGawe</string>
+
+    <string name="slide_1_desc">\t <b>MoGawe</b> adalah sebuah komunitas penyedia data (data provider) pengguna smartphone dimana setiap anggota terdaftar dapat memilih sendiri jenis dan lokasi pekerjaan pengumpulan data (gawean) serta menerima imbalan sesuai kualitas dan ketepatan waktu penyerahan pekerjaan.</string>
+
+    <string name="slide_1_desc2">\t <b>MoGawe</b> menghubungkan kebutuhan perusahaan dengan penyedia data yang siap mengumpulkan dan melaporkannya secara real time.</string>
+
+
+    <string name="slide_2_title">Cari Gawean Dengan Cepat Dan Mudah</string>
+
+    <string name="slide_2_desc">Tentukan hari ini kamu ingin menghasilkan berapa ribu rupiah. MoGawe akan mencarikan gawean-gawean di sekitar yang dapat kamu selesaikan hari itu juga.</string>
+    <string name="slide_3_title">Kerjakan Gawean Sesuai Dengan Instruksi</string>
+    <string name="slide_3_desc">Setiap gawean sudah diberikan instruksinya masing-masing. Sehingga memudahkan MoGawers untuk menyelesaikan Gawean.</string>
+    <string name="slide_4_title">Terima Bayaran</string>
+
+    <string name="slide_4_desc">Setelah hasil gawean kamu berhasil diverivikasi dan dinyatakan sukses oleh tim MoGawe. Upahmu akan langsung ditransfer ke saldo MoGawe kamu.</string>
+    <string name="slide_5_title">Lakukan Pekerjaan</string>
+    <string name="slide_5_desc">Selesaikan list gawean yang ada di menu <b>Gawean</b> anda, sesuai petunjuk atau pelatihan yang disediakan, dan jangan lupa selalu lakukan dengan penuh rasa tanggung jawab.</string>
+
+    <string name="slide_6_title">Kirim Hasil Pekerjaan</string>
+    <string name="slide_6_desc">Pastikan validasi data sebelum gawean dikirim (Simpan Data) dengan kualitas terbaik sebelum tenggat waktu yang ditentukan. Klien kita akan menyenangi hal ini</string>
+
+    <string name="slide_7_title">Terima Pembayaran</string>
+    <string name="slide_7_desc">Imbalan atas hasil jerih payah anda akan dikirim secara langsung kepada anda setelah dilakukan penilaian atas kualitas gawean yang sudah anda kirimkan, anda hanya harus bersiap untuk gawean yang berikut. <u>Pembayaran akan ditransfer melalui LinkAja sesuai dengan nomor rekening ponsel yang didaftarkan</u></string>
+
+    <string name="play_again_desc">To see the welcome slider again, goto Settings -> apps -> welcome slider -> clear data</string>
+    <string name="play_again">Play Again</string>
+
+    <string name="selesai_gawean">Selesai Gawean</string>
+    <string name="gawean_selesai">Gawean Selesai</string>
+    <string name="keterangan_penugasan">Keterangan Penugasan</string>
+
+    <string name="data_collector">Data Collector</string>
+    <string name="job_tipe">Job Tipe:</string>
+
+    <string name="job_id">Job ID:</string>
+    <string name="job_deskripsi">Job Deskripsi:</string>
+
+
+    <string name="mogawers_id">MoGawers ID:</string>
+    <string name="sample_text_card">Dengan ini dinyatakan bahwa MoGawers dengan nama Muhammad Abidzar Abdussalam, sedang melakukan survei di OL Shop Shoes</string>
+    <string name="mogawe_link">https://mogawe.id/</string>
+    <string name="moto_mogawe">MoGawe (Your Data Your Control)</string>
+    <string name="alamat_mogawe">Jl. O Kavling, Kebon Baru, Tebet, Jakarta Selatan 12830</string>
+    <string name="edukasi">Edukasi</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="all">Semua</string>
+    <string name="hundred_k">100K</string>
+    <string name="observation">Observasi</string>
+    <string name="explore">Eksplor</string>
+    <string name="interview">Interview</string>
+    <string name="nearby">Terdekat</string>
+    <string name="we_found_some_job">Kami menemukan %1$d gawean terdekat\nyang bisa kamu kerjakan</string>
+    <string name="status">\"Aku adalah manusia biasa yang tak sempurna\"</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="action.apply_all" tools:ignore="ExtraTranslation">Apply Semua</string>
+    <string name="action.apply" tools:ignore="ExtraTranslation">Apply</string>
+    <string name="wanna_have_job">Mau uang tambahan?</string>
+    <string name="alternative_login">Atau Login Menggunakan</string>
+    <string name="good_job">Good Job</string>
+    <string name="good_luck">Selamat bekerja!</string>
+    <string name="you_have_finished_a_job">Kamu berhasil menyelesaikan gawean ini.</string>
+    <string name="thank_you">Terima Kasih</string>
+    <string name="please_continue_your_work">Silahkan lanjutkan pekerjaan kamu.</string>
+    <string name="your_work_will_be_evaluated">Gawean akan kami evaluasi</string>
+    <string name="to_make_sure_your_work_will_be_evaluated">Untuk memastikan gawean benar dan baik, semua gawean akan kami cek terlebih dahulu.</string>
+    <string name="work_will_be_paid_after_evaluation">Gawean yang akan dibayar adalah gawean yang sudah dinyatakan benar dan baik.</string>
+    <string name="fill_your_data">Isi Data Kamu</string>
+    <string name="data_must_be_valid">Data harus lengkap dan valid ya!</string>
+    <string name="one_last_step">Satu langkah lagi!</string>
+    <string name="activate_your_phone_number">Aktivasi no handphone kamu!</string>
+    <string name="check_your_email_for_activation_code">Ayo cek email kamu. Kode aktivasinya sudah kami kirim ke sana, ya!</string>
+    <string name="check_your_phone_for_activation_code">Ayo cek handphone kamu. Kode aktivasinya sudah kami SMS ke sana, ya!</string>
+    <string name="check_your_phone_for_miscall_activation_code">Kamu akan di miscall oleh sistem. \n Mohon untuk menuliskan 6 digit terakhir dari nomor yang miscall Kamu!</string>
+    <string name="activation_code">Kode Aktivasi</string>
+    <string name="action.lets_go" tools:ignore="ExtraTranslation">Ayo Beraksi!</string>
+    <string name="action.resend" tools:ignore="ExtraTranslation">Kirim Ulang</string>
+    <string name="dont_get_email">Belum dapat email?</string>
+    <string name="dont_get_sms">Belum dapat SMS?</string>
+    <string name="resend_in">Kirim ulang dalam :</string>
+    <string name="welcome_abroad">Selamat Bergabung!</string>
+    <string name="welcoming_notes">Sekarang kamu sudah resmi menjadi MoGawers.\nBanyak hal yang bisa kamu raih di sini.\nSemangat!</string>
+    <string name="welcoming_supplier_notes">Sekarang kamu sudah resmi menjadi Supplier.\nBanyak hal yang bisa kamu raih di sini.\nSemangat</string>
+    <string name="what_is_your_name">Siapa nama kamu?</string>
+    <string name="type_your_answer">Ketik jawaban kamu</string>
+    <string name="hint.year_yyyy" tools:ignore="ExtraTranslation">YYYY</string>
+    <string name="char.slash" tools:ignore="ExtraTranslation">/</string>
+    <string name="hint.month_mm" tools:ignore="ExtraTranslation">MM</string>
+    <string name="hint.date_dd" tools:ignore="ExtraTranslation">DD</string>
+    <string name="insert_new_password">Masukkan password baru kamu</string>
+    <string name="new_password_will_be_sent_to_registered_email">Konfirmasi code aktivasi password baru akan kami kirim ke email yang sudah terdaftar.</string>
+    <string name="password_will_be_sent_to_registered_email">Aktivasi akan kami kirim ke email yang sudah terdaftar.</string>
+    <string name="password_has_been_changed">Password sudah diubah!</string>
+    <string name="you_can_now_login_with_new_password">Sekarang kamu sudah bisa log in dengan password baru kamu!\nNtaps!</string>
+    <string name="insert_phone_number">Masukkan No Handphone</string>
+    <string name="make_sure_phone_is_valid">Pastikan nomor handphone valid dan aktif. Karena akan kami gunakan untuk verifikasi pembayaran.</string>
+    <string name="phone_valid_terms">Kegagalan pembayaran karena kesalahan nomor handphone, bukan merupakan tanggung jawab MoGawe.</string>
+    <string name="facebook_app_id">496562735069126</string>
+    <string name="fb_login_protocol_scheme">fb496562735069126</string>
+    <string name="com_auth0_client_id">GFauIkooLk3dRBfw5_bWZzRPoPIkLuAn</string>
+    <string name="title_activity_registration_sm">RegistrationSMActivity</string>
+    <string name="server_client_id">17152186723-crg86u7orvsqcufglua4trvv08mh2k1l.apps.googleusercontent.com</string>
+    <string name="action.fb_login" tools:ignore="ExtraTranslation">Facebook</string>
+    <string name="action.google_login" tools:ignore="ExtraTranslation">Google</string>
+    <string name="or">Atau</string>
+    <string name="verifikasi">Verifikasi</string>
+
+    <string name="action.change_phone" tools:ignore="ExtraTranslation">Ganti Nomor</string>
+    <string name="sms_already_sent">SMS aktivasi sudah dikirim</string>
+    <string name="citcall_already_sent">Request miscall sudah dikirim. Catat 6 digit terakhir nomor penelpon sebagai aktivasi</string>
+
+    <string name="is_on_location">apakah sudah dilokasi?</string>
+    <string name="amount_cash_out">Mau Tarik Uang Berapa?</string>
+
+    <string name="cash_Out_description_optional">Keterangan Penarikan (Opsional)</string>
+    <string name="set_up_password">Menyiapkan Password</string>
+    <string name="input_your_password">Ayo, masukan password kamu</string>
+    <string name="is_fact_on_focus">fact focus</string>
+    <string name="optional">Tidak wajib diisi</string>
+    <string name="project_name">Nama Project</string>
+
+    <string name="pending_payment_not_found">Tidak ada pembayaran yang pending</string>
+
+    <string name="com.twitter.sdk.android.CONSUMER_KEY" tools:ignore="ExtraTranslation">bJdoHHY9aH8V2RoxLuffg0InR</string>
+    <string name="com.twitter.sdk.android.CONSUMER_SECRET" tools:ignore="ExtraTranslation">u5HJcyYgD85d7UPYfrnRcZY4kgfbZBJg4I5ZWXW7NRR1xYyaF6</string>
+
+    <string name="swipe_down_to_refresh">Geser kebawah untuk refresh ya!</string>
+    <string name="job_categories_uuid">UUID Job Categories</string>
+
+    <string name="action.share">Share</string>
+    <string name="generating_results">Please Wait...</string>
+    <string name="load_more">Lebih banyak</string>
+    <string name="walletHistory">Hai, MoGawers.\n Kamu tidak memiliki catatan transaksi.\n\n Informasi lebih lanjut, silahkan hubungi Costumer Service kami di Menu Bantuan.\n\n Terimakasih</string>
+
+    <string name="voucherKosong">Hai, MoGawers.\n Voucher kamu kosong nich. Ayo kumpulkan point dan segera tukarkan point mu dengan voucher di menu <b>MoGawe Deals</b> ya. Jangan sampai ketinggalan.\n\n Informasi lebih lanjut, silahkan hubungi Costumer Service kami di Menu Bantuan.\n\n Terimakasih</string>
+    <string name="homeKosong">Hai, MoGawers.\n Nampaknya kamu semangat sekali menjawab semua Polling dari Mogawe :). Untuk sekarang kosong dulu ya. Kami akan selalu berusaha untuk selalu menyediakan Polling ini hanya untuk kalian. Pokoknya Stay Tuned terus ya di MoGawe.\n\n Informasi lebih lanjut, silahkan hubungi Costumer Service kami di Menu Bantuan.\n\n Terimakasih</string>
+
+    <string name="useVoucher">1. Tukar point kamu dengan tekan tombol \"Tukar\" yang ada di bawah ini, atau di list voucher yang ada di menu \"MoGawe Deals\" \n\n2. Voucher yang berhasil ditukar akan masuk ke menu \"VoucherKu\" dengan keterangan <b><font color='#4CAF50'>Sent</font></b> \n\n3. Untuk memakai voucher, pergi ke menu \"VoucherKu\" dan pilih voucher yang ingin kamu gunakan. Setelah di klik maka akan muncul halaman \"Detail Voucher\" \n\n4. Tunjukan halaman \"Detail Voucher\" ke gerai kasir voucher yang kamu pilih. Beritahu kasir, bahwa kamu ingin membayar menggunakan voucher, dan tunjukan QR Code yang ada di halaman \"Detail Voucher\" \n\n5. Selesai! Voucher kamu berhasil digunakan"</string>
+    <string name="deals">Deals</string>
+    <string name="balance">Saldo</string>
+    <string name="points">Points</string>
+    <string name="voucher">VoucherKu</string>
+    <string name="downlinerKosong">Halo MoGawers, kamu belum punya downliner nih, ayo ajak temen kamu untuk download MoGawe dan dapatkan points, untuk bisa di tukarkan di menu \"MoGawe Deals\".\n\n Untuk info lebih lanjut, bisa hubungin Costumer Service kami yang ada di menu \"Bantuan\"</string>
+
+    <string name="qiscus_hint_message">Type your message</string>
+    <string name="qiscus_group_member_closing">and you</string>
+    <string name="qiscus_group_member_only_you">Only you</string>
+    <string name="qiscus_corrupted_file">Can not read file, please make sure that is not corrupted file!</string>
+    <string name="qiscus_failed_download_file">Failed to download file!</string>
+    <string name="qiscus_permission_message">If you not grant permission, the apps may not be working properly. So please grant the permission for better user experienced.</string>
+    <string name="qiscus_grant">Grant Permission</string>
+    <string name="qiscus_denny">Denny Permission</string>
+    <string name="qiscus_permission_request_title">Please grant permissions to make apps working properly!</string>
+    <string name="qiscus_message_too_far">Sorry, Message too far to load it!</string>
+    <string name="failed_to_delete_messages">Failed to delete messages</string>
+    <string name="qiscus_add_a_caption">Add caption to your image</string>
+    <string name="cancel">Cancel</string>
+    <string name="batalkan">Batalkan</string>
+    <string name="berangkat">Berangkat</string>
+    <string name="send">Send</string>
+    <string name="qiscus_chat_error_failed_open_picture">Failed to open picture!</string>
+    <string name="qiscus_chat_error_failed_read_picture">Failed to read picture data!</string>
+    <string name="qiscus_chat_error_failed_open_file">Failed to open file!</string>
+    <string name="qiscus_chat_error_failed_write">Failed to write temporary picture!</string>
+    <string name="group_name_hint">Type group name here</string>
+    <string name="group_upload_text">Give your group a name and add optional photo</string>
+
+    <string-array name="education_array">
+        <item>SMP</item>
+        <item>SMA/SMK</item>
+        <item>D3</item>
+        <item>S1</item>
+    </string-array>
+    <string-array name="experience_array">
+        <item>Industri Makanan</item>
+    </string-array>
+    <string-array name="bizloc_array">
+        <item>Rumah/Apartemen</item>
+    </string-array>
+    <string-array name="store_type">
+        <item>Pilih Lokasi</item>
+        <item>Dalam Pasar</item>
+        <item>Sekitar Pasar</item>
+        <item>Pemukiman</item>
+        <item>Sekitar Sekolah</item>
+        <item>Sekitar Kantor Pelayanan Publik</item>
+        <item>Sekitar Sekolah</item>
+    </string-array>
+    <string-array name="road_type">
+        <item>Pilih Tipe Jalan</item>
+        <item>1 Mobil</item>
+        <item>2 Mobil</item>
+        <item>Motor</item>
+    </string-array>
+    <string-array name="reasons">
+        <item>Pilih Alasan</item>
+        <item>Display sudah berubah</item>
+        <item>Dilarang security</item>
+        <item>Lain-lain</item>
+    </string-array>
+    <string-array name="pictures">
+        <item>Ambil foto</item>
+        <item>Dari galeri</item>
+    </string-array>
+    <string-array name="picturesPlusDelete">
+        <item>Ambil foto</item>
+        <item>Dari galeri</item>
+        <item>Hapus foto</item>
+    </string-array>
+    <string-array name="pictures_with_delete">
+        <item>Ambil foto</item>
+        <item>Dari galeri</item>
+        <item>Hapus foto</item>
+    </string-array>
+    <string-array name="questions">
+        <item>Tidak Ada</item>
+        <item>""</item>
+        <item>Ada</item>
+    </string-array>
+    <string-array name="sortby_gawean">
+        <item value="nameAtoZ">Nama Job : A-Z</item>
+        <item value="nameZtoA">Nama Job : Z-A</item>
+        <item value="jobLtoN">Job Terjauh</item>
+        <item value="jobNtoL">Job Terdekat</item>
+        <item value="feeBigToSmall">Bayaran Tertinggi</item>
+        <item value="feeSmallToBig">Bayaran Terkecil</item>
+        <item value="pointBigToSmall">Point Tertinggi</item>
+        <item value="pointSmallToBig">Point Terkecil</item>
+    </string-array>
+    <string-array name="sortby_status_gawean">
+        <item value="semuaStatus">Semua Status</item>
+        <item value="pengerjaan">Pengerjaan</item>
+        <item value="dalamPerjalanan">Dalam Perjalanan</item>
+        <item value="belumDikerjakan">Belum dikerjakan</item>
+        <item value="pengecekan">Pengecekan</item>
+        <item value="dibatalkan">Dibatalkan</item>
+        <item value="dikreditkan">Dikreditkan</item>
+        <item value="TidakLolosQc">Tidak Lolos QC</item>
+    </string-array>
+    <string-array name="sortby_date">
+        <item value="semuaStatus">Semua Hari</item>
+        <item value="pengerjaan">Seminggu terakhir</item>
+        <item value="dalamPerjalanan">Sebulan terakhir</item>
+        <item value="belumDikerjakan">3 bulan terakhir</item>
+    </string-array>
+    <string-array name="sortby_order_status">
+        <item value="all">Semua</item>
+        <item value="unpaid">Belum dibayar</item>
+        <item value="paid">Sudah dibayar</item>
+        <item value="on shipping">Dalam perjalanan</item>
+        <item value="delivered">Terkirim</item>
+        <item value="confirm">Selesai</item>
+        <item value="canceled">Dibatalkan</item>
+    </string-array>
+    <string-array name="sortby_history_status">
+        <item value="semuaStatus">Semua Status</item>
+        <item value="rejected">Rejected</item>
+        <item value="pengerjaan">Pending</item>
+        <item value="dalamPerjalanan">Approved</item>
+        <item value="belumDikerjakan">Credited</item>
+    </string-array>
+    <string-array name="filter_wallet_history">
+        <item value="weekly">Seminggu Terakhir</item>
+        <item value="monthly">Sebulan Terakhir</item>
+    </string-array>
+    <string name="title_activity_group_chat_room">GroupChatRoomActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="title_activity_notification_list">NotificationListActivity</string>
+    <string name="title_activity_skill_and_assets_verification">SkillAndAssetsVerificationActivity
+    </string>
+    <string name="skill">Skill</string>
+    <string name="aset">Aset</string>
+    <string name="action.register_new">Daftar Baru</string>
+    <string name="or_login_with">Atau masuk dengan</string>
+    <string name="facebook">Facebook</string>
+    <string name="google">Google</string>
+    <string name="twitter">Twitter</string>
+    <string name="dont_have_account">Belum punya akun MoGawe?</string>
+    <string name="sending">Menigirim...</string>
+    <string name="memuat_map">Memuat Map...</string>
+    <string name="map">Map</string>
+    <string name="certification">Sertifikasi</string>
+    <string name="title_activity_certificate_info">CertificateInfoActivity</string>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string name="hello_world">Hello Square World!</string>
+    <string name="greetings_welcome">Selamat Datang!</string>
+    <string name="login_as_business">Login sebagai pengusaha</string>
+    <string name="wanna_be_business">Ingin Daftar Jadi Pengusaha?</string>
+    <string name="choose">Pilih</string>
+    <string name="exit">Keluar</string>
+    <string name="logistic_service">Service Logistik</string>
+    <string name="order_list">List Order</string>
+    <string name="add_product">Tambah Produk</string>
+    <string name="product_list">List Produk</string>
+    <string name="canceled">Dibatalkan</string>
+    <string name="dash">-</string>
+    <string name="sales">Penjualan</string>
+    <string name="orders">Pesanan</string>
+    <string name="product">Produk</string>
+    <string name="edit_store_profile">Edit Profil Toko</string>
+    <string name="zero_rupiah">Rp.0</string>
+    <string name="province">Provinsi</string>
+    <string name="city">Kota/Kabupaten</string>
+    <string name="full_address">Alamat Lengkap</string>
+    <string name="add_note_shipment">Catatan Alamat Pengiriman</string>
+    <string name="shipping_address">Alamat Pengiriman</string>
+    <string name="product_image">Gambar Produk *</string>
+    <string name="send_as_dropship">Kirim Sebagai Dropshipper</string>
+    <string name="sender_detail">Detail Pengirim</string>
+    <string name="destination_address">Alamat Tujuan</string>
+
+    <string name="sort_matrix_item_sequence">Default</string>
+    <string name="sort_matrix_item_filled">Jawaban yang terisi</string>
+
+    <string-array name="Edukasi_array">
+        <item>SD</item>
+        <item>SMP/Sederajat</item>
+        <item>SMA/Sederajat</item>
+        <item>Diploma</item>
+        <item>S1</item>
+        <item>S2</item>
+        <item>S3</item>
+    </string-array>
+    <string name="title_activity_tes_aja">TesAja</string>
+    <string name="title_activity_scroll_test">ScrollingActivity</string>
+    <string name="large_text">
+        "Material is the metaphor.\n\n"
+
+        "A material metaphor is the unifying theory of a rationalized space and a system of motion."
+        "The material is grounded in tactile reality, inspired by the study of paper and ink, yet "
+        "technologically advanced and open to imagination and magic.\n"
+        "Surfaces and edges of the material provide visual cues that are grounded in reality. The "
+        "use of familiar tactile attributes helps users quickly understand affordances. Yet the "
+        "flexibility of the material creates new affordances that supercede those in the physical "
+        "world, without breaking the rules of physics.\n"
+        "The fundamentals of light, surface, and movement are key to conveying how objects move, "
+        "interact, and exist in space and in relation to each other. Realistic lighting shows "
+        "seams, divides space, and indicates moving parts.\n\n"
+
+        "Bold, graphic, intentional.\n\n"
+
+        "The foundational elements of print based design typography, grids, space, scale, color, "
+        "and use of imagery guide visual treatments. These elements do far more than please the "
+        "eye. They create hierarchy, meaning, and focus. Deliberate color choices, edge to edge "
+        "imagery, large scale typography, and intentional white space create a bold and graphic "
+        "interface that immerse the user in the experience.\n"
+        "An emphasis on user actions makes core functionality immediately apparent and provides "
+        "waypoints for the user.\n\n"
+
+        "Motion provides meaning.\n\n"
+
+        "Motion respects and reinforces the user as the prime mover. Primary user actions are "
+        "inflection points that initiate motion, transforming the whole design.\n"
+        "All action takes place in a single environment. Objects are presented to the user without "
+        "breaking the continuity of experience even as they transform and reorganize.\n"
+        "Motion is meaningful and appropriate, serving to focus attention and maintain continuity. "
+        "Feedback is subtle yet clear. Transitions are efﬁcient yet coherent.\n\n"
+
+        "3D world.\n\n"
+
+        "The material environment is a 3D space, which means all objects have x, y, and z "
+        "dimensions. The z-axis is perpendicularly aligned to the plane of the display, with the "
+        "positive z-axis extending towards the viewer. Every sheet of material occupies a single "
+        "position along the z-axis and has a standard 1dp thickness.\n"
+        "On the web, the z-axis is used for layering and not for perspective. The 3D world is "
+        "emulated by manipulating the y-axis.\n\n"
+
+        "Light and shadow.\n\n"
+
+        "Within the material environment, virtual lights illuminate the scene. Key lights create "
+        "directional shadows, while ambient light creates soft shadows from all angles.\n"
+        "Shadows in the material environment are cast by these two light sources. In Android "
+        "development, shadows occur when light sources are blocked by sheets of material at "
+        "various positions along the z-axis. On the web, shadows are depicted by manipulating the "
+        "y-axis only. The following example shows the card with a height of 6dp.\n\n"
+
+        "Resting elevation.\n\n"
+
+        "All material objects, regardless of size, have a resting elevation, or default elevation "
+        "that does not change. If an object changes elevation, it should return to its resting "
+        "elevation as soon as possible.\n\n"
+
+        "Component elevations.\n\n"
+
+        "The resting elevation for a component type is consistent across apps (e.g., FAB elevation "
+        "does not vary from 6dp in one app to 16dp in another app).\n"
+        "Components may have different resting elevations across platforms, depending on the depth "
+        "of the environment (e.g., TV has a greater depth than mobile or desktop).\n\n"
+
+        "Responsive elevation and dynamic elevation offsets.\n\n"
+
+        "Some component types have responsive elevation, meaning they change elevation in response "
+        "to user input (e.g., normal, focused, and pressed) or system events. These elevation "
+        "changes are consistently implemented using dynamic elevation offsets.\n"
+        "Dynamic elevation offsets are the goal elevation that a component moves towards, relative "
+        "to the component’s resting state. They ensure that elevation changes are consistent "
+        "across actions and component types. For example, all components that lift on press have "
+        "the same elevation change relative to their resting elevation.\n"
+        "Once the input event is completed or cancelled, the component will return to its resting "
+        "elevation.\n\n"
+
+        "Avoiding elevation interference.\n\n"
+
+        "Components with responsive elevations may encounter other components as they move between "
+        "their resting elevations and dynamic elevation offsets. Because material cannot pass "
+        "through other material, components avoid interfering with one another any number of ways, "
+        "whether on a per component basis or using the entire app layout.\n"
+        "On a component level, components can move or be removed before they cause interference. "
+        "For example, a floating action button (FAB) can disappear or move off screen before a "
+        "user picks up a card, or it can move if a snackbar appears.\n"
+        "On the layout level, design your app layout to minimize opportunities for interference. "
+        "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
+        "when a user tries to pick up one of cards.\n\n"
+    </string>
+    <string name="action_settings">Settings</string>
+    <string name="additional_notes"><font size="12">variasi warna, model, atau packing</font></string>
+    <string name="onboarding_slide_1">Tunjukkan keahlianmu dan dapatkan kerjaan dengan mudah</string>
+    <string name="onboarding_slide_2">Dapatkan penawaran kerja yang sesuai dengan keahlian</string>
+    <string name="onboarding_slide_3">Terima uang setelah kerjaan berhasil dikirim</string>
+    <string name="onboarding_slide_final">Siap Gawe,\nSiap Gajian!</string>
+
+</resources>

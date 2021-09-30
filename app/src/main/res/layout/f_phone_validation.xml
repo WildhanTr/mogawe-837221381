@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".view.shared.phone_validation.PhoneValidationFragment">
+
+    <Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </Toolbar>
+
+    <com.mogawe.mosurvei.util.ui.GalanoTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/space_xdouble"
+        android:text="Masukkan telepon"
+        android:textSize="36sp" />
+
+    <LinearLayout
+        android:id="@+id/lnrPhoneNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <com.mogawe.mosurvei.util.ui.GalanoTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/space_double"
+            android:layout_marginRight="@dimen/space_double"
+            android:layout_marginTop="@dimen/space"
+            android:textSize="16sp"
+            android:text="Nomor Teleponmu"/>
+        <com.mogawe.mosurvei.util.ui.GalanoTextView
+            android:id="@+id/txvPhoneMogawers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/space_double"
+            android:layout_marginRight="@dimen/space_double"
+            android:text="087784123129"/>
+    </LinearLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edtPhoneNumberWrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/space_double"
+        android:layout_marginRight="@dimen/space_double"
+        android:layout_marginTop="@dimen/space"
+        android:hint="@string/nomor_telepon">
+
+        <EditText
+            android:id="@+id/edtPhoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:inputType="textPersonName"
+            android:textColor="@color/grey_800" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edtActivationCodeWrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/space_double"
+        android:layout_marginRight="@dimen/space_double"
+        android:layout_marginTop="@dimen/space"
+        android:hint="Kode Aktivasi">
+
+        <EditText
+            android:id="@+id/edtActivationCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:inputType="textPersonName"
+            android:textColor="@color/grey_800" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.mogawe.mosurvei.util.ui.GalanoButton
+        android:id="@+id/btnSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/space_double"
+        android:background="@drawable/bg_primary_rounded"
+        android:text="Submit"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+</LinearLayout>

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Backup/mogawe-android/app/src/main/res/drawable/bg_circle_black_transparent.xml" value="0.26944444444444443" />
+        <entry key="..\:/Backup/mogawe-android/app/src/main/res/drawable/bg_dialog_top_rounded.xml" value="0.28615384615384615" />
+        <entry key="..\:/Backup/mogawe-android/app/src/main/res/drawable/bg_gradient_red_onboarding.xml" value="0.2861111111111111" />
+        <entry key="..\:/Backup/mogawe-android/app/src/main/res/drawable/button_green.xml" value="0.290625" />
+        <entry key="..\:/Backup/mogawe-android/app/src/main/res/drawable/button_grey.xml" value="0.15989583333333332" />
+        <entry key="..\:/Backup/mogawe-android/app/src/main/res/drawable/button_primary.xml" value="0.290625" />
+        <entry key="..\:/Backup/mogawe-android/app/src/main/res/drawable/c_single_radio_vertical.xml" value="0.28615384615384615" />
+        <entry key="..\:/Backup/mogawe-android/app/src/main/res/drawable/circle.xml" value="0.290625" />
+        <entry key="..\:/Backup/mogawe-android/app/src/main/res/drawable/circle_border.xml" value="0.290625" />
+        <entry key="..\:/Backup/mogawe-android/app/src/main/res/drawable/qiscus_rounded_primary_chat_bg.xml" value="0.290625" />
+        <entry key="..\:/Backup/mogawe-android/app/src/main/res/drawable/round_corner.xml" value="0.275" />
+        <entry key="..\:/Backup/mogawe-android/app/src/main/res/layout/a_accreditation_list.xml" value="0.536" />
+        <entry key="..\:/Backup/mogawe-android/app/src/main/res/layout/a_catalog.xml" value="0.2033514492753623" />
+        <entry key="..\:/Backup/mogawe-android/app/src/main/res/layout/a_gawean_infomation_instant.xml" value="0.264" />
+        <entry key="..\:/Backup/mogawe-android/app/src/main/res/layout/a_gawean_information.xml" value="0.1598731884057971" />
+        <entry key="..\:/Backup/mogawe-android/app/src/main/res/layout/a_gawean_instant.xml" value="0.2033514492753623" />
+        <entry key="..\:/Backup/mogawe-android/app/src/main/res/layout/a_gawean_ku_see_all.xml" value="0.24818840579710144" />
+        <entry key="..\:/Backup/mogawe-android/app/src/main/res/layout/a_hire_me.xml" value="0.21331521739130435" />
+        <entry key="..\:/Backup/mogawe-android/app/src/main/res/layout/a_home.xml" value="0.19791666666666666" />
+        <entry key="..\:/Backup/mogawe-android/app/src/main/res/layout/a_intro.xml" value="0.21331521739130435" />
+        <entry key="..\:/Backup/mogawe-android/app/src/main/res/layout/a_kyc.xml" value="0.2" />
+        <entry key="..\:/Backup/mogawe-android/app/src/main/res/layout/a_section_form.xml" value="0.264" />
+        <entry key="..\:/Backup/mogawe-android/app/src/main/res/layout/a_section_form_tracker.xml" value="0.2554347826086957" />
+        <entry key="..\:/Backup/mogawe-android/app/src/main/res/layout/a_skill_and_assets_verification.xml" value="0.2504528985507246" />
+        <entry key="..\:/Backup/mogawe-android/app/src/main/res/layout/ai_deals.xml" value="0.19791666666666666" />
+        <entry key="..\:/Backup/mogawe-android/app/src/main/res/layout/ai_gawean_instant.xml" value="0.264" />
+        <entry key="..\:/Backup/mogawe-android/app/src/main/res/layout/ai_group_history_job.xml" value="0.234375" />
+        <entry key="..\:/Backup/mogawe-android/app/src/main/res/layout/ai_history_job.xml" value="0.234375" />
+        <entry key="..\:/Backup/mogawe-android/app/src/main/res/layout/ai_skill_asset_detail.xml" value="0.2504528985507246" />
+        <entry key="..\:/Backup/mogawe-android/app/src/main/res/layout/ai_skill_asset_needed.xml" value="0.19791666666666666" />
+        <entry key="..\:/Backup/mogawe-android/app/src/main/res/layout/ai_task_gawean.xml" value="0.2513586956521739" />
+        <entry key="..\:/Backup/mogawe-android/app/src/main/res/layout/ai_task_home.xml" value="0.2513586956521739" />
+        <entry key="..\:/Backup/mogawe-android/app/src/main/res/layout/appbar_multiline.xml" value="0.4" />
+        <entry key="..\:/Backup/mogawe-android/app/src/main/res/layout/bottom_sheet_skill_detail.xml" value="0.1598731884057971" />
+        <entry key="..\:/Backup/mogawe-android/app/src/main/res/layout/c_button.xml" value="0.2513586956521739" />
+        <entry key="..\:/Backup/mogawe-android/app/src/main/res/layout/c_button_desc.xml" value="0.27447916666666666" />
+        <entry key="..\:/Backup/mogawe-android/app/src/main/res/layout/c_child.xml" value="0.4" />
+        <entry key="..\:/Backup/mogawe-android/app/src/main/res/layout/c_form_tracker.xml" value="0.6" />
+        <entry key="..\:/Backup/mogawe-android/app/src/main/res/layout/c_images.xml" value="0.20878623188405798" />
+        <entry key="..\:/Backup/mogawe-android/app/src/main/res/layout/c_open_url.xml" value="0.27447916666666666" />
+        <entry key="..\:/Backup/mogawe-android/app/src/main/res/layout/c_radiogroup_vertical.xml" value="0.23369565217391305" />
+        <entry key="..\:/Backup/mogawe-android/app/src/main/res/layout/c_search_gawean.xml" value="0.23369565217391305" />
+        <entry key="..\:/Backup/mogawe-android/app/src/main/res/layout/c_single_child.xml" value="0.4" />
+        <entry key="..\:/Backup/mogawe-android/app/src/main/res/layout/c_single_images.xml" value="0.264" />
+        <entry key="..\:/Backup/mogawe-android/app/src/main/res/layout/c_single_open_url.xml" value="0.2078804347826087" />
+        <entry key="..\:/Backup/mogawe-android/app/src/main/res/layout/c_single_radio_vertical.xml" value="0.23369565217391305" />
+        <entry key="..\:/Backup/mogawe-android/app/src/main/res/layout/c_single_radiogroup_vertical.xml" value="0.22418478260869565" />
+        <entry key="..\:/Backup/mogawe-android/app/src/main/res/layout/c_single_text.xml" value="0.2" />
+        <entry key="..\:/Backup/mogawe-android/app/src/main/res/layout/c_text.xml" value="0.27447916666666666" />
+        <entry key="..\:/Backup/mogawe-android/app/src/main/res/layout/f_cari_gawean_advanced_result.xml" value="0.19791666666666666" />
+        <entry key="..\:/Backup/mogawe-android/app/src/main/res/layout/f_deals.xml" value="0.19791666666666666" />
+        <entry key="..\:/Backup/mogawe-android/app/src/main/res/layout/f_deals_reedem.xml" value="0.19791666666666666" />
+        <entry key="..\:/Backup/mogawe-android/app/src/main/res/layout/f_gawean_fragment_v3.xml" value="0.24818840579710144" />
+        <entry key="..\:/Backup/mogawe-android/app/src/main/res/layout/f_gawean_information.xml" value="0.27447916666666666" />
+        <entry key="..\:/Backup/mogawe-android/app/src/main/res/layout/f_onboarding_slide_1.xml" value="0.21331521739130435" />
+        <entry key="..\:/Backup/mogawe-android/app/src/main/res/layout/f_onboarding_slide_final.xml" value="0.21331521739130435" />
+        <entry key="..\:/Backup/mogawe-android/app/src/main/res/layout/f_section_form_tracker.xml" value="0.2554347826086957" />
+        <entry key="..\:/Backup/mogawe-android/app/src/main/res/layout/footbar_section_form.xml" value="0.22418478260869565" />
+        <entry key="..\:/Backup/mogawe-android/app/src/main/res/layout/fragment_section_form.xml" value="0.2" />
+        <entry key="..\:/Backup/mogawe-android/app/src/main/res/layout/fragment_section_form_item.xml" value="0.2427536231884058" />
+        <entry key="..\:/Backup/mogawe-android/app/src/main/res/layout/item_my_text_comment.xml" value="0.4" />
+        <entry key="..\:/Backup/mogawe-android/app/src/main/res/layout/item_opponent_text_comment.xml" value="0.27447916666666666" />
+        <entry key="..\:/Backup/mogawe-android/app/src/main/res/layout/l_banner_list.xml" value="0.19791666666666666" />
+        <entry key="..\:/Backup/mogawe-android/app/src/main/res/layout/l_gawean_list.xml" value="0.19791666666666666" />
+        <entry key="..\:/Backup/mogawe-android/app/src/main/res/layout/l_job_times.xml" value="0.2554347826086957" />
+        <entry key="..\:/Backup/mogawe-android/app/src/main/res/layout/r_accreditation_page.xml" value="0.3793969849246231" />
+        <entry key="..\:/Backup/mogawe-android/app/src/main/res/layout/r_certificate_item.xml" value="0.16" />
+        <entry key="..\:/Backup/mogawe-android/app/src/main/res/layout/r_next_gawean.xml" value="0.6" />
+        <entry key="..\:/Users/abidz/Documents/mogawe-android/app/src/main/res/drawable/border_edit_text.xml" value="0.2361111111111111" />
+        <entry key="..\:/Users/abidz/Documents/mogawe-android/app/src/main/res/drawable/button_primary.xml" value="0.290625" />
+        <entry key="..\:/Users/abidz/Documents/mogawe-android/app/src/main/res/drawable/button_toggle_primary.xml" value="0.290625" />
+        <entry key="..\:/Users/abidz/Documents/mogawe-android/app/src/main/res/drawable/dialog_matrix.xml" value="0.2361111111111111" />
+        <entry key="..\:/Users/abidz/Documents/mogawe-android/app/src/main/res/drawable/round_corner.xml" value="0.2361111111111111" />
+        <entry key="..\:/Users/abidz/Documents/mogawe-android/app/src/main/res/drawable/round_outline.xml" value="0.28615384615384615" />
+        <entry key="..\:/Users/abidz/Documents/mogawe-android/app/src/main/res/drawable/text_toggle_primary.xml" value="0.290625" />
+        <entry key="..\:/Users/abidz/Documents/mogawe-android/app/src/main/res/layout/a_cari_gawean.xml" value="0.1334853090172239" />
+        <entry key="..\:/Users/abidz/Documents/mogawe-android/app/src/main/res/layout/a_catalog.xml" value="0.1334853090172239" />
+        <entry key="..\:/Users/abidz/Documents/mogawe-android/app/src/main/res/layout/a_certificate_info.xml" value="0.2151268115942029" />
+        <entry key="..\:/Users/abidz/Documents/mogawe-android/app/src/main/res/layout/a_certificate_post.xml" value="0.20199275362318841" />
+        <entry key="..\:/Users/abidz/Documents/mogawe-android/app/src/main/res/layout/a_gawean_information.xml" value="0.264" />
+        <entry key="..\:/Users/abidz/Documents/mogawe-android/app/src/main/res/layout/a_gawean_ku_see_all.xml" value="0.4" />
+        <entry key="..\:/Users/abidz/Documents/mogawe-android/app/src/main/res/layout/a_home.xml" value="0.2" />
+        <entry key="..\:/Users/abidz/Documents/mogawe-android/app/src/main/res/layout/a_intro.xml" value="0.1334853090172239" />
+        <entry key="..\:/Users/abidz/Documents/mogawe-android/app/src/main/res/layout/a_login.xml" value="0.4" />
+        <entry key="..\:/Users/abidz/Documents/mogawe-android/app/src/main/res/layout/a_map.xml" value="0.20199275362318841" />
+        <entry key="..\:/Users/abidz/Documents/mogawe-android/app/src/main/res/layout/a_product_detail.xml" value="0.1334853090172239" />
+        <entry key="..\:/Users/abidz/Documents/mogawe-android/app/src/main/res/layout/a_section_form_post.xml" value="0.1334853090172239" />
+        <entry key="..\:/Users/abidz/Documents/mogawe-android/app/src/main/res/layout/a_splash.xml" value="0.23007246376811594" />
+        <entry key="..\:/Users/abidz/Documents/mogawe-android/app/src/main/res/layout/ai_catalog.xml" value="0.22010869565217392" />
+        <entry key="..\:/Users/abidz/Documents/mogawe-android/app/src/main/res/layout/ai_skill_asset_detail.xml" value="0.2151268115942029" />
+        <entry key="..\:/Users/abidz/Documents/mogawe-android/app/src/main/res/layout/ai_skill_asset_needed.xml" value="0.23007246376811594" />
+        <entry key="..\:/Users/abidz/Documents/mogawe-android/app/src/main/res/layout/appbar_light.xml" value="0.1334853090172239" />
+        <entry key="..\:/Users/abidz/Documents/mogawe-android/app/src/main/res/layout/bottom_sheet_skill_detail.xml" value="0.1334853090172239" />
+        <entry key="..\:/Users/abidz/Documents/mogawe-android/app/src/main/res/layout/c_button_desc.xml" value="0.536" />
+        <entry key="..\:/Users/abidz/Documents/mogawe-android/app/src/main/res/layout/c_child.xml" value="0.6" />
+        <entry key="..\:/Users/abidz/Documents/mogawe-android/app/src/main/res/layout/c_images.xml" value="0.4" />
+        <entry key="..\:/Users/abidz/Documents/mogawe-android/app/src/main/res/layout/c_info.xml" value="0.264" />
+        <entry key="..\:/Users/abidz/Documents/mogawe-android/app/src/main/res/layout/c_list_plano.xml" value="0.20742753623188406" />
+        <entry key="..\:/Users/abidz/Documents/mogawe-android/app/src/main/res/layout/c_open_url.xml" value="0.264" />
+        <entry key="..\:/Users/abidz/Documents/mogawe-android/app/src/main/res/layout/c_phone_verification.xml" value="0.264" />
+        <entry key="..\:/Users/abidz/Documents/mogawe-android/app/src/main/res/layout/c_radiogroup.xml" value="0.1334853090172239" />
+        <entry key="..\:/Users/abidz/Documents/mogawe-android/app/src/main/res/layout/c_rating_bar.xml" value="0.264" />
+        <entry key="..\:/Users/abidz/Documents/mogawe-android/app/src/main/res/layout/c_scan_qr.xml" value="0.48198970840480276" />
+        <entry key="..\:/Users/abidz/Documents/mogawe-android/app/src/main/res/layout/c_text.xml" value="0.1334853090172239" />
+        <entry key="..\:/Users/abidz/Documents/mogawe-android/app/src/main/res/layout/dialog_matrix.xml" value="0.3820840950639854" />
+        <entry key="..\:/Users/abidz/Documents/mogawe-android/app/src/main/res/layout/f_cari_gawean.xml" value="0.19293478260869565" />
+        <entry key="..\:/Users/abidz/Documents/mogawe-android/app/src/main/res/layout/f_gawean_information.xml" value="0.15353260869565216" />
+        <entry key="..\:/Users/abidz/Documents/mogawe-android/app/src/main/res/layout/f_mapview.xml" value="0.20199275362318841" />
+        <entry key="..\:/Users/abidz/Documents/mogawe-android/app/src/main/res/layout/fragment_section_form.xml" value="0.1334853090172239" />
+        <entry key="..\:/Users/abidz/Documents/mogawe-android/app/src/main/res/layout/image_slider_container.xml" value="0.22010869565217392" />
+        <entry key="..\:/Users/abidz/Documents/mogawe-android/app/src/main/res/layout/l_banner_list.xml" value="0.23007246376811594" />
+        <entry key="..\:/Users/abidz/Documents/mogawe-android/app/src/main/res/layout/l_gawean_list.xml" value="0.2" />
+        <entry key="..\:/Users/abidz/Documents/mogawe-android/app/src/main/res/layout/r_certificate_item.xml" value="0.4" />
+        <entry key="app/src/main/res/drawable/ic_share_red_24dp.xml" value="0.5411458333333333" />
+        <entry key="app/src/main/res/layout/a_accreditation_list.xml" value="0.525" />
+        <entry key="app/src/main/res/layout/a_bantuan.xml" value="0.525" />
+        <entry key="app/src/main/res/layout/a_cari_gawean.xml" value="0.3125" />
+        <entry key="app/src/main/res/layout/a_catalog.xml" value="0.3125" />
+        <entry key="app/src/main/res/layout/a_checkout.xml" value="0.3125" />
+        <entry key="app/src/main/res/layout/a_gawean_information.xml" value="0.5265625" />
+        <entry key="app/src/main/res/layout/a_home.xml" value="0.5265625" />
+        <entry key="app/src/main/res/layout/a_informasi.xml" value="0.525" />
+        <entry key="app/src/main/res/layout/a_login.xml" value="0.525" />
+        <entry key="app/src/main/res/layout/a_product_detail.xml" value="0.5265625" />
+        <entry key="app/src/main/res/layout/a_section_form_post.xml" value="0.5265625" />
+        <entry key="app/src/main/res/layout/a_skill_and_assets_verification.xml" value="0.525" />
+        <entry key="app/src/main/res/layout/c_audio.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/c_child.xml" value="0.75" />
+        <entry key="app/src/main/res/layout/c_rating_bar.xml" value="0.6836461126005362" />
+        <entry key="app/src/main/res/layout/c_scan_qr.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/c_slider.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/image_slider_container.xml" value="0.5265625" />
+        <entry key="app/src/main/res/layout/r_accreditation_page.xml" value="0.525" />
+        <entry key="app/src/main/res/layout/r_certificate_page.xml" value="0.525" />
+        <entry key="app/src/main/res/layout/r_next_gawean.xml" value="0.5" />
+        <entry key="app/src/main/res/menu/menu_gaweanku_card.xml" value="0.525" />
+        <entry key="app/src/main/res/menu/menu_navigation.xml" value="0.525" />
+        <entry key="app/src/main/res/menu/menu_scroll_test.xml" value="0.525" />
+        <entry key="app/src/main/res/menu/menu_section_form.xml" value="0.525" />
+        <entry key="app/src/main/res/menu/popup_menu.xml" value="0.525" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.3124994018349886" />
+      </ProjectState>
+    </option>
+  </component>
+</project>

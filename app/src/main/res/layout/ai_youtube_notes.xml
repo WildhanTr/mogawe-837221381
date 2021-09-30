@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:orientation="horizontal">
+
+
+        <com.mogawe.mosurvei.util.ui.GalanoTextView
+            android:id="@+id/txvVideoTime"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="25:08"
+            android:textColor="@color/blue_700"
+            android:gravity="center"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="10"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="12dp">
+
+                <EditText
+                    android:id="@+id/edtNote"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="10"
+                    android:singleLine="true"
+                    android:textColor="@color/grey_800"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"/>
+
+                <ImageButton
+                    android:id="@+id/btnDeleteNotes"
+                    style="?android:buttonBarButtonStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:paddingBottom="@dimen/space_double"
+                    android:src="@drawable/ic_delete_black_24dp" />
+            </LinearLayout>
+
+            <com.mogawe.mosurvei.util.ui.LatoTextView
+                android:id="@+id/txvError"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_half"
+                android:layout_marginTop="-4dp"
+                android:textColor="@color/red_400"
+                android:textSize="@dimen/font_small" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

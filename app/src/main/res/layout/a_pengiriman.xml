@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.content.supplier.shipment.PengirimanActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/appBar"
+            layout="@layout/appbar_light" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="81dp"
+            tools:ignore="UselessParent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:focusable="true"
+                android:focusableInTouchMode="true">
+
+                <LinearLayout
+                    android:id="@+id/labelBerat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_rounded_white"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/layoutWeight"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:layout_marginEnd="21dp">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/weight" />
+
+                        <com.mogawe.mosurvei.util.ui.LatoTextView
+                            android:layout_width="236dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="15.5dp"
+                            android:layout_weight="1"
+                            android:text="Berat *"
+                            android:textAllCaps="false"
+                            android:textColor="@color/black" />
+
+                        <EditText
+                            android:id="@+id/txtAturBerat"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@color/white"
+                            android:text=""
+                            android:inputType="number"
+                            android:hint="Atur Berat "
+                            android:gravity="right"
+                            android:textSize="15sp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" gr"/>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_rounded_white"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/space_double">
+
+                        <com.mogawe.mosurvei.util.ui.LatoTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:text="Ukuran Paket"
+                            android:textStyle="bold"
+                            android:textAllCaps="false"
+                            android:textColor="@color/black" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layoutWidth"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginStart="@dimen/space_double"
+                        android:layout_marginEnd="@dimen/space_double"
+                        android:layout_marginBottom="@dimen/space">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/width" />
+
+                        <com.mogawe.mosurvei.util.ui.LatoTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/space_double"
+                            android:layout_weight="1"
+                            android:text="Lebar"
+                            android:textAllCaps="false"
+                            android:textColor="@color/black" />
+
+                        <EditText
+                            android:id="@+id/txtAturLebar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@color/white"
+                            android:text=""
+                            android:hint="Atur Lebar "
+                            android:inputType="number"
+                            android:gravity="right"
+                            android:textSize="15sp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" cm"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layoutLength"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginStart="@dimen/space_double"
+                        android:layout_marginEnd="@dimen/space_double"
+                        android:layout_marginTop="@dimen/space"
+                        android:layout_marginBottom="@dimen/space">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/length" />
+
+                        <com.mogawe.mosurvei.util.ui.LatoTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/space_double"
+                            android:layout_weight="1"
+                            android:text="Panjang "
+                            android:textAllCaps="false"
+                            android:textColor="@color/black" />
+
+                        <EditText
+                            android:id="@+id/txtAturPanjang"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@color/white"
+                            android:text=""
+                            android:hint="Atur Panjang "
+                            android:inputType="number"
+                            android:gravity="right"
+                            android:textSize="15sp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" cm"/>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layoutHeight"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginStart="@dimen/space_double"
+                        android:layout_marginEnd="@dimen/space_double"
+                        android:layout_marginTop="@dimen/space"
+                        android:layout_marginBottom="@dimen/space_double">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/height" />
+
+                        <com.mogawe.mosurvei.util.ui.LatoTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/space_double"
+                            android:layout_weight="1"
+                            android:text="Tinggi"
+                            android:textAllCaps="false"
+                            android:textColor="@color/black" />
+
+                        <EditText
+                            android:id="@+id/txtAturTinggi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@color/white"
+                            android:text=""
+                            android:hint="Atur Tinggi "
+                            android:inputType="number"
+                            android:gravity="right"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" cm"/>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_rounded_white"
+                    android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/space_double">
+
+                            <com.mogawe.mosurvei.util.ui.LatoTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:text="Metode Pengiriman"
+                                android:textStyle="bold"
+                                android:textAllCaps="false"
+                                android:textColor="@color/black" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginBottom="@dimen/space"
+                            android:layout_marginStart="@dimen/space_double"
+                            android:layout_marginEnd="9dp">
+
+                            <ImageView
+                                android:layout_width="22dp"
+                                android:layout_height="22dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_ambil_sendiri" />
+
+                            <com.mogawe.mosurvei.util.ui.LatoTextView
+                                android:layout_width="236dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="14.5dp"
+                                android:layout_weight="1"
+                                android:text="Ambil Sendiri"
+                                android:textAllCaps="false"
+                                android:textColor="@color/black" />
+
+                            <androidx.appcompat.widget.SwitchCompat
+                                android:id="@+id/checkAmbilSendiri"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:checked="false"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="@dimen/space"
+                            android:layout_marginBottom="@dimen/space"
+                            android:layout_marginStart="@dimen/space_double"
+                            android:layout_marginEnd="9dp">
+
+                            <ImageView
+                                android:layout_width="22dp"
+                                android:layout_height="22dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_kurir_toko" />
+
+                            <com.mogawe.mosurvei.util.ui.LatoTextView
+                                android:layout_width="236dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="14.5dp"
+                                android:layout_weight="1"
+                                android:text="Kurir Toko"
+                                android:textAllCaps="false"
+                                android:textColor="@color/black" />
+
+                            <androidx.appcompat.widget.SwitchCompat
+                                android:id="@+id/checkKurirToko"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:checked="false"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layoutEkspedisi"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="@dimen/space"
+                            android:layout_marginBottom="@dimen/space_double"
+                            android:layout_marginStart="@dimen/space_double"
+                            android:layout_marginEnd="9dp">
+
+                            <ImageView
+                                android:layout_width="22dp"
+                                android:layout_height="22dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_logistik" />
+
+                            <com.mogawe.mosurvei.util.ui.LatoTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="14.5dp"
+                                android:text="Ekspedisi"
+                                android:textAllCaps="false"
+                                android:textColor="@color/black" />
+
+                            <com.mogawe.mosurvei.util.ui.LatoTextView
+                                android:id="@+id/txtEkspedisiPilihan"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="@dimen/space"
+                                android:layout_weight="1"
+                                android:text=""
+                                android:textSize="12sp"
+                                android:textAllCaps="false"
+                                android:textColor="@color/colorPrimary" />
+
+
+                            <androidx.appcompat.widget.SwitchCompat
+                                android:id="@+id/checkEkspedisi"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:checked="false"
+                                android:clickable="false" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layoutEkspedisiPilihan"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="1dp"
+                            android:layout_marginBottom="@dimen/space_double"
+                            android:layout_marginStart="@dimen/space_double"
+                            android:layout_marginEnd="16dp"
+                            android:visibility="gone">
+
+                            <com.mogawe.mosurvei.util.ui.LatoTextView
+                                android:id="@+id/txtEkspedisiPilihanHilang"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="right"
+                                android:layout_marginStart="50dp"
+                                android:layout_weight="1"
+                                android:text=""
+                                android:textAllCaps="false"
+                                android:textColor="@color/black" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/bg_rounded_white"
+                        android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/layoutGratisOngkir"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:layout_marginEnd="9dp">
+
+                        <ImageView
+                            android:layout_width="21dp"
+                            android:layout_height="21dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_free_ongkir"/>
+
+                        <com.mogawe.mosurvei.util.ui.LatoTextView
+                            android:layout_width="236dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/space_double"
+                            android:layout_weight="1"
+                            android:text="Gratis Ongkir"
+                            android:textAllCaps="false"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/txtGratisOngkir"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="@color/black"
+                            android:visibility="gone"/>
+
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:id="@+id/checkGratisOngkir"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:clickable="false"/>
+                    </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/space_double">
+
+                    <Button
+                        android:id="@+id/btnTambah"
+                        style="@style/GenericRaisedButtonStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Simpan"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+</FrameLayout>

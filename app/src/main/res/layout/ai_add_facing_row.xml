@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+<!--    <ImageButton-->
+<!--        android:id="@+id/buttonAdd"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="@dimen/space_double"-->
+<!--        android:background="@drawable/bg_white_rounded_stroke"-->
+<!--        android:padding="@dimen/space_double"-->
+<!--        android:src="@drawable/ic_add_black_24dp" />-->
+
+    <com.mogawe.mosurvei.util.ui.GalanoButton
+        android:id="@+id/buttonAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/space_xtra"
+        android:layout_marginTop="@dimen/space_double"
+        android:text="Tambah baris"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:drawableEnd="@drawable/ic_add_black_24dp"
+        android:drawableTint="@color/white"
+        style="@style/GenericRaisedButtonStyle"
+        android:layout_gravity="right"
+        android:layout_marginBottom="@dimen/space"/>
+
+<!--    <View-->
+<!--        android:id="@+id/line"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="2dp"-->
+<!--        android:layout_marginTop="@dimen/space"-->
+<!--        android:background="@color/grey_300" />-->
+
+</LinearLayout>

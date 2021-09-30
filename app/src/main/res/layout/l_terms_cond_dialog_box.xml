@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:paddingRight="@dimen/space_triple"
+    android:paddingLeft="@dimen/space_triple"
+    android:paddingTop="@dimen/space">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_xxtra"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/cbTermsAndConds"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/txvTermsAndConds"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/agree_terms_and_conds"
+            android:textColor="@color/grey_600"
+            android:textSize="@dimen/font_medium" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_xdouble"
+        android:gravity="right"
+        android:padding="@dimen/space"
+        android:orientation="horizontal">
+
+        <com.mogawe.mosurvei.util.ui.LatoMaterialButton
+            android:id="@+id/btnNegative"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tidak"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            android:textSize="@dimen/font_medium"
+            android:textColor="@color/grey_600"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"/>
+        <com.mogawe.mosurvei.util.ui.LatoMaterialButton
+            android:layout_marginLeft="@dimen/space"
+            android:id="@+id/btnPositive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ya"
+            android:textStyle="bold"
+            android:textSize="@dimen/font_medium"
+            android:textColor="@color/colorPrimary"
+            android:textAllCaps="false"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"/>
+    </LinearLayout>
+
+
+</LinearLayout>

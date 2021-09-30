@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.google.android.material.appbar.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/appBar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:theme="@style/AppTheme.AppBarOverlay"
+    app:elevation="0dp">
+
+    <Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:paddingTop="@dimen/space"
+        android:paddingBottom="@dimen/space"
+        app:popupTheme="@style/AppTheme.PopupOverlay">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.mogawe.mosurvei.util.ui.GalanoLightTextView
+                android:id="@+id/txvAppName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="@dimen/space_half"
+                android:gravity="center_vertical"
+                android:text="@string/app_name"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_big"
+                android:textStyle="bold" />
+
+            <com.mogawe.mosurvei.util.ui.GalanoTextView
+                android:id="@+id/txvTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="@string/deals"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_big" />
+
+
+            <com.mogawe.mosurvei.util.ui.GalanoButton
+                android:id="@+id/btnVoucher"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/space_double"
+                android:background="@color/transparent"
+                android:drawableEnd="@drawable/ic_voucher_black_24"
+                android:drawablePadding="@dimen/space_half"
+                android:drawableTint="@color/white"
+                android:text="@string/voucher"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:tint="@color/white" />
+
+
+        </LinearLayout>
+
+    </Toolbar>
+
+</com.google.android.material.appbar.AppBarLayout>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".view.content.acreditation.AccreditationListActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsing_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            app:contentScrim="@color/colorPrimary"
+            app:expandedTitleTextAppearance="@android:color/transparent"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:statusBarScrim="@color/white">
+
+
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+                <ImageView
+                    android:id="@+id/buttonBack"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="0dp"
+                    android:padding="@dimen/space_quarter"
+                    app:srcCompat="@drawable/ic_arrow_back_white_24dp" />
+
+                <com.mogawe.mosurvei.util.ui.LatoTextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:minHeight="?actionBarSize"
+                    android:padding="@dimen/appbar_padding"
+                    android:text="Akreditasi"
+                    android:textAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
+                    android:textSize="@dimen/font_big" />
+
+                <LinearLayout
+                    android:id="@+id/lnrVerifiedSkill"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="@dimen/space_double"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/lnrVerifiedAccreditation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+<!--                        <androidx.cardview.widget.CardView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            app:cardCornerRadius="@dimen/space_double">-->
+
+<!--                            <ImageView-->
+<!--                                android:id="@+id/imvSkillIcon"-->
+<!--                                android:layout_width="32dp"-->
+<!--                                android:layout_height="32dp"-->
+<!--                                android:background="@drawable/circle"-->
+<!--                                android:backgroundTint="@color/white"-->
+<!--                                android:padding="@dimen/space_half"-->
+<!--                                android:src="@drawable/ic_play_circle_filled_black_24dp" />-->
+
+<!--                        </androidx.cardview.widget.CardView>-->
+
+<!--                        <androidx.cardview.widget.CardView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginStart="-16dp"-->
+<!--                            app:cardCornerRadius="@dimen/space_double">-->
+
+<!--                            <ImageView-->
+<!--                                android:layout_width="32dp"-->
+<!--                                android:layout_height="32dp"-->
+<!--                                android:padding="@dimen/space"-->
+<!--                                android:src="@drawable/ic_coin"-->
+<!--                                app:tint="@color/black" />-->
+
+<!--                        </androidx.cardview.widget.CardView>-->
+
+<!--                        <androidx.cardview.widget.CardView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginStart="-16dp"-->
+<!--                            app:cardCornerRadius="@dimen/space_double">-->
+
+<!--                            <ImageView-->
+<!--                                android:layout_width="32dp"-->
+<!--                                android:layout_height="32dp"-->
+<!--                                android:background="@drawable/circle"-->
+<!--                                android:backgroundTint="@color/white"-->
+<!--                                android:padding="@dimen/space"-->
+<!--                                android:src="@drawable/ic_coin" />-->
+
+<!--                        </androidx.cardview.widget.CardView>-->
+
+
+                    </LinearLayout>
+
+                    <com.mogawe.mosurvei.util.ui.GalanoTextView
+                        android:id="@+id/txvCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/space"
+                        android:text="+12"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_big"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+
+                </LinearLayout>
+
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/pagerAccreditation"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" />
+
+</LinearLayout>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!--tools:context="com.mogawe.mosurvei.view.activity.RegisterKycActivity">-->
+
+    <include
+        android:id="@+id/appBar"
+        layout="@layout/appbar_elevated" />
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/appBar"
+        android:layout_marginTop="@dimen/space">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:descendantFocusability="beforeDescendants"
+            android:focusableInTouchMode="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="@dimen/space_quadruple">
+
+            <com.mogawe.mosurvei.util.ui.GalanoTextView
+                android:id="@+id/txvData"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/please_fill_data"
+                android:textSize="20sp" />
+
+            <com.mogawe.mosurvei.util.ui.GalanoTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/space_half"
+                android:layout_marginStart="@dimen/space_half"
+                android:layout_marginTop="@dimen/space_quadruple"
+                android:text="@string/education"
+                android:textSize="@dimen/font_small" />
+
+            <Spinner
+                android:id="@+id/sprEducation"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/education_array" />
+
+            <com.mogawe.mosurvei.util.ui.GalanoTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/space_half"
+                android:layout_marginStart="@dimen/space_half"
+                android:layout_marginTop="@dimen/space"
+                android:text="@string/research_experience"
+                android:textSize="@dimen/font_small" />
+
+            <Spinner
+                android:id="@+id/sprExperience"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/experience_array" />
+
+            <com.mogawe.mosurvei.util.ui.GalanoTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/space_half"
+                android:layout_marginStart="@dimen/space_half"
+                android:layout_marginTop="@dimen/space"
+                android:text="@string/biz_location"
+                android:textSize="@dimen/font_small" />
+
+            <Spinner
+                android:id="@+id/sprBizLocation"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/bizloc_array" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_triple"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/cbTermsAndConds"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <com.mogawe.mosurvei.util.ui.GalanoTextView
+                    android:id="@+id/txvTermsAndConds"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/agree_terms_and_conds"
+                    android:textColor="@color/grey_600"
+                    android:textSize="@dimen/font_small" />
+
+            </LinearLayout>
+
+
+            <com.mogawe.mosurvei.util.ui.GalanoButton
+                android:id="@+id/btnRegister"
+                style="@style/GenericRaisedButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space"
+                android:text="Selesai"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

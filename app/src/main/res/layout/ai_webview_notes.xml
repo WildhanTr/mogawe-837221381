@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/rvParent"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txvPilih">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal">
+
+                <com.vicmikhailau.maskededittext.MaskedEditText
+                    android:id="@+id/edtVideoTime"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:hint="00:00"
+                    android:imeOptions="actionDone"
+                    android:inputType="time"
+                    android:singleLine="true"
+                    android:textColor="@color/blue_700"
+                    app:mask="##:##:##"/>
+
+                <EditText
+                    android:id="@+id/edtNote"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="8"
+                    android:hint="Catatan"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:textColor="@color/grey_800" />
+
+                <ImageButton
+                    android:id="@+id/btnDeleteNotes"
+                    style="?android:buttonBarButtonStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingBottom="@dimen/space_double"
+                    android:src="@drawable/ic_delete_black_24dp" />
+            </LinearLayout>
+
+            <com.mogawe.mosurvei.util.ui.LatoTextView
+                android:id="@+id/txvError"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_half"
+                android:layout_marginTop="-4dp"
+                android:textColor="@color/red_400"
+                android:textSize="@dimen/font_small" />
+
+        </LinearLayout>
+
+        <HorizontalScrollView
+            android:id="@+id/templateScroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@color/white">
+
+            <LinearLayout
+                android:id="@+id/lnrButtonTemplate"
+                android:layout_width="wrap_content"
+                android:layout_height="54dp"
+                android:layout_margin="@dimen/space"
+                android:orientation="horizontal">
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+    </RelativeLayout>
+
+    <com.mogawe.mosurvei.util.ui.GalanoTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pilih catatan :"
+        android:id="@+id/txvPilih"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <!--tools:context=".test.RepoTestActivity">-->
+
+    <include
+        android:id="@+id/appBar"
+        layout="@layout/appbar" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/appBar"
+        android:padding="@dimen/space_double" />
+
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/space_xxxtra"
+        android:backgroundTint="@color/colorPrimary"
+        android:src="@android:drawable/btn_plus"
+        android:tint="@color/white" />
+
+</RelativeLayout>

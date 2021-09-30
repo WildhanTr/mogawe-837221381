@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/lnrMenu"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:background="@color/white"
+    android:baselineAligned="false"
+    android:gravity="bottom"
+    android:minHeight="56dp"
+    android:orientation="horizontal">
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottom_navigation_menu"
+        android:background="@android:color/white"
+        app:itemTextColor="@drawable/selector_bottom_navigation_menu"
+        app:itemIconTint="@drawable/selector_bottom_navigation_menu"
+        app:menu="@menu/menu_navigation"
+        app:labelVisibilityMode="labeled"/>
+
+</LinearLayout>

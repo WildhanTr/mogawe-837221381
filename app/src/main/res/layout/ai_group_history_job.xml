@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:id="@+id/lnrGroupJobHistory">
+
+    <RelativeLayout
+        android:layout_width="@dimen/space_triple"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/imgDots"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:src="@drawable/circle"
+            android:layout_centerInParent="true"
+            android:tint="@color/grey_500"/>
+
+        <View
+            android:id="@+id/lineView"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/grey_500"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.mogawe.mosurvei.util.ui.GalanoTextView
+                android:id="@+id/txvJobName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:padding="@dimen/space"
+                android:text="Observasi ppgyg SAT 45"
+                android:textColor="@color/black"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/grey_200"
+                android:layout_marginStart="@dimen/space_double"
+                android:layout_marginEnd="@dimen/space_double" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="@dimen/space">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:orientation="vertical">
+
+                    <com.mogawe.mosurvei.util.ui.GalanoLightTextView
+                        android:id="@+id/txvStatusQC"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Status"
+                        android:textSize="@dimen/font_small"
+                        android:paddingStart="@dimen/space"
+                        android:paddingEnd="@dimen/space"
+                        android:textStyle="bold"
+                        android:background="@drawable/round_corner"
+                        android:backgroundTint="@color/green_200"
+                        android:textColor="@color/green_900"
+                        android:layout_centerVertical="true"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/space"
+                    android:visibility="gone">
+                    <ImageView
+                        android:id="@+id/imvPending"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_sent"
+                        android:maxHeight="24dp"
+                        android:maxWidth="24dp"
+                        android:layout_marginEnd="@dimen/space_half"/>
+
+                    <View
+                        android:id="@+id/firstLine"
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1"
+                        android:background="@color/grey_300"
+                        android:layout_gravity="center" />
+
+                    <ImageView
+                        android:id="@+id/imvApproved"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_approved"
+                        android:maxHeight="24dp"
+                        android:maxWidth="24dp"
+                        android:layout_marginStart="@dimen/space_half"
+                        android:layout_marginEnd="@dimen/space_half"/>
+
+                    <View
+                        android:id="@+id/secondLine"
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1"
+                        android:background="@color/grey_300"
+                        android:layout_gravity="center" />
+
+                    <ImageView
+                        android:id="@+id/imvSendToSaldo"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_credited"
+                        android:maxHeight="24dp"
+                        android:maxWidth="24dp"
+                        android:layout_marginStart="@dimen/space_half"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="6"
+                android:orientation="vertical">
+
+                <com.mogawe.mosurvei.util.ui.GalanoLightTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tanggal pengerjaan : "
+                    android:textSize="@dimen/font_tiny"
+                    android:paddingStart="@dimen/space_half"
+                    android:textStyle="bold"/>
+
+                <com.mogawe.mosurvei.util.ui.GalanoLightTextView
+                    android:id="@+id/txvJobTimestamp"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="6"
+                    android:text="timestamp"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:paddingStart="@dimen/space_half"
+                    android:gravity="center|start"/>
+
+                <com.mogawe.mosurvei.util.ui.GalanoLightTextView
+                    android:id="@+id/txvRejectedReason"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="6"
+                    android:text="Foto tidak sesuai"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:paddingStart="@dimen/space_half"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/space">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:id="@+id/lnrFee"
+                    android:layout_marginStart="@dimen/space_half">
+
+                    <com.mogawe.mosurvei.util.ui.GalanoLightTextView
+                        android:textStyle="bold"
+                        android:id="@+id/txvRp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rp "
+                        android:textSize="@dimen/font_small"/>
+
+                    <com.mogawe.mosurvei.util.ui.GalanoLightTextView
+                        android:textStyle="bold"
+                        android:id="@+id/txvJobFee"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="20000"
+                        android:textColor="@color/red_400"
+                        android:textSize="@dimen/font_small" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lnrPoint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="@dimen/space_half"
+                    android:layout_marginEnd="@dimen/space">
+
+                    <com.mogawe.mosurvei.util.ui.GalanoLightTextView
+                        android:textStyle="bold"
+                        android:id="@+id/txvPoint"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="20000"
+                        android:textColor="@color/red_400"
+                        android:textSize="@dimen/font_small" />
+
+                    <com.mogawe.mosurvei.util.ui.GalanoLightTextView
+                        android:textStyle="bold"
+                        android:id="@+id/txvPts"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" Pts"
+                        android:textSize="@dimen/font_small"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey_500"
+            android:layout_marginTop="@dimen/space"
+            android:layout_marginBottom="@dimen/space"
+            android:layout_marginStart="@dimen/space"/>
+
+    </LinearLayout>
+
+</LinearLayout>

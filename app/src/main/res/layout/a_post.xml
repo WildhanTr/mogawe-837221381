@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".view.content.timeline.PostActivity">
+
+    <include
+        android:id="@+id/appBar"
+        layout="@layout/appbar_light" />
+
+    <com.mogawe.mosurvei.util.ui.CostumEditText
+        android:id="@+id/edtInputPostText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/space_double"
+        android:hint="Tambahkan status Anda"
+        android:visibility="gone"/>
+
+   <ScrollView
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical">
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal"
+               android:gravity="center"
+               android:layout_marginTop="@dimen/space_double"
+               android:padding="@dimen/space"
+               android:clipToPadding="false">
+
+               <com.mogawe.mosurvei.util.ui.GalanoButton
+                   android:id="@+id/btnStiker"
+                   android:layout_width="wrap_content"
+                   android:layout_height="@dimen/space_xtra"
+                   android:layout_gravity="center"
+                   android:background="@drawable/bg_menu_on"
+                   android:text="Stiker"
+                   android:textAllCaps="false"
+                   android:textColor="@color/white"
+                   android:textSize="@dimen/font_small"
+                   android:layout_marginEnd="@dimen/space"/>
+
+               <com.mogawe.mosurvei.util.ui.GalanoButton
+                   android:id="@+id/btnGif"
+                   android:layout_width="wrap_content"
+                   android:layout_height="@dimen/space_xtra"
+                   android:layout_gravity="center"
+                   android:background="@drawable/bg_menu_off"
+                   android:text="GIF"
+                   android:textAllCaps="false"
+                   android:textColor="@color/colorPrimary"
+                   android:textSize="@dimen/font_small"
+                   android:layout_marginStart="@dimen/space"/>
+
+           </LinearLayout>
+
+           <androidx.recyclerview.widget.RecyclerView
+               android:id="@+id/rvStiker"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:padding="@dimen/space_double"
+               android:clipToPadding="false"
+               android:scrollbars="vertical"
+               android:layout_gravity="center"/>
+
+           <androidx.recyclerview.widget.RecyclerView
+               android:id="@+id/rvStikerGif"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:padding="@dimen/space_double"
+               android:clipToPadding="false"
+               android:scrollbars="vertical"
+               android:layout_gravity="center"
+               android:visibility="gone"/>
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal"
+               android:layout_margin="@dimen/space_double"
+               android:gravity="end|center_vertical"
+               android:visibility="gone">
+
+               <ProgressBar
+                   android:visibility="gone"
+                   android:id="@+id/progress_bar"
+                   android:layout_width="20dp"
+                   android:layout_height="20dp"
+                   android:layout_gravity="center"
+                   android:layout_marginEnd="@dimen/space_double"/>
+
+               <com.mogawe.mosurvei.util.ui.GalanoButton
+                   android:id="@+id/btn_edit_status"
+                   android:layout_width="wrap_content"
+                   android:layout_height="@dimen/space_xtra"
+                   android:layout_gravity="end"
+                   android:background="@drawable/button_primary"
+                   android:text="@string/action.save"
+                   android:textAllCaps="false"
+                   android:textColor="@color/white"
+                   android:textSize="@dimen/font_small" />
+           </LinearLayout>
+
+
+       </LinearLayout>
+
+   </ScrollView>
+</LinearLayout>

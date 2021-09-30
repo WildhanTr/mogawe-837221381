@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:layout_marginTop="@dimen/space_triple">
+
+    <LinearLayout
+        android:paddingTop="@dimen/space_quadruple"
+        android:layout_height="match_parent"
+        android:layout_width="?attr/actionBarSize"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/btnFlash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_flash_off_black_24dp"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.mogawe.mosurvei.playground.AutoFitTextureView
+            android:id="@+id/texture"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <View
+            android:id="@+id/line"
+            android:layout_height="match_parent"
+            android:layout_width="2dp"
+            android:background="@color/grey_300"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_gravity="end"
+            android:padding="@dimen/space"
+            android:background="@color/transparent"
+            android:layout_alignParentEnd="true">
+
+            <ImageButton
+                android:padding="@dimen/space"
+                android:id="@+id/btnSwitchCamera"
+                style="@android:style/Widget.Material.Light.Button.Borderless"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_marginBottom="40dp"
+                android:contentDescription="@string/app_name"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_cached_white_32dp"
+                android:tint="@color/black"
+                android:background="@drawable/circle"
+                android:backgroundTint="@color/white"/>
+
+            <ImageView
+                android:id="@+id/picture"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/space_quadruple"
+                android:text="Photo"
+                android:src="@drawable/bg_circle_camera"/>
+
+            <ImageButton
+                android:padding="@dimen/space"
+                android:id="@+id/btnBackCamera"
+                style="@android:style/Widget.Material.Light.Button.Borderless"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_marginBottom="40dp"
+                android:contentDescription="@string/app_name"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_arrow_back_black_24dp"
+                android:background="@drawable/circle"
+                android:backgroundTint="@color/white"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

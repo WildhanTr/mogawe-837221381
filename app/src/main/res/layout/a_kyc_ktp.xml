@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".view.shared.kyc.KycKTPActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/LLBack"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:orientation="vertical"
+            android:paddingLeft="30dp"
+            android:paddingTop="20dp"
+            android:paddingRight="30dp">
+
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@color/white"
+                app:srcCompat="?attr/actionModeCloseDrawable" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/KartuIdentitas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/LLBack">
+
+            <com.mogawe.mosurvei.util.ui.GalanoLightTextView
+                android:layout_width="match_parent"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="Masukkan Kartu Identitas"
+                android:textSize="24dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/KartuIdentitas"
+            android:orientation="vertical">
+
+            <com.mogawe.mosurvei.util.ui.GalanoLightTextView
+                android:layout_width="match_parent"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:gravity="center"
+                android:text="Foto KTP kamu"
+                android:textSize="16dp" />
+
+            <ImageView
+                android:id="@+id/imgHasilFotoKTP"
+                android:layout_width="280dp"
+                android:layout_height="178dp"
+                android:layout_gravity="center"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/common_google_signin_btn_icon_dark_normal_background" />
+
+            <com.mogawe.mosurvei.util.ui.GalanoLightTextView
+                android:layout_width="match_parent"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:gravity="center"
+                android:text="Foto Selfie dengan KTP kamu"
+                android:textSize="16dp" />
+
+            <ImageView
+                android:id="@+id/imgHasilSelfie"
+                android:layout_width="280dp"
+                android:layout_height="178dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/common_google_signin_btn_icon_dark_normal_background" />
+
+
+
+            <TextView
+                android:id="@+id/txtRecognized"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <com.mogawe.mosurvei.util.ui.GalanoButton
+        android:id="@+id/btnEditProfile"
+        style="@style/GenericRaisedButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_margin="@dimen/space_double"
+        android:layout_marginTop="@dimen/space_double"
+        android:text="Lanjut"
+        android:textSize="16dp"
+        android:textAllCaps="false"
+        android:textColor="@color/white" />
+
+
+</FrameLayout>

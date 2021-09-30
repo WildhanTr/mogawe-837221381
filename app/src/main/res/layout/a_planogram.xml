@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.shared.planogram.PlanogramActivity">
+
+    <include android:id="@+id/appBar"
+        layout="@layout/appbar_light" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@id/appBar"
+        android:id="@+id/rvFacingRow"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/space_double"
+        android:layout_marginEnd="@dimen/space_double"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black_transparent"
+        android:id="@+id/rltSearchFacing"
+        android:visibility="gone"
+        android:clickable="true">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/crdSearchFacing"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:visibility="gone"
+            android:clickable="true"
+            android:layout_marginTop="24dp">
+
+            <LinearLayout
+                android:id="@+id/lnrUpdateDeleteProduct"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingTop="@dimen/space_double"
+                        android:paddingBottom="@dimen/space_double"
+                        android:layout_gravity="center">
+
+                        <com.mogawe.mosurvei.util.ui.GalanoTextView
+                            android:id="@+id/txvProductName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="SGM EKSPLOR"
+                            android:layout_centerHorizontal="true"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/font_small"
+                            android:layout_marginBottom="@dimen/space"
+                            android:layout_above="@+id/imvProductFacing"
+                            android:layout_marginStart="@dimen/space"
+                            android:layout_marginEnd="@dimen/space"/>
+
+                        <ImageView
+                            android:id="@+id/imvProductFacing"
+                            android:layout_width="140dp"
+                            android:layout_height="200dp"
+                            android:src="@color/colorPrimary"
+                            android:layout_centerInParent="true"/>
+
+                        <com.mogawe.mosurvei.util.ui.GalanoTextView
+                            android:id="@+id/txvProductSize"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_below="@id/imvProductFacing"
+                            android:text="150gr"
+                            android:textColor="@color/black"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/space_triple"
+                            android:textSize="@dimen/font_small"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/closeDetail"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:padding="@dimen/space_quarter"
+                            android:background="@drawable/bg_circle_black_transparent"
+                            android:src="@drawable/ic_close_black_24dp"
+                            android:tint="@color/white"
+                            android:layout_alignParentEnd="true"
+                            android:layout_margin="@dimen/space_double"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:layout_centerInParent="true">
+
+                            <com.mogawe.mosurvei.util.ui.GalanoButton
+                                android:id="@+id/btnDeleteProduct"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Hapus"
+                                android:textAllCaps="false"
+                                android:background="@color/transparent"
+                                android:foreground="?attr/selectableItemBackground"
+                                android:drawableStart="@drawable/ic_delete_black_24dp"
+                                android:drawableTint="@color/colorPrimary"/>
+
+                            <com.mogawe.mosurvei.util.ui.GalanoButton
+                                android:id="@+id/btnEditProduct"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Ubah"
+                                android:textAllCaps="false"
+                                android:background="@color/transparent"
+                                android:foreground="?attr/selectableItemBackground"
+                                android:drawableStart="@drawable/ic_edit_white_24dp"
+                                android:drawableTint="@color/black"/>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+<!--                <View-->
+<!--                    android:layout_width="2dp"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:background="@color/grey_300"/>-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:orientation="vertical"-->
+<!--                    android:gravity="center">-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="Jumlah Stock"-->
+<!--                        android:textColor="@color/black"-->
+<!--                        android:layout_marginStart="@dimen/space_double"-->
+<!--                        android:layout_marginEnd="@dimen/space_double"/>-->
+
+<!--                    <EditText-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginStart="@dimen/space_double"-->
+<!--                        android:layout_marginEnd="@dimen/space_double"/>-->
+
+<!--                    <com.mogawe.mosurvei.util.ui.GalanoButton-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="50dp"-->
+<!--                        android:text="Simpan"-->
+<!--                        android:textAllCaps="false"-->
+<!--                        style="@style/GenericRaisedButtonStyle"-->
+<!--                        android:layout_gravity="right"-->
+<!--                        android:layout_marginEnd="@dimen/space_double"-->
+<!--                        android:layout_marginTop="@dimen/space_double"-->
+<!--                        android:drawableEnd="@drawable/ic_save_black_24dp"-->
+<!--                        android:drawableTint="@color/white"/>-->
+
+<!--                </LinearLayout>-->
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lnrSearchProduct"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <me.zhanghai.android.materialprogressbar.MaterialProgressBar
+                    android:id="@+id/progressBarHorizontal"
+                    style="@style/Widget.MaterialProgressBar.ProgressBar.Horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/space_half"
+                    android:indeterminate="true"
+                    app:mpb_progressStyle="horizontal"
+                    app:mpb_useIntrinsicPadding="false"
+                    android:outlineAmbientShadowColor="@color/white"
+                    android:visibility="invisible"/>
+
+                <ImageView
+                    android:visibility="gone"
+                    android:id="@+id/imvCloseSearchFacing"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:padding="@dimen/space_quarter"
+                    android:background="@drawable/bg_circle_black_transparent"
+                    android:src="@drawable/ic_close_black_24dp"
+                    android:tint="@color/white"
+                    android:layout_gravity="right"
+                    android:layout_margin="@dimen/space"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="@dimen/space">
+
+                    <com.mogawe.mosurvei.util.ui.GalanoTextView
+                        android:id="@+id/txvPilih"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Pilih Produk : "
+                        android:textSize="@dimen/font_big"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/searchView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space"
+                    android:layout_marginEnd="@dimen/space"
+                    android:layout_marginTop="@dimen/space_double"
+                    android:layout_marginBottom="@dimen/space_double"
+                    app:layout_constraintBottom_toTopOf="@+id/btnPreview"
+                    app:layout_constraintTop_toBottomOf="@+id/txvFactName"
+                    tools:layout_editor_absoluteX="0dp"
+                    android:background="@drawable/button_disabled"
+                    android:backgroundTint="@color/grey_200"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/space">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/places_ic_search"
+                        android:tint="@color/black" />
+
+                    <EditText
+                        android:id="@+id/edtSearchFacing"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/space"
+                        android:layout_marginEnd="@dimen/space"
+                        android:layout_weight="1"
+                        android:background="@color/transparent"
+                        android:hint="Cari produk"
+                        android:imeOptions="actionDone"
+                        android:inputType="text" />
+
+                    <ImageView
+                        android:id="@+id/imvClearEdtTextSearchFacing"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_close_black_24dp"
+                        android:tint="@color/black" />
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/rvFacingProduct"
+                    android:layout_margin="@dimen/space"
+                    android:layout_marginTop="@dimen/space_double"
+                    android:paddingBottom="@dimen/space_xtra"
+                    android:clipToPadding="false"/>
+
+                <com.mogawe.mosurvei.util.ui.GalanoTextView
+                    android:id="@+id/txvErrorProduct"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:visibility="gone"
+                    android:text="Produk tidak ditemukan" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+</RelativeLayout>

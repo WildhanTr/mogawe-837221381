@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".view.content.user.KYCActivity">
+
+    <include
+        android:id="@+id/appBar"
+        layout="@layout/appbar_light" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/appBar"
+        android:background="@color/white"
+        android:fillViewport="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="@dimen/space_double"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.mogawe.mosurvei.util.ui.GalanoTextView
+                android:id="@+id/txvGreetings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_xxtra"
+                android:gravity="center_horizontal"
+                android:textSize="@dimen/font_xxbig"
+                android:textStyle="bold"
+                tools:text="Selamat Siang" />
+
+            <com.mogawe.mosurvei.util.ui.LatoTextView
+                android:id="@+id/txvStory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space"
+                android:gravity="center_horizontal"
+                android:textSize="@dimen/font_medium"
+                tools:text="Anda adalah seorang yang bertanggung jawab " />
+
+
+            <LinearLayout
+                android:id="@+id/parentLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_triple"
+                android:descendantFocusability="beforeDescendants"
+                android:focusableInTouchMode="true"
+                android:gravity="center_horizontal"
+                android:orientation="vertical" />
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/space_double">
+
+                <com.mogawe.mosurvei.util.ui.GalanoButton
+                    android:id="@+id/btnPrevious"
+                    style="@style/GenericRaisedButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="@dimen/space_double"
+                    android:layout_marginBottom="@dimen/space_double"
+                    android:text="@string/action.previous"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:visibility="visible" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+
+                <com.mogawe.mosurvei.util.ui.GalanoButton
+                    android:id="@+id/btnNext"
+                    style="@style/GenericRaisedButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="@dimen/space_double"
+                    android:layout_marginBottom="@dimen/space_double"
+                    android:text="@string/action.next"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/prbRegister"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginEnd="@dimen/space_quadruple"
+                android:visibility="gone" />
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginTop="@dimen/space">
+
+    <CheckBox
+        android:id="@+id/cbLocationName"
+        android:text="Hello"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.mogawe.mosurvei.util.ui.GalanoLightTextView
+        android:id="@+id/txvAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Jln M Kavling "
+        android:textColor="@color/black"
+        android:layout_marginStart="@dimen/space_quadruple"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/grey_300"
+        android:layout_marginTop="@dimen/space"/>
+
+
+</LinearLayout>

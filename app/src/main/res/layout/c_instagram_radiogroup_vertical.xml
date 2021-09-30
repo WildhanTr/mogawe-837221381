@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginBottom="@dimen/space"
+    android:paddingBottom="@dimen/space_double">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@drawable/im_ig_post_header" />
+
+    <ImageView
+        android:id="@+id/imvTutorial"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:scaleType="centerCrop"
+        android:src="@color/grey_600"
+        android:visibility="visible" />
+
+    <FrameLayout
+        android:id="@+id/frameWebView"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:visibility="gone">
+
+        <WebView
+            android:id="@+id/webviewYoutubeTutorial"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:ignore="WebViewLayout" />
+
+        <ProgressBar
+            android:id="@+id/pbFact"
+            android:layout_width="@dimen/space_quadruple"
+            android:layout_height="@dimen/space_quadruple"
+            android:layout_gravity="center" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey_300" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/im_ig_post_actions" />
+
+        <com.mogawe.mosurvei.util.ui.LatoTextView
+            android:id="@+id/txvFactName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_double"
+            android:layout_marginEnd="@dimen/space_double"
+            android:text="a. Siapa nama kamu?"
+            android:textColor="@color/black" />
+
+        <com.mogawe.mosurvei.util.ui.LatoTextView
+            android:id="@+id/txvHint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_double"
+            android:layout_marginTop="@dimen/space_half"
+            android:layout_marginEnd="@dimen/space_double"
+            android:text="Nama harus lengkap" />
+
+        <RadioGroup
+            android:id="@+id/radiogroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_double"
+            android:layout_marginEnd="@dimen/space_double"
+            android:orientation="vertical">
+
+        </RadioGroup>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_double"
+            android:layout_marginEnd="@dimen/space_double"
+            android:hint="Sebutkan lainnya"
+            android:visibility="gone">
+
+            <EditText
+                android:id="@+id/editText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/grey_800" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

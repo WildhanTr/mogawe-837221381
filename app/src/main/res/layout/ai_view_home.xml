@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lnrViewHome"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rltHomeKosong"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <com.mogawe.mosurvei.util.ui.LatoTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/space_double"
+            android:layout_marginTop="@dimen/space"
+            android:layout_marginRight="@dimen/space_double"
+            android:gravity="center"
+            android:text="@string/homeKosong"
+            android:textSize="@dimen/font_big" />
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:paddingLeft="@dimen/space"
+    android:paddingRight="@dimen/space">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/lnrMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_dialog_top_rounded"
+            android:orientation="horizontal"
+            android:padding="@dimen/space_half">
+
+
+            <LinearLayout
+                android:id="@+id/logoDialog"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/btn_mogawe_bg_whitexxxhdpi"
+                    android:padding="@dimen/space">
+
+                    <ImageView
+                        android:id="@+id/imvCariGawean"
+                        android:layout_width="50dp"
+                        android:layout_height="55dp"
+                        android:background="@drawable/btn_mogawexxhdpi" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <com.mogawe.mosurvei.util.ui.GalanoTextView
+                android:id="@+id/titleCostumDialog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/space"
+                android:gravity="center"
+                android:text="Title Title"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_big" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/imvCostumDialog"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginRight="@dimen/space_double"
+                android:layout_marginLeft="@dimen/space_double"
+                android:src="@color/grey_600"
+                android:scaleType="center"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <com.mogawe.mosurvei.util.ui.GalanoTextView
+                android:id="@+id/messageCostumDialog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/space_triple"
+                android:layout_marginTop="@dimen/space"
+                android:layout_marginRight="@dimen/space_triple"
+                android:gravity="center"
+                android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry." />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_dialog_bottom_rounded"
+            android:orientation="horizontal"
+            android:padding="@dimen/space_triple">
+
+            <com.mogawe.mosurvei.util.ui.GalanoButton
+                android:id="@+id/btnNegativeCostumDialog"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/button_primary"
+                android:text="Cancel"
+                android:textAllCaps="false"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_marginRight="@dimen/space_half"
+                android:layout_marginLeft="@dimen/space_half"
+                android:textColor="@color/white"/>
+
+            <com.mogawe.mosurvei.util.ui.GalanoButton
+                android:id="@+id/btnPositiveCostumDialog"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/space_half"
+                android:layout_marginRight="@dimen/space_half"
+                android:layout_weight="1"
+                android:background="@drawable/button_primary"
+                android:text="Oke"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

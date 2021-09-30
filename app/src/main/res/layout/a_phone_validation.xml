@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.mogawe.mosurvei.view.content.user.PhoneValidationActivity">
+
+    <include
+        android:id="@+id/appBar"
+        layout="@layout/appbar_light" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/appBar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:descendantFocusability="beforeDescendants"
+            android:focusableInTouchMode="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="@dimen/space_quadruple">
+
+            <LinearLayout
+                android:id="@+id/layoutInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <com.mogawe.mosurvei.util.ui.GalanoLightTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/insert_phone_number"
+                    android:textSize="@dimen/font_xbig"
+                    android:textStyle="bold" />
+
+                <com.mogawe.mosurvei.util.ui.GalanoLightTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="@string/make_sure_phone_is_valid"
+                    android:textSize="@dimen/font_medium"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/edtPhoneWrapper"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_triple"
+                    android:hint="@string/phone_number"
+                    android:textAlignment="center">
+
+                    <EditText
+                        android:id="@+id/edtPhone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:inputType="phone"
+                        android:text=""
+                        android:textAlignment="center"
+                        tools:ignore="Autofill,LabelFor" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.mogawe.mosurvei.util.ui.GalanoLightTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_xxtra"
+                    android:gravity="center_horizontal"
+                    android:text="@string/phone_valid_terms"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/font_medium"
+                    android:textStyle="bold"
+                    tools:ignore="Autofill,LabelFor" />
+
+                <com.mogawe.mosurvei.util.ui.GalanoButton
+                    android:id="@+id/btnNext"
+                    style="@style/GenericRaisedButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_double"
+                    android:text="@string/action.nextSms"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_xmedium"
+                    android:textStyle="bold" />
+
+                <com.mogawe.mosurvei.util.ui.GalanoButton
+                    android:id="@+id/btnNextCitcall"
+                    style="@style/GenericRaisedButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_double"
+                    android:text="@string/action.nextCitcall"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_xmedium"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/layoutActivation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <com.mogawe.mosurvei.util.ui.GalanoLightTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/one_last_step"
+                    android:textSize="@dimen/font_xxbig"
+                    android:textStyle="bold" />
+
+                <com.mogawe.mosurvei.util.ui.GalanoLightTextView
+                    android:id="@+id/txvKet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="@string/check_your_phone_for_activation_code"
+                    android:textSize="@dimen/font_medium"
+                    android:textStyle="bold" />
+
+
+                <com.mogawe.mosurvei.util.ui.GalanoLightTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_triple"
+                    android:gravity="center_horizontal"
+                    android:text="@string/phone_number"
+                    android:textStyle="bold" />
+
+                <com.mogawe.mosurvei.util.ui.GalanoLightTextView
+                    android:id="@+id/txvPhone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:textSize="@dimen/font_xxbig"
+                    android:textStyle="bold"
+                    tools:text="081314169140" />
+
+
+                <com.mogawe.mosurvei.util.ui.GalanoButton
+                    android:id="@+id/btnChangePhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-12dp"
+                    android:background="@android:color/transparent"
+                    android:text="@string/action.change_phone"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/font_xmedium"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/edtActivationCodeWrapper"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_quadruple"
+                    android:hint="@string/activation_code"
+                    android:paddingLeft="@dimen/space_xxtra"
+                    android:paddingRight="@dimen/space_xxtra"
+                    android:textAlignment="center">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edtActivationCode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:inputType="phone"
+                        android:maxLength="6"
+                        android:textAlignment="center"
+                        tools:ignore="Autofill,LabelFor" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.mogawe.mosurvei.util.ui.ModulusButton
+                    android:id="@+id/btnActivate"
+                    style="@style/GenericRaisedButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/space_triple"
+                    android:layout_marginTop="@dimen/space_triple"
+                    android:layout_marginRight="@dimen/space_triple"
+                    android:text="@string/action.activate"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_xmedium"
+                    android:textStyle="bold" />
+
+
+                <LinearLayout
+                    android:id="@+id/lnrResend"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center">
+                    <com.mogawe.mosurvei.util.ui.LatoTextView
+                        android:id="@+id/txvReConfirmation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_triple"
+                        android:gravity="center_horizontal"
+                        android:text="@string/dont_get_sms"
+                        android:textSize="@dimen/font_medium" />
+
+                    <com.mogawe.mosurvei.util.ui.ModulusButton
+                        android:id="@+id/btnResendSMS"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-8dp"
+                        android:background="@android:color/transparent"
+                        android:text="@string/action.resend"
+                        android:textAllCaps="false"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/font_xmedium"
+                        android:textStyle="bold" />
+                    <com.mogawe.mosurvei.util.ui.ModulusButton
+                        android:id="@+id/txvSendingSMS"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-8dp"
+                        android:background="@android:color/transparent"
+                        android:text="Mengirim..."
+                        android:textAllCaps="false"
+                        android:textSize="@dimen/font_xmedium"
+                        android:textStyle="bold"
+                        android:visibility="gone"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/lnrTimer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:visibility="gone">
+                    <com.mogawe.mosurvei.util.ui.LatoTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_triple"
+                        android:gravity="center_horizontal"
+                        android:text="@string/resend_in"
+                        android:textSize="@dimen/font_medium" />
+                    <com.mogawe.mosurvei.util.ui.LatoTextView
+                        android:id="@+id/txvTimerResend"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_triple"
+                        android:gravity="center_horizontal"
+                        android:textSize="@dimen/font_medium" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

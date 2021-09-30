@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardPendingPayment"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="1dp"
+    card_view:cardCornerRadius="6dp"
+    card_view:cardElevation="3dp"
+    card_view:cardUseCompatPadding="true"
+    card_view:contentPadding="@dimen/space_double">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="6"
+            android:orientation="vertical">
+
+            <com.mogawe.mosurvei.util.ui.GalanoLightTextView
+                android:textStyle="bold"
+                android:id="@+id/txvIdPayment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ID : 0002191288128128129"
+                android:textSize="12dp" />
+            <com.mogawe.mosurvei.util.ui.GalanoLightTextView
+                android:textStyle="bold"
+                android:id="@+id/txvDatePaymentRequest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kamis, 29 maret 2019"
+                android:textSize="12dp" />
+
+            <com.mogawe.mosurvei.util.ui.GalanoTextView
+                android:id="@+id/txvDescriptionPayment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pembayaran Job 22 - 28 Jan"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.mogawe.mosurvei.util.ui.GalanoTextView
+                android:textStyle="bold"
+                android:id="@+id/txvStatusPayment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pending"/>
+            <com.mogawe.mosurvei.util.ui.GalanoLightTextView
+                android:textStyle="bold"
+                android:id="@+id/txvNominalPayment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="- Rp 150.000"
+                android:textColor="@color/red_500" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

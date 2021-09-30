@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardDeals"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardCornerRadius="12dp"
+        card_view:cardElevation="3dp"
+        card_view:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imgButtonReward"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/image_comingsoon" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/space"
+                android:orientation="vertical">
+
+                <com.mogawe.mosurvei.util.ui.GalanoTextView
+                    android:id="@+id/txvMessagePoint"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/font_xmedium"
+                    android:textColor="@color/black"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space"
+                    android:orientation="horizontal">
+                    <com.mogawe.mosurvei.util.ui.GalanoTextView
+                        android:id="@+id/voucherPoint"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textSize="@dimen/font_medium"
+                        android:textColor="@color/grey_600"
+                        android:gravity="left|center"
+                        android:text="100 pts"/>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/grey_400"
+                        android:layout_marginLeft="@dimen/space"
+                        android:layout_marginRight="@dimen/space"/>
+
+                    <com.mogawe.mosurvei.util.ui.GalanoTextView
+                        android:id="@+id/stockPoint"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textSize="@dimen/font_small"
+                        android:textColor="@color/grey_600"
+                        android:gravity="left|center"
+                        android:text="Stock Tersedia : 10"
+                        android:drawablePadding="@dimen/space_half" />
+
+                    <com.mogawe.mosurvei.util.ui.GalanoButton
+                        android:id="@+id/btnTukarkan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:paddingRight="@dimen/space_double"
+                        android:paddingLeft="@dimen/space_double"
+                        android:text="Tukarkan"
+                        android:textSize="@dimen/font_small"
+                        android:textColor="@color/white"
+                        android:textAllCaps="false"
+                        android:background="@drawable/bg_menu_on"/>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

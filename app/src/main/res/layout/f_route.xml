@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.shared.map.RouteGaweanFragment"
+    android:orientation="vertical">
+
+    <!-- TODO: Update blank fragment layout -->
+    <FrameLayout
+        android:id="@+id/containerMappy"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:visibility="visible"
+        android:layout_margin="@dimen/space_quadruple">
+
+    </FrameLayout>
+
+    <com.mogawe.mosurvei.util.ui.GalanoButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/GenericRaisedButtonStyle"
+        android:layout_marginStart="@dimen/space_xtra"
+        android:layout_marginEnd="@dimen/space_xtra"
+        android:layout_marginBottom="@dimen/space_double"
+        android:text="Check In"
+        android:textSize="@dimen/font_medium"/>
+
+    <com.mogawe.mosurvei.util.ui.GalanoButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/GenericRaisedButtonStyle"
+        android:layout_marginStart="@dimen/space_xtra"
+        android:layout_marginEnd="@dimen/space_xtra"
+        android:layout_marginBottom="@dimen/space_xxxtra"
+        android:text="Batalkan Gawean"
+        android:textSize="@dimen/font_medium"/>
+
+</LinearLayout>

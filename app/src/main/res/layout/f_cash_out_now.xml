@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".view.content.profile.wallet.CashOutNowFragment">
+
+    <Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></Toolbar>
+
+    <LinearLayout
+        android:id="@+id/lnrCash"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/space_quadruple"
+        android:paddingRight="@dimen/space_quadruple"
+        android:paddingTop="@dimen/space_double">
+
+        <com.mogawe.mosurvei.util.ui.ModulusTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cash out saldo"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="@dimen/space"/>
+        <com.mogawe.mosurvei.util.ui.LatoTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Uang kamu akan ditransfer ke : "
+            android:textSize="16sp"/>
+        <com.mogawe.mosurvei.util.ui.LatoTextView
+            android:id="@+id/txvRekName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="Mandiri E-Cash"
+            android:textSize="16sp"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/edtAmountWrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_triple"
+            android:hint="@string/amount_cash_out">
+
+            <EditText
+                android:id="@+id/edtAmount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                tools:ignore="Autofill,LabelFor" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/edtPasswordWrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_triple"
+            android:hint="@string/password"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/colorPrimary">>
+
+            <EditText
+                android:id="@+id/edtPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                tools:ignore="Autofill,LabelFor" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/edtDescriptionWrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_triple"
+            android:hint="@string/cash_Out_description_optional">
+
+            <EditText
+                android:id="@+id/edtDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                tools:ignore="Autofill,LabelFor" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.mogawe.mosurvei.util.ui.ModulusButton
+            android:id="@+id/btnCashOut"
+            style="@style/GenericRaisedButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/space_triple"
+            android:layout_marginTop="@dimen/space"
+            android:layout_marginRight="@dimen/space_triple"
+            android:text="@string/action.cash_out"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_xmedium"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</LinearLayout>

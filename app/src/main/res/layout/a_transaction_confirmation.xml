@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="@dimen/space_double">
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/imvTransactionDone"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        app:lottie_fileName="lotties/login_loading_102x102.json" />
+
+    <com.mogawe.mosurvei.util.ui.ModulusTextView
+        android:id="@+id/tvConfirmationOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:padding="@dimen/space"
+        android:text="@string/order_complete"
+        android:textSize="@dimen/font_medium"
+        android:textStyle="bold" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:padding="@dimen/space_double">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="@dimen/space_double"
+            android:orientation="horizontal">
+
+            <com.mogawe.mosurvei.util.ui.GalanoButton
+                android:id="@+id/btnMoGawe"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_primary"
+                android:text="Lihat Transaksi"
+                android:textColor="@color/white"
+                android:layout_marginEnd="@dimen/space"
+                android:textAllCaps="false"
+                style="?android:attr/borderlessButtonStyle"/>
+
+            <com.mogawe.mosurvei.util.ui.GalanoButton
+                android:id="@+id/btnMoBisnis"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_white_rounded_white"
+                android:text="Lanjut Belanja"
+                android:layout_marginStart="@dimen/space"
+                android:textAllCaps="false"
+                style="?android:attr/borderlessButtonStyle"
+                android:textColor="@color/colorPrimary"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

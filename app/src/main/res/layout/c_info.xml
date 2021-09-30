@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/space_double"
+    android:paddingEnd="@dimen/space_double"
+    android:paddingStart="@dimen/space"
+    android:paddingBottom="@dimen/space_double">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imvCheck"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_gravity="top"
+            android:src="@drawable/ic_baseline_check_circle_24"
+            android:layout_marginTop="@dimen/space_quarter"
+            android:layout_marginEnd="@dimen/space_quarter"/>
+
+        <com.mogawe.mosurvei.util.ui.LatoTextView
+            android:id="@+id/txvFactName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="a. Siapa nama kamu?"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_medium" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imvTutorial"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_marginBottom="@dimen/space_double"
+        android:scaleType="centerInside"
+        android:visibility="gone"
+        android:src="@color/grey_600"/>
+
+    <FrameLayout
+        android:id="@+id/frameWebView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_marginBottom="@dimen/space_double">
+
+        <WebView
+            android:id="@+id/webviewYoutubeTutorial"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            tools:ignore="WebViewLayout" />
+
+        <ProgressBar
+            android:id="@+id/pbFact"
+            android:layout_width="@dimen/space_quadruple"
+            android:layout_height="@dimen/space_quadruple"
+            android:layout_gravity="center" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="12dp"
+        android:orientation="vertical">
+
+        <com.mogawe.mosurvei.util.ui.LatoTextView
+            android:id="@+id/txvHint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_half"
+            android:textColor="@color/grey_600" />
+
+        <com.mogawe.mosurvei.util.ui.GalanoTextView
+            android:id="@+id/textValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="vertical"
+            android:layout_marginStart="@dimen/space_triple"
+            android:layout_marginEnd="@dimen/space_triple"
+            tools:text="Gk sabar nunggu live IG MoGawe"/>
+
+        <Button
+            android:id="@+id/btnCopyValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginEnd="@dimen/space_half"
+            android:layout_marginTop="@dimen/space_double"
+            android:background="@null"
+            android:text="Copy"
+            android:textAllCaps="false"
+            android:foreground="?attr/selectableItemBackground"
+            android:drawableStart="@drawable/ic_baseline_content_copy_24"
+            android:textColor="@color/grey_700"
+            android:paddingStart="@dimen/space"/>
+
+<!--        <ImageButton-->
+<!--            android:id="@+id/btnCopyValue"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:src="@drawable/ic_baseline_content_copy_24"-->
+<!--            android:layout_gravity="end"-->
+<!--            android:layout_margin="@dimen/space_double"-->
+<!--            android:background="@drawable/circle_border"-->
+<!--            android:padding="@dimen/space"/>-->
+
+    </LinearLayout>
+</LinearLayout>
+
+

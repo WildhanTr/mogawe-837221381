@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".view.content.form.SectionFormPostActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/space_xxxtra"
+        android:paddingBottom="@dimen/space_xxxtra">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lottieanimview"
+                android:layout_width="320dp"
+                android:layout_height="320dp"
+                android:layout_centerInParent="true"
+                app:lottie_fileName="lotties/success_form.json" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="240dp"
+                android:orientation="vertical">
+
+                <com.mogawe.mosurvei.util.ui.GalanoTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Good Job!"
+                    android:textAlignment="center"
+                    android:textSize="24dp" />
+
+                <com.mogawe.mosurvei.util.ui.GalanoLightTextView
+                    android:id="@+id/txvPostMessage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/space_double"
+                    android:text="Kamu berhasil menyelesaikan gawean ini"
+                    android:textAlignment="center"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+        <com.mogawe.mosurvei.util.ui.GalanoTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_xtra"
+            android:text="Share pengalaman kamu !"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:visibility="gone" />
+
+        <com.mogawe.mosurvei.util.ui.GalanoLightTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Share gawean kamu ke teman-temanmu."
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/green_50"
+            android:orientation="vertical"
+            android:padding="@dimen/space_triple">
+
+            <com.mogawe.mosurvei.util.ui.GalanoLightTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Perlu Kamu Ketahui"
+                android:textColor="@color/green_900"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <com.mogawe.mosurvei.util.ui.GalanoLightTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Uang kamu baru bisa ditransfer ke rekening LinkAja minimal Rp 100.000. Maka dari itu ayo kerjakan Gawean sebanyak-banyaknya."
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/btnShareFacebook"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_double"
+                android:gravity="center">
+
+                <com.facebook.share.widget.ShareButton
+                    android:id="@+id/fb_share_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@color/com_facebook_blue"
+                    android:text="share to facebook" />
+
+
+                <com.mogawe.mosurvei.util.ui.ModulusTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Share ke Facebook"
+                    android:textColor="@color/blue_900"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btnShareTwitter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_double"
+                android:background="#28AAE1"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="4dp"
+                        android:src="@drawable/ic_twitter" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:background="#28AAE1"
+                        android:padding="3dp"
+                        android:text="share to twitter"
+                        android:textColor="@color/white"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btnShareToStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_double"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="4dp"
+                        android:src="@mipmap/ic_launcher" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:background="@color/colorPrimary"
+                        android:padding="3dp"
+                        android:text="share to status"
+                        android:textColor="@color/white"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lnrFooter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_quadruple"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <com.mogawe.mosurvei.util.ui.GalanoTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Total Gawean Selesai :"
+                android:textAlignment="center"
+                android:textSize="24sp" />
+
+
+            <com.mogawe.mosurvei.util.ui.GalanoLightTextView
+                android:id="@+id/txvJobProgress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="10 dari 100"
+                android:textAlignment="center"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_double"
+            android:layout_marginTop="@dimen/space_xtra"
+            android:layout_marginEnd="@dimen/space_double"
+            android:clipToPadding="false"
+            android:orientation="vertical"
+            android:padding="@dimen/space_half">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.mogawe.mosurvei.util.ui.GalanoButton
+                    android:id="@+id/btnCloseJob"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/space_half"
+                    android:layout_marginBottom="@dimen/space_double"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_primary_outlined"
+                    android:text="Tutup Kelurahan"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+
+                <com.mogawe.mosurvei.util.ui.GalanoButton
+                    android:id="@+id/btnTambahToko"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space_half"
+                    android:layout_marginBottom="@dimen/space_double"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_primary"
+                    android:text="Tambah Toko"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <com.mogawe.mosurvei.util.ui.GalanoButton
+                android:id="@+id/btnSelesai"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_half"
+                android:layout_marginBottom="@dimen/space_double"
+                android:layout_weight="1"
+                android:background="@drawable/button_primary_outlined"
+                android:text="Kembali ke Home"
+                android:textAllCaps="false"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <com.mogawe.mosurvei.util.ui.GalanoButton
+                android:id="@+id/btnShareTanggapan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_primary_outlined"
+                android:drawableRight="@drawable/ic_arrow_drop_down_black_24dp"
+                android:paddingStart="@dimen/space_double"
+                android:paddingEnd="@dimen/space_double"
+                android:text="Berikan Tanggapan"
+                android:textAllCaps="false"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lnrSwitchStikerGifButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_double"
+            android:clipToPadding="false"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="@dimen/space"
+            android:visibility="gone">
+
+            <com.mogawe.mosurvei.util.ui.GalanoButton
+                android:id="@+id/btnStiker"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/space_xtra"
+                android:layout_gravity="center"
+                android:layout_marginEnd="@dimen/space"
+                android:background="@drawable/bg_menu_on"
+                android:text="Stiker"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_small" />
+
+            <com.mogawe.mosurvei.util.ui.GalanoButton
+                android:id="@+id/btnGif"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/space_xtra"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/space"
+                android:background="@drawable/bg_menu_off"
+                android:text="GIF"
+                android:textAllCaps="false"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/font_small" />
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvStikerImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:clipToPadding="false"
+            android:padding="@dimen/space_double"
+            android:visibility="gone" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvStikerGif"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:clipToPadding="false"
+            android:padding="@dimen/space_double"
+            android:visibility="gone" />
+
+        <com.mogawe.mosurvei.util.ui.GalanoLightTextView
+            android:id="@+id/txvRekomendasiJob"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_double"
+            android:layout_marginTop="@dimen/space_xtra"
+            android:text="Rekomendasi Untuk Anda"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvGaweanKu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/space_double"
+            android:clipToPadding="false"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/space_double"
+            android:visibility="gone"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+    </LinearLayout>
+
+</ScrollView>

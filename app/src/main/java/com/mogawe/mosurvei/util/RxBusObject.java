@@ -1,0 +1,248 @@
+package com.mogawe.mosurvei.util;
+
+/**
+ * Created by fajarfatur on 8/28/15.
+ */
+public class RxBusObject {
+
+    private RxBusKey key;
+    private Object object;
+
+    public RxBusObject(RxBusKey key, Object object) {
+        this.key = key;
+        this.object = object;
+    }
+
+    public RxBusKey getKey() {
+        return key;
+    }
+
+    public Object getObject() {
+        return object;
+    }
+
+    public enum RxBusKey {
+        CHECK_SPOTLIGHT,
+
+        TAB_MENU,
+        HIDE_SHADOW,
+        SHOW_SHADOW,
+        HIDE_TAB_MENU,
+        SHOW_TAB_MENU,
+        SET_TOOLBAR_TITLE,
+        SET_TOOLBAR_ICON,
+        GO_TO,
+        CONTACT_PHONEBOOK,
+        QRCODE,
+
+        DELETE_PRODUCT,
+
+        DRIVER_LATLNG,
+        DRAW_DRIVER,
+        CLEAR_MAP,
+        CLEAR_LINES,
+        REINITIATE_MAP,
+        MAP_READY,
+        SELECT_LOCATION,
+        SELECT_PLACE,
+        DETAIL_FROM_DIRECTIONS,
+        SELECT_NULL_PLACE,
+        DONE_SELECT_LOCATION,
+        DRAW_MARKER,
+        DRAW_AREA,
+        DRAW_ROUTES,
+        DRAW_ROUTES_FROM_POLYLINES,
+        VIEW_MAP,
+        SEND_CENTER,
+        GO_TO_LOC,
+        GO_TO_BURSA,
+        MAP_MOVE,
+        LOCATION_CHANGE,
+        GET_CURRENT_LATLNG,
+        PAUSE_LOCATION_UPDATE,
+        RESUME_LOCATION_UPDATE,
+        GET_INFORMATION_JOB_LOCATION,
+        FIT_BOUNDS_ALL,
+        RESEARCH_GAWEAN,
+        CLOSE_CATEGORY_AND_SHOW_PROGRESS,
+        CLOSE_CATEGORY_AND_SHOW_PROGRESS_HOME,
+        ADD_UUID_LOCATION,
+        ADD_UUID_LOCATION_NAME,
+        DELETE_UUID_LOCATION,
+        DELETE_UUID_LOCATION_NAME,
+
+        ADD_UUID_SUB_CATEGORY,
+        ADD_UUID_SUB_CATEGORY_NAME,
+        DELETE_UUID_SUB_CATEGORY,
+        DELETE_UUID_SUB_CATEGORY_NAME,
+
+        DISTANCE,
+        DURATION,
+
+        ORIGIN_EDIT,
+        ORIGIN_DONE,
+        DRAW_ORIGIN,
+        ORIGIN_PLACE,
+        GO_TO_ORIGIN,
+
+        DEST_EDIT,
+        DEST_DONE,
+        DRAW_DEST,
+        DEST_PLACE,
+        GO_TO_DEST,
+
+        LOADING,
+
+        DRAW_DIRECTION,
+        DRAW_SPECIFIC_DIRECTION,
+
+        SET_SELECTED_JOB,
+        SET_CURRENT_LOCATION,
+        LOAD_BURSA_LIST,
+        LOAD_GAWEAN_LIST,
+        LOAD_TASK_LIST,
+
+        GET_SECTION,
+        GET_SECTION_TASK,
+        START_GAWEAN,
+
+        CLSOE_GAWEAN,
+
+        SECTION_END,
+        END_SHOW_MESSAGE_SAVE_INPUT,
+        OPEN_SECTION,
+        SET_AUTO_CODE,
+        SET_AGE_FROM_DATE,
+        SET_DISABLED,
+        SHOW_SECTION,
+        SHOW_MESSAGE,
+        SHOW_REASON,
+        OPEN_SUB_SECTION,
+        OPEN_SUB_SECTION_ITEM,
+        OPEN_API,
+        END_SHOW_MESSAGE,
+        SUBMIT,
+        SET_INPUT_SECTION,
+        SET_SECTION_END,
+        SET_INPUT_FACT,
+        SET_SECTION,
+        REQUEST_FOTO,
+        REQUEST_SCREEN_CAPTURE_WEB,
+        SHOW_PREVIEW,
+        SHOW_PREVIEW_TAKE_PIC,
+        SHOW_PREVIEW_TAKE_VID,
+        SHOW_PREVIEW_TAKE_BACKGROUND_VID,
+        SHOW_PREVIEW_SCREEN_RECORDER,
+        SHOW_PREVIEW_TAKE_PIC_FROM_GALLERY,
+        GET_FACT_VIEW,
+        GET_FACT_VIEW_BACK,
+        UPDATE_INDICATOR,
+        UPDATE_ITEMS,
+        HIDE_FACT_VIEW,
+        SHOW_HIDDEN_FACT,
+        GET_LOCATION_SPOT_CHECK,
+
+        ALL_JOB,
+        NEARBY_JOB,
+        HUNDRED_K_JOB,
+        OBSERVATION_JOB,
+        EXPLORE_JOB,
+        INTERVIEW_JOB,
+
+        SCROLL_TO_BOTTOM,
+        GET_CITY,
+        GET_ADDRESS,
+
+        GET_LOCATION,
+
+        OPEN_INFORMATION_GAWEAN,
+        SHOW_APPLY_SUCCESS_MESSAGE,
+        GET_CHAT_ROOM_ID,
+
+        UPDATE_PROFILE,
+        REFRESH_GAWEAN,
+        REFRESH_GAWEAN_INSTANT,
+        REFRESH_GAWEAN_KU,
+        CREATE_JOB_ROUTES,
+        UPDATE_ADAPTER,
+        ADD_TASK_GAWEAN_ADAPTER,
+        ADD_JOB_HISTORY_ADAPTER,
+        SHOW_VOUCHER,
+        GET_VOUCHER,
+
+        REFRESH_SECTION_STATE,
+
+        IS_CLICKED,
+
+        GET_DEALS,
+
+        UPDATE_JOB_CATEGORIES_FRAGMENT,
+        UPDATE_JOB_CATEGORIES_PAGE,
+
+        RUN_BACKGROUND_SERVICE,
+        REFRESH_PENDING_GAWEAN_LIST,
+        RUN_BACKGROUND_SERVICE_ALL,
+
+        OPEN_SEARCH_FACING,
+        ADD_ROW_FACING,
+        UPDATE_ROW_FACING,
+        SELECT_ROW_FACING,
+        DELETE_ROW_FACING,
+        ADD_ITEM_FACING,
+
+        LOW_MEMORY_ALERT,
+
+        DELETE_ITEM_PRESENCE,
+        SET_PRESENCE_INPUT,
+        UPDATE_SECTION_ACTIVITY,
+        GET_SECTION_SOURCE,
+        NEXT_PROFILE_MENU,
+        PREVIOUS_PROFILE_MENU,
+
+        LOAD_CHAT_LIST,
+        HIDE_CHAT_LIST,
+        SHOW_CHAT_LIST,
+        ADD_OR_UPDATE_CHAT_OPEN,
+        ADD_OR_UPDATE_CHAT_CLOSE,
+        END_OF_CHAT_LIST,
+        ADD_CHAT_LIST_PAGE,
+        CHANGE_NOTIF_ICON,
+
+        GET_MY_TASK_STARTING_NULL,
+
+        INPUT_RESI,
+        REFRESH_CATALOG,
+        IS_EVER_CHANGE_FAVORIT,
+        HOME_SCROLL_DISABLED,
+        UPDATE_SEQUENCE_TODO,
+        ACTIVATION_NUMBER,
+        RESEND_SMS,
+
+        SET_LABEL_OR_HINT,
+        SET_FACT_NAME,
+
+        CALLBACK_LABEL_OR_HINT,
+        CALLBACK_FACT_NAME,
+
+        CALLBACK_SET_INPUT_NUMBER,
+        CALLBACK_INPUT_EDIT_TEXT,
+        CALLBACK_INPUT_EDIT_PHONE,
+
+
+        REQ_INPUT_NUMBER,
+        REQ_INPUT_EDIT_TEXT,
+        REQ_INPUT_EDIT_PHONE,
+
+        SET_SELECTED_EDIT_TEXT,
+
+        ON_FACT_RULES,
+        SET_HIDE_KEYBOARD,
+
+        ADD_ARRAY_VIEW,
+        ADD_PHONES,
+        ADD_EDIT_TEXT,
+        ADD_ERROR_TEXT
+    }
+
+
+}

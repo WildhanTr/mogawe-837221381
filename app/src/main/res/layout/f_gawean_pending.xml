@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.content.gawean.gaweanku.GaweanPendingFragment"
+    android:background="@color/grey_100"
+    android:clickable="true">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <include
+        android:id="@+id/appBar"
+        layout="@layout/appbar_light" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvPendingGawean"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingBottom="75dp"
+        android:layout_below="@id/appBar"
+        android:paddingTop="@dimen/space_double"/>
+
+    <com.mogawe.mosurvei.util.ui.GalanoTextView
+        android:id="@+id/txvNoPendingJob"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:text="Tidak ada gawean pending untuk di upload"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_alignParentBottom="true"
+        android:id="@+id/crdUploadAll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/colorPrimary"
+        android:visibility="visible"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="@dimen/space_double"
+        android:layout_marginRight="@dimen/space"
+        android:layout_marginLeft="@dimen/space"
+        android:foreground="?attr/selectableItemBackground">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/space_double">
+
+            <com.mogawe.mosurvei.util.ui.GalanoTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Upload All"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</RelativeLayout>

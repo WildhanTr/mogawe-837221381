@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mogawe.mosurvei.util.ui.SquareLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/thumbnail"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_margin="@dimen/space_double"
+        android:background="@drawable/bg_white_rounded_stroke"
+        android:contentDescription="@string/app_name"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_camera" />
+</com.mogawe.mosurvei.util.ui.SquareLayout>

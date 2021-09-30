@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lnrButton"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center">
+
+    <com.mogawe.mosurvei.util.ui.GalanoButton
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/btnLoadMore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/space_double"
+        android:layout_gravity="center"
+        android:text="@string/load_more"
+        android:textAllCaps="false"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/font_xmedium"
+        android:textStyle="bold"
+        android:background="@drawable/bg_menu_on_inverse"
+        />
+
+</LinearLayout>

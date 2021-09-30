@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginTop="@dimen/space_quadruple">
+
+    <RelativeLayout
+        android:layout_width="@dimen/space_triple"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+        <View
+            android:id="@+id/lineView"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/grey_500"
+            android:layout_centerInParent="true"/>
+
+        <ImageView
+            android:id="@+id/dotsIndicator"
+            android:layout_width="@dimen/space_double"
+            android:layout_height="@dimen/space_double"
+            android:src="@drawable/section_indicator__neutral"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/space_quadruple"
+        android:layout_marginStart="@dimen/space_double">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:id="@+id/txvFactName"
+            android:text="Datang ke rumah costumer"
+            android:textSize="@dimen/font_small"
+            android:textColor="@color/black"/>
+
+        <LinearLayout
+            android:id="@+id/lnrTimestamp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imvClock"
+                android:layout_width="@dimen/spacex"
+                android:layout_height="@dimen/spacex"
+                android:layout_marginRight="@dimen/space_quarter"
+                android:src="@drawable/ic_access_time_black_24dp"
+                android:layout_centerHorizontal="true"
+                app:tint="@color/grey_600" />
+            <TextView
+                android:id="@+id/txvTimestamp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="@dimen/font_tiny"
+                android:textColor="@color/grey_800"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <com.mogawe.mosurvei.util.ui.LatoMaterialButton
+        android:id="@+id/btnKerjakan"
+        style="@style/GenericRaisedButtonStylePrimary"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Kerjakan"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_tiny"
+        android:gravity="center"
+        android:layout_marginStart="@dimen/space"
+        android:layout_marginEnd="@dimen/space"
+        android:background="@drawable/button_primary"/>
+
+</LinearLayout>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.appbar.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/footBar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:background="@color/white"
+    android:paddingTop="0dp"
+    app:elevation="0dp"
+    tools:context="com.mogawe.mosurvei.view.content.form.basic.SectionFormActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight=".60"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtSectionState"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:text="1 of 13" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding=".5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp">
+                <ProgressBar
+                    android:id="@+id/progressSectionPage"
+                    android:padding="0dp"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:max="100"
+                    android:progress="10" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+        <!--<Button-->
+            <!--android:id="@+id/previousFactButton"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight=".20"-->
+            <!--android:onClick="backFact"-->
+            <!--android:text="Back" />-->
+            <!--app:srcCompat="@android:drawable/arrow_up_float" />-->
+
+        <ImageView
+            android:layout_marginLeft="@dimen/space"
+            android:id="@+id/previousFactButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".10"
+            android:onClick="backFact"
+            app:srcCompat="@drawable/ic_keyboard_arrow_up_black_24dp" />
+        <ImageView
+            android:layout_marginRight="@dimen/space"
+            android:id="@+id/nextFactButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".10"
+            android:onClick="backFact"
+            app:srcCompat="@drawable/ic_keyboard_arrow_down_black_24dp" />
+
+        <!--<Button-->
+            <!--android:id="@+id/nextFactButton"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight=".20"-->
+            <!--android:onClick="nextFact"-->
+            <!--android:text="Next" />-->
+            <!--app:srcCompat="@android:drawable/arrow_down_float" />-->
+
+    </LinearLayout>
+
+</com.google.android.material.appbar.AppBarLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="@dimen/space"
+    android:elevation="@dimen/space_triple"
+    app:cardCornerRadius="@dimen/spacexx"
+    android:foreground="?attr/selectableItemBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/space_double">
+
+        <ImageView
+            android:id="@+id/imvIcon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_camera" />
+
+        <com.mogawe.mosurvei.util.ui.GalanoTextView
+            android:id="@+id/txvName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Foto Produk"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:textColor="@color/black"
+            android:layout_marginStart="@dimen/space_double"/>
+
+        <com.mogawe.mosurvei.util.ui.GalanoTextView
+            android:id="@+id/txvStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/font_small"
+            android:text="Terverifikasi" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

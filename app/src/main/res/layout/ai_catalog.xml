@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/crdProduct"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="@dimen/space"
+    app:cardCornerRadius="@dimen/space"
+    app:cardElevation="@dimen/space">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imvProduct"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:scaleType="centerCrop"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <ImageButton
+                android:id="@+id/imgBtnFavoriteProduct"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_favorite_24"
+                android:background="@drawable/circle"
+                android:padding="@dimen/space"
+                android:backgroundTint="@color/white"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="@dimen/space"/>
+
+        </RelativeLayout>
+
+        <com.mogawe.mosurvei.util.ui.GalanoTextView
+            android:id="@+id/txvProductName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/space"
+            android:text="Voucher Netflix 1 Bulan Private Sharing"
+            android:textColor="@color/black"
+            android:maxLines="2"
+            android:ellipsize="end"/>
+
+        <com.mogawe.mosurvei.util.ui.GalanoTextView
+            android:id="@+id/txvStatusProduk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/space"
+            android:text="Published"
+            android:textColor="@color/white"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:textSize="@dimen/font_tiny"
+            android:background="@drawable/shape_rounded"
+            android:paddingStart="@dimen/space"
+            android:paddingEnd="@dimen/space"
+            android:backgroundTint="@color/green_500"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/space">
+
+            <com.mogawe.mosurvei.util.ui.GalanoLightTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Harga Produk"
+                android:textSize="@dimen/font_small"/>
+
+            <com.mogawe.mosurvei.util.ui.GalanoTextView
+                android:id="@+id/txvProductPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Rp 40.000"
+                android:textColor="@color/black"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/space">
+
+            <com.mogawe.mosurvei.util.ui.GalanoLightTextView
+                android:textSize="@dimen/font_small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Komisi Penjualan"/>
+
+            <com.mogawe.mosurvei.util.ui.GalanoTextView
+                android:id="@+id/txvProducCommission"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Rp 25.000 / voucher"
+                android:textColor="@color/green_600"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

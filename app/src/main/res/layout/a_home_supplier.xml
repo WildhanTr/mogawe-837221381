@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".view.content.supplier.home.HomeSupplierActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/grey_100">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:paddingTop="@dimen/space_triple">
+
+                <RelativeLayout
+                    android:id="@+id/appBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/space_double"
+                    android:paddingTop="@dimen/space_double"
+                    android:paddingEnd="@dimen/space_double">
+
+                    <LinearLayout
+                        android:id="@+id/notification"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:orientation="horizontal"
+                        tools:ignore="UselessParent">
+
+                        <ImageView
+                            android:id="@+id/imvNotification"
+                            android:layout_width="@dimen/space_triple"
+                            android:layout_height="@dimen/space_triple"
+                            android:layout_gravity="center"
+                            android:contentDescription="@string/app_name"
+                            android:src="@drawable/ic_bell"
+                            app:tint="@color/white" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_primary_datar"
+                android:orientation="vertical"
+                android:paddingStart="@dimen/space_double"
+                android:paddingEnd="@dimen/space_double"
+                android:paddingBottom="@dimen/space_double">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_dialog_top_rounded"
+                    android:orientation="vertical"
+                    android:paddingStart="@dimen/space_double"
+                    android:paddingEnd="@dimen/space_double">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/imvProfile"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center"
+                        android:src="@color/grey_200"
+                        app:civ_border_color="@color/grey_400"
+                        app:civ_border_width="1dp" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_double"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <com.mogawe.mosurvei.util.ui.LatoTextView
+                            android:id="@+id/txvFullName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/dash"
+                            android:textColor="@color/grey_900"
+                            android:textSize="@dimen/font_xmedium"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space"
+                        android:layout_marginBottom="5dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <com.mogawe.mosurvei.util.ui.LatoTextView
+                            android:id="@+id/txvStoreName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/dash"
+                            android:textColor="@color/grey_900"
+                            android:textSize="@dimen/font_xmedium"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/space_half"
+                            android:src="@drawable/ic_wallet_new"
+                            android:contentDescription="@string/walletHistory"/>
+
+                        <com.mogawe.mosurvei.util.ui.LatoTextView
+                            android:id="@+id/txvBalance"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/zero_rupiah" />
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space"
+                        android:gravity="center">
+
+                        <com.mogawe.mosurvei.util.ui.GalanoButton
+                            android:id="@+id/btnEditProfile"
+                            android:layout_width="150dp"
+                            android:layout_height="@dimen/space_triple"
+                            android:background="@drawable/button_primary"
+                            android:text="@string/edit_store_profile"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/font_small" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="@dimen/space_double"
+                        android:background="@color/grey_200" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/bg_dialog_bottom_rounded"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:paddingTop="@dimen/space"
+                        android:paddingBottom="@dimen/space"
+                        android:baselineAligned="false">
+
+                        <LinearLayout
+                            android:id="@+id/lnrProductDashboard"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="@string/product"
+                                android:textSize="@dimen/font_small" />
+
+                            <TextView
+                                android:id="@+id/txvProductCount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="@string/dash"
+                                android:textColor="@color/black"
+                                android:textSize="17sp"
+                                android:textStyle="bold" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="@string/orders"
+                                android:textSize="@dimen/font_small" />
+
+                            <TextView
+                                android:id="@+id/txvOrderCount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="@string/dash"
+                                android:textColor="@color/black"
+                                android:textSize="17sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="@string/sales"
+                                android:textSize="@dimen/font_small" />
+
+                            <TextView
+                                android:id="@+id/txvSalesCount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="@string/dash"
+                                android:textColor="@color/black"
+                                android:textSize="17sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="@string/canceled"
+                                android:textSize="@dimen/font_small" />
+
+                            <TextView
+                                android:id="@+id/txvCanceledCount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="@string/dash"
+                                android:textColor="@color/black"
+                                android:textSize="17sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/bg_rounded_white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/lnrProductList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/space_double">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:contentDescription="@string/product_list"
+                        android:src="@drawable/box" />
+
+                    <com.mogawe.mosurvei.util.ui.LatoTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/space_double"
+                        android:layout_weight="1"
+                        android:text="@string/product_list"
+                        android:textAllCaps="false"
+                        android:textColor="@color/black" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_baseline_chevron_right_24" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lnrAddProduct"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/space_double">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:contentDescription="@string/add_product"
+                        android:src="@drawable/gift" />
+
+                    <com.mogawe.mosurvei.util.ui.LatoTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/space_double"
+                        android:layout_weight="1"
+                        android:text="@string/add_product"
+                        android:textAllCaps="false"
+                        android:textColor="@color/black" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:contentDescription="@string/add_product"
+                        android:src="@drawable/ic_baseline_chevron_right_24" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lnrOrderList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/space_double">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:contentDescription="@string/order_list"
+                        android:src="@drawable/checklist" />
+
+                    <com.mogawe.mosurvei.util.ui.LatoTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/space_double"
+                        android:layout_weight="1"
+                        android:text="@string/order_list"
+                        android:textAllCaps="false"
+                        android:textColor="@color/black" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:contentDescription="@string/order_list"
+                        android:src="@drawable/ic_baseline_chevron_right_24" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/bg_rounded_white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/lnrServiceLogistik"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/space_double">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:contentDescription="@string/logistic_service"
+                        android:src="@drawable/consult" />
+
+                    <com.mogawe.mosurvei.util.ui.LatoTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/space_double"
+                        android:layout_weight="1"
+                        android:text="@string/logistic_service"
+                        android:textAllCaps="false"
+                        android:textColor="@color/black" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:contentDescription="@string/logistic_service"
+                        android:src="@drawable/ic_baseline_chevron_right_24" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutBantuan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/space_double">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:contentDescription="@string/help"
+                        android:src="@drawable/help" />
+
+                    <com.mogawe.mosurvei.util.ui.LatoTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/space_double"
+                        android:layout_weight="1"
+                        android:text="@string/help"
+                        android:textAllCaps="false"
+                        android:textColor="@color/black" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:contentDescription="@string/help"
+                        android:src="@drawable/ic_baseline_chevron_right_24" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lnrLogout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/space_double">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:contentDescription="@string/log_out"
+                        android:src="@android:drawable/ic_lock_power_off"
+                        app:tint="@color/colorPrimary" />
+
+                    <com.mogawe.mosurvei.util.ui.LatoTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/space_double"
+                        android:layout_weight="1"
+                        android:text="@string/exit"
+                        android:textAllCaps="false"
+                        android:textColor="@color/colorPrimary" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:contentDescription="@string/log_out"
+                        android:src="@drawable/ic_baseline_chevron_right_24"
+                        app:tint="@color/colorPrimary" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

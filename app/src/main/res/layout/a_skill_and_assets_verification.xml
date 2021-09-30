@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.content.home.SkillAndAssetsVerificationActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsing_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            app:contentScrim="@color/colorPrimary"
+            app:expandedTitleTextAppearance="@android:color/transparent"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:statusBarScrim="@color/white">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="?attr/actionBarSize"
+                android:orientation="horizontal">
+
+                <com.mogawe.mosurvei.util.ui.GalanoTextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:minHeight="?actionBarSize"
+                    android:padding="@dimen/appbar_padding"
+                    android:text="Asset"
+                    android:textAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
+                    android:textSize="@dimen/font_xbig" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:padding="@dimen/appbar_padding">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/appbar_padding"
+                        android:background="@drawable/shape_rounded"
+                        android:backgroundTint="@color/black1_transparent"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/space_double"
+                        android:paddingTop="@dimen/space_half"
+                        android:paddingRight="@dimen/space_double"
+                        android:paddingBottom="@dimen/space">
+
+                        <ImageView
+                            android:layout_width="@dimen/space_triple"
+                            android:layout_height="@dimen/space_triple"
+                            android:background="@drawable/circle"
+                            android:backgroundTint="@color/light_green_800"
+                            android:src="@drawable/ic_check_black_24dp"
+                            app:tint="@color/white" />
+
+                        <com.mogawe.mosurvei.util.ui.GalanoTextView
+                            android:id="@+id/txvCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/space"
+                            android:text="@string/please_wait" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+                <ImageView
+                    android:id="@+id/buttonBack"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="0dp"
+                    android:padding="@dimen/space_quarter"
+                    app:srcCompat="@drawable/ic_arrow_back_white_24dp" />
+
+                <TextView
+                    android:id="@+id/txvSkip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/skip"
+                    android:textColor="@color/white"/>
+
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvCertificate"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:paddingBottom="54dp" />
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

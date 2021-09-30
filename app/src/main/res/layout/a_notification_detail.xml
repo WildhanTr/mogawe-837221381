@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.content.notification.NotificationListActivity">
+
+    <include
+        android:id="@+id/appBar"
+        layout="@layout/appbar_light" />
+
+    <com.mogawe.mosurvei.util.ui.GalanoTextView
+        android:id="@+id/txvTitleNotification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/appBar"
+        android:layout_margin="@dimen/space_double"
+        android:maxLines="2"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_big"
+        tools:text="Halo MoGawe, ada gawean baru nichh!!" />
+
+    <com.mogawe.mosurvei.util.ui.GalanoTextView
+        android:id="@+id/txvDescriptionNotification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txvTitleNotification"
+        android:layout_margin="@dimen/space_double"
+        tools:text="@string/action.lorem_ipsum" />
+
+</RelativeLayout>

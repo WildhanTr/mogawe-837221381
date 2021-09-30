@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.content.hire_me.HireMeActivity">
+
+    <include
+        android:id="@+id/appBar"
+        layout="@layout/appbar_light" />
+
+    <RelativeLayout
+        android:id="@+id/rltHero"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/appBar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@drawable/hire_me_hero">
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/space_xtra">
+            <com.mogawe.mosurvei.util.ui.LatoTextView
+                android:id="@+id/txvFactName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_half"
+                android:text="Pilih Opsi Gawean Yuk!"
+                android:textColor="@color/white"
+                android:textSize="24dp"
+                android:textStyle="bold"
+                android:paddingHorizontal="@dimen/space_double"
+                android:layout_marginTop="@dimen/space_double"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/crdBundledGawean"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/fab_margin"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="@dimen/space_triple"
+                    app:cardElevation="@dimen/space_double"
+                    app:layout_anchor="@id/appBarHome"
+
+                    app:layout_anchorGravity="bottom|end"
+
+                    app:srcCompat="@android:drawable/ic_dialog_email">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/space_double">
+
+                        <LinearLayout
+                            android:id="@+id/hire_me_bundled"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/space_double"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_hire_me_bundled" />
+
+                            <com.mogawe.mosurvei.util.ui.GalanoTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="Bundled"
+                                android:textColor="@color/black" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/crdInstantGawean"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/fab_margin"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="@dimen/space_triple"
+                    app:cardElevation="@dimen/space_double"
+                    app:layout_anchor="@id/appBarHome"
+                    app:layout_anchorGravity="bottom|end"
+                    app:srcCompat="@android:drawable/ic_dialog_email">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/space_double">
+
+                        <LinearLayout
+                            android:id="@+id/hire_me_instant"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/space_double"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_hire_me_instant" />
+
+                            <com.mogawe.mosurvei.util.ui.GalanoTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="Instant"
+                                android:textColor="@color/black" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/lnrHireMeDescription"
+        android:layout_below="@+id/rltHero"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/space_double"
+        android:paddingVertical="@dimen/space_double">
+        <com.mogawe.mosurvei.util.ui.LatoTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_medium"
+            android:textStyle="bold"
+            android:text="Bundled :" />
+        <com.mogawe.mosurvei.util.ui.LatoTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_medium"
+            android:layout_marginBottom="@dimen/space"
+            android:text="jika kamu punya target harian" />
+        <com.mogawe.mosurvei.util.ui.LatoTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_medium"
+            android:textStyle="bold"
+            android:text="Instant :" />
+        <com.mogawe.mosurvei.util.ui.LatoTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_medium"
+            android:text="jika kamu mau kerja sekarang" />
+    </LinearLayout>
+</RelativeLayout>

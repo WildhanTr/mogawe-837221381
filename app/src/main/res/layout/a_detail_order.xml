@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.content.supplier.product.DetailOrderActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <include
+        android:id="@+id/appBar"
+        layout="@layout/appbar_light" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="81dp"
+            tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/imvTransactionDone"
+                android:layout_gravity="center"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:background="@drawable/ic_bill"/>
+
+            <com.mogawe.mosurvei.util.ui.ModulusTextView
+                android:id="@+id/tvConfirmationOrder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:padding="@dimen/space"
+                android:text="@string/order_complete"
+                android:textSize="@dimen/font_medium"
+                android:textStyle="bold" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:orientation="vertical"
+                android:background="@color/white"
+                android:padding="@dimen/space_double">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="@dimen/space_double"
+                    android:orientation="horizontal">
+
+                    <com.mogawe.mosurvei.util.ui.GalanoButton
+                        android:id="@+id/btnChatBuyer"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_primary"
+                        android:text="Chat Pembeli"
+                        android:textColor="@color/white"
+                        android:layout_marginEnd="@dimen/space"
+                        android:textAllCaps="false"
+                        style="?android:attr/borderlessButtonStyle"/>
+
+                    <com.mogawe.mosurvei.util.ui.GalanoButton
+                        android:id="@+id/btnLanjutBeli"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_white_rounded_white"
+                        android:text="Lanjut Belanja"
+                        android:layout_marginStart="@dimen/space"
+                        android:textAllCaps="false"
+                        style="?android:attr/borderlessButtonStyle"
+                        android:textColor="@color/colorPrimary"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Informasi Tagihan"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="15dp"
+                    android:textSize="15dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="No. Tagihan"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/font_small" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/txvInvoiceNo"
+                            android:layout_width="match_parent"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_height="35dp"
+                            android:background="@drawable/custom_input"
+                            android:paddingStart="4dp"
+                            android:paddingEnd="12dp"
+                            android:editable="false"
+                            android:textColor="@color/grey_500"
+                            android:textSize="@dimen/font_small"
+                            android:text="MJ123456OXP"
+                            tools:ignore="Autofill,LabelFor" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Status Tagihan"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/font_small" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/txvStatus"
+                            android:layout_width="match_parent"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_height="35dp"
+                            android:background="@drawable/custom_input"
+                            android:paddingStart="4dp"
+                            android:paddingEnd="12dp"
+                            android:editable="false"
+                            android:textColor="@color/grey_500"
+                            android:textSize="@dimen/font_small"
+                            android:text="Menunggu Pembayaran"
+                            tools:ignore="Autofill,LabelFor" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Total Tagihan"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/font_small" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/txvTotal"
+                            android:layout_width="match_parent"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_height="35dp"
+                            android:background="@drawable/custom_input"
+                            android:paddingStart="4dp"
+                            android:paddingEnd="12dp"
+                            android:editable="false"
+                            android:textColor="@color/grey_500"
+                            android:textSize="@dimen/font_small"
+                            android:text="Rp115.000"
+                            tools:ignore="Autofill,LabelFor" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/white">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="No. Transaksi"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/font_small" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/txvOrderNo"
+                            android:layout_width="match_parent"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_height="35dp"
+                            android:background="@drawable/custom_input"
+                            android:paddingStart="4dp"
+                            android:paddingEnd="12dp"
+                            android:editable="false"
+                            android:textColor="@color/grey_500"
+                            android:textSize="@dimen/font_small"
+                            android:text="213123010123"
+                            tools:ignore="Autofill,LabelFor" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txvBuyersName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Glen Rynaldy Hermanus"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/font_small" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/txvBuyersPhoneAndAddress"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:editable="false"
+                            android:textColor="@color/grey_500"
+                            android:textSize="@dimen/font_small"
+                            android:paddingBottom="15dp"
+                            android:text="081314169140 \nJalan Rawasari Timur 1 dalam No.3 Cempaka Putih \nJakarta Pusat, DKI Jakarta"
+                            tools:ignore="Autofill,LabelFor" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txvProductName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="-"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/font_small" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/txvQuantityAndPrice"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:editable="false"
+                            android:textColor="@color/grey_500"
+                            android:textSize="@dimen/font_small"
+                            android:paddingBottom="15dp"
+                            android:text="Jumlah : 1 \nTotal Harga : Rp100.000"
+                            tools:ignore="Autofill,LabelFor" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Metode Pengiriman"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/font_small" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/txvShipment"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:editable="false"
+                            android:textColor="@color/grey_500"
+                            android:textSize="@dimen/font_small"
+                            android:paddingBottom="15dp"
+                            android:text="JNE Reguler \nTotal Ongkir : Rp15.000"
+                            tools:ignore="Autofill,LabelFor" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btnSubmit"
+                    style="@style/GenericRaisedButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginLeft="5dp"
+                    android:text="Selesai"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+</FrameLayout>

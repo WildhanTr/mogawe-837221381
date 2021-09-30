@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    app:cardCornerRadius="@dimen/space"
+    card_view:cardElevation="3dp"
+    android:id="@+id/cardBanner"
+    android:foreground="?attr/selectableItemBackground">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:orientation="horizontal">
+
+           <ImageView
+               android:id="@+id/imvAds"
+               android:layout_width="0dp"
+               android:layout_height="match_parent"
+               android:layout_weight="4"
+               android:scaleType="centerCrop"
+               card_view:srcCompat="@drawable/ic_interview_marker" />
+
+           <LinearLayout
+               android:id="@+id/rltAds"
+               android:layout_width="0dp"
+               android:layout_height="match_parent"
+               android:layout_weight="6"
+               android:orientation="vertical">
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="0dp"
+                   android:layout_weight="1"
+                   android:orientation="horizontal"
+                   android:padding="@dimen/space_double"
+                   android:clipToPadding="false">
+
+                   <LinearLayout
+                       android:layout_width="0dp"
+                       android:layout_height="wrap_content"
+                       android:layout_weight="1"
+                       android:orientation="vertical"
+                       android:clipToPadding="false">
+
+                       <com.mogawe.mosurvei.util.ui.GalanoTextView
+                           android:id="@+id/txvTitleAds"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_centerVertical="true"
+                           android:text="Undian Berhadiah Di MoGawe!"
+                           android:textColor="@color/black"
+                           android:maxLines="1"
+                           android:ellipsize="end"
+                           android:textSize="@dimen/font_medium" />
+
+                       <com.mogawe.mosurvei.util.ui.GalanoTextView
+                           android:id="@+id/txvMessageAds"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="Undian Berhadiah Di MoGawe!"
+                           android:textSize="@dimen/font_small"
+                           android:maxLines="2"
+                           android:ellipsize="end"
+                           android:layout_marginTop="@dimen/space_half"/>
+
+                   </LinearLayout>
+
+                   <com.mogawe.mosurvei.util.ui.GalanoButton
+                       android:id="@+id/btnAds"
+                       android:layout_width="wrap_content"
+                       android:layout_height="30dp"
+                       android:layout_alignParentEnd="true"
+                       android:background="@drawable/button_primary"
+                       android:text="Mau"
+                       android:textAllCaps="false"
+                       android:textColor="@color/white"
+                       android:visibility="gone"
+                       android:paddingStart="@dimen/space"
+                       android:paddingEnd="@dimen/space"/>
+
+               </LinearLayout>
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:visibility="gone">
+
+                   <androidx.cardview.widget.CardView
+                       android:id="@+id/crdLike"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       app:cardCornerRadius="@dimen/space_double"
+                       android:layout_margin="@dimen/space_double"
+                       android:clipToPadding="false">
+
+                       <LinearLayout
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:orientation="horizontal"
+                           android:paddingBottom="@dimen/space_xhalf"
+                           android:paddingTop="@dimen/space_xhalf"
+                           android:paddingStart="@dimen/space"
+                           android:paddingEnd="@dimen/space">
+
+                           <ImageView
+                               android:id="@+id/imvLike"
+                               android:layout_width="24dp"
+                               android:layout_height="24dp"
+                               android:src="@drawable/ic_favorite_active_red_24dp" />
+
+                           <com.mogawe.mosurvei.util.ui.GalanoTextView
+                               android:id="@+id/txvLikeCount"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:layout_gravity="center"
+                               android:layout_marginStart="@dimen/space"
+                               android:text="@string/action.example_number"
+                               android:textStyle="bold"
+                               android:textSize="@dimen/font_small"/>
+
+                       </LinearLayout>
+                   </androidx.cardview.widget.CardView>
+               </LinearLayout>
+
+           </LinearLayout>
+
+       </LinearLayout>
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shmAds"
+            tools:duration="800"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <include layout="@layout/shm_load_single_ads" />
+            </LinearLayout>
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
+
+

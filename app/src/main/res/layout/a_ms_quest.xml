@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".playground.MSQuestActivity">
+
+    <SurfaceView
+        android:id="@+id/surface_camera"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+            <com.mogawe.mosurvei.util.ui.GalanoTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Demo Gawean MS"
+                android:textSize="@dimen/font_big" />
+
+            <com.mogawe.mosurvei.util.ui.GalanoTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:paddingLeft="@dimen/space_double"
+                android:paddingRight="@dimen/space_double"
+                android:text="HP akan merekam video jika menekan tombol Start di bawah"
+                android:textAlignment="center"
+                android:textSize="@dimen/font_medium" />
+
+            <com.mogawe.mosurvei.util.ui.GalanoTextView
+                android:layout_marginTop="@dimen/space_double"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:paddingLeft="@dimen/space_double"
+                android:paddingRight="@dimen/space_double"
+                android:text="Slide gambar ke kanan unutuk menyatakan Ya"
+                android:textAlignment="center"
+                android:textSize="@dimen/font_medium" />
+            <com.mogawe.mosurvei.util.ui.GalanoTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:paddingLeft="@dimen/space_double"
+                android:paddingRight="@dimen/space_double"
+                android:text="Slide gambar ke kiri unutuk menyatakan Tidak"
+                android:textAlignment="center"
+                android:textSize="@dimen/font_medium" />
+
+            <com.mogawe.mosurvei.util.ui.GalanoButton
+                android:id="@+id/btnStartIG"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/space_double"
+                android:background="@drawable/button_primary"
+                android:minHeight="@dimen/space_xtra"
+                android:paddingLeft="@dimen/space_double"
+                android:paddingRight="@dimen/space_double"
+                android:text="Start Questionnaire InstaGram"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_medium"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutIG"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/im_ig_header" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/im_ig_post_header" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <Button
+                android:layout_centerInParent="true"
+                android:id="@+id/btnStop"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/space_double"
+                android:background="@drawable/button_primary"
+                android:minHeight="@dimen/space_xtra"
+                android:paddingLeft="@dimen/space_double"
+                android:paddingRight="@dimen/space_double"
+                android:text="Selesai"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_medium"
+                android:textStyle="bold" />
+
+            <com.lorentzos.flingswipe.SwipeFlingAdapterView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/frame"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:max_visible="4"
+                android:background="@color/white"
+                app:min_adapter_stack="6"
+                app:rotation_degrees="16" />
+
+
+
+        </RelativeLayout>
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/im_ig_footer" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_200"
+    tools:context="com.mogawe.mosurvei.view.content.home.HomeV2Activity">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarHome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:fitsSystemWindows="true">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/collapsing_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fitsSystemWindows="true"
+                app:contentScrim="@color/colorPrimary"
+                app:expandedTitleTextAppearance="@android:color/transparent"
+                app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed"
+                app:statusBarScrim="@color/colorPrimary"
+                app:toolbarId="@+id/toolbar">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/imvBanner"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/round_outline"
+                    app:shapeAppearanceOverlay="@style/roundedBottom"
+                    android:src="@color/red_600"/>
+
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <com.mogawe.mosurvei.util.ui.FlexSwipeRefreshLayout
+            android:id="@+id/scrollBody"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@+id/footBarLayout"
+            android:layout_below="@+id/appBar"
+            android:visibility="visible"
+            android:layout_marginTop="@dimen/space_xxtra"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:descendantFocusability="blocksDescendants">
+
+                <LinearLayout
+                    android:id="@+id/lnrUpdateApp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/space_double"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/space_double"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_error_red_24dp" />
+
+                    <com.mogawe.mosurvei.util.ui.GalanoTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Update App terbaru sudah tersedia"
+                        android:textColor="@color/colorPrimary" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rltRefreshInstruction"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lnrUpdateApp"
+                    android:gravity="center"
+                    android:visibility="gone">
+
+                    <com.mogawe.mosurvei.util.ui.GalanoTextView
+                        android:id="@+id/txvSwipeToRefresh"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingLeft="@dimen/space"
+                        android:paddingTop="@dimen/space"
+                        android:paddingRight="@dimen/space"
+                        android:text="@string/swipe_down_to_refresh"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/font_medium" />
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="18dp"
+                        android:layout_below="@id/txvSwipeToRefresh"
+                        android:layout_centerHorizontal="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_keyboard_arrow_down_black_24dp" />
+                </RelativeLayout>
+
+                <com.facebook.shimmer.ShimmerFrameLayout
+                    android:id="@+id/shmGroupGawean"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rltRefreshInstruction"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical"
+                    tools:duration="800">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <include layout="@layout/shm_load_gawean" />
+                    </LinearLayout>
+                </com.facebook.shimmer.ShimmerFrameLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvHomeCategory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rltRefreshInstruction"
+                    android:clipToPadding="false"
+                    android:orientation="horizontal"
+                    android:paddingStart="@dimen/space"
+                    android:paddingTop="@dimen/space"
+                    android:paddingEnd="@dimen/space_xdouble"
+                    android:scrollbars="vertical"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvHomeView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/rvHomeCategory"
+                    android:clipToPadding="false"
+                    android:paddingBottom="@dimen/space_xxxtra" />
+            </RelativeLayout>
+
+        </com.mogawe.mosurvei.util.ui.FlexSwipeRefreshLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/fab_margin"
+            app:layout_anchorGravity="bottom|end"
+            app:layout_anchor="@id/appBarHome"
+            app:cardCornerRadius="@dimen/space_triple"
+
+            app:cardElevation="@dimen/space_double"
+
+            app:srcCompat="@android:drawable/ic_dialog_email" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/menu_gawean_power_up"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_margin="@dimen/space_double">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_power_up"
+                        android:layout_gravity="center"/>
+
+                    <com.mogawe.mosurvei.util.ui.GalanoTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Power Up!"
+                        android:layout_gravity="center"
+                        android:textColor="@color/black"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/menu_gawean_worker"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_margin="@dimen/space_double">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_hire_me"
+                        android:layout_gravity="center"/>
+
+                    <com.mogawe.mosurvei.util.ui.GalanoTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Hire Me!"
+                        android:layout_gravity="center"
+                        android:textColor="@color/black"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/menu_gawean_seller"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_margin="@dimen/space_double">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_commerce"
+                        android:layout_gravity="center"/>
+
+                    <com.mogawe.mosurvei.util.ui.GalanoTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Commerce"
+                        android:layout_gravity="center"
+                        android:textColor="@color/black"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_collapseMode="pin">
+
+            <LinearLayout
+                android:id="@+id/lnr_home_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/rltPhotoProfileToolbar"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/space"
+                    android:layout_marginEnd="@dimen/space">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/photoProfileMogawersToolbar"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_gravity="center"
+                        android:src="@drawable/im_ambar_good_bgwhite"
+                        app:civ_border_color="@color/grey_300"
+                        app:civ_border_width="1dp" />
+
+
+                    <ImageView
+                        android:id="@+id/KYCAlertToolbar"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:contentDescription="TODO"
+                        android:src="@drawable/ic_error_red_24dp"
+                        app:tint="@color/yellow_700" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/lnrToolbarInfo"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/listProfileMenu"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rp. "
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/font_reg" />
+
+                        <TextView
+                            android:id="@+id/txvSaldo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="-"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/font_reg" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/txvPoint"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="-"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/font_reg" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" pts"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/font_reg" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/space_triple"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:minHeight="56dp"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/imvChat"
+                        android:layout_width="@dimen/space_triple"
+                        android:layout_height="@dimen/space_triple"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_chat"
+                        app:tint="@color/white" />
+
+                    <Space
+                        android:layout_width="@dimen/space_double"
+                        android:layout_height="0dp"/>
+
+                    <ImageView
+                        android:id="@+id/imvNotification"
+                        android:layout_width="@dimen/space_triple"
+                        android:layout_height="@dimen/space_triple"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_bell"
+                        app:tint="@color/white" />
+
+                    <Space
+                        android:layout_width="@dimen/space_double"
+                        android:layout_height="0dp"/>
+
+                    <ImageView
+                        android:id="@+id/imvProfile"
+                        android:layout_width="@dimen/space_triple"
+                        android:layout_height="@dimen/space_triple"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_baseline_menu_24"
+                        app:tint="@color/white" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <!-- <View
+         android:id="@+id/viewPoint"
+         android:layout_marginTop="254dp"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:layout_above="@+id/footBarLayout"/>-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/footBarLayout">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/crdOfflineMode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/space"
+            android:visibility="gone"
+            app:cardBackgroundColor="@color/colorPrimary">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/space_double">
+
+                <com.mogawe.mosurvei.util.ui.GalanoTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Offline Mode"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <com.mogawe.mosurvei.util.ui.GalanoTextView
+                    android:id="@+id/txvRestart"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="Restart"
+                    android:textColor="@color/white"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/footBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/transparent"
+        android:clipToPadding="false"
+        android:paddingTop="@dimen/space_double">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:paddingTop="@dimen/space_double"
+            app:cardElevation="@dimen/space_triple"
+            android:visibility="gone">
+
+            <include
+                android:id="@+id/footBar"
+                layout="@layout/l_menu_v3" />
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/blurLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:descendantFocusability="beforeDescendants"
+        android:visibility="gone">
+
+    </RelativeLayout>
+</RelativeLayout>
