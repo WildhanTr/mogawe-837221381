@@ -52,7 +52,7 @@
                     android:layout_centerHorizontal="true"
                     android:layout_centerVertical="true"
                     android:text="125%"
-                    android:textSize="30sp"
+                    android:textSize="25sp"
                     android:textStyle="bold"/>
 
             </RelativeLayout>

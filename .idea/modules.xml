@@ -4,8 +4,6 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/mogawe-837221381.iml" filepath="$PROJECT_DIR$/.idea/modules/mogawe-837221381.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/mogawe-837221381.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/mogawe-837221381.app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mogawe-android.iml" filepath="$PROJECT_DIR$/.idea/modules/mogawe-android.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/mogawe-android.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/mogawe-android.app.iml" />
     </modules>
   </component>
 </project>
