@@ -1,10 +1,15 @@
 package com.mogawe.mosurvei.view.content.home;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.widget.Toolbar;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.AttributeSet;
 import android.view.View;
+import android.widget.Button;
 
 import com.google.android.material.appbar.AppBarLayout;
 import com.mogawe.mosurvei.R;
@@ -50,5 +55,41 @@ public class HomeV2Activity extends BaseActivity {
         );
         params.setMargins(0, getStatusBarHeight(), 0, 0);
         appBar.setLayoutParams(params);
+
+        // TODO
+        // this will be temporary
+        // set up the button for showing DailyTargetFragment
+        buttonShowDailyTargetFragmentWithSurplus();
+        buttonShowDailyTargetFragmentNotReached();
+    }
+
+    // TODO
+    // this is to show the DailyTarget fragment, this is just temporary
+    // and will be removed
+    private void buttonShowDailyTargetFragmentWithSurplus() {
+        Button button = findViewById(R.id.btn_show_daily_target_surplus_fragment);
+        button.setOnClickListener(v -> {
+            System.out.println("show DailyTarget fragment");
+            showDailyTargetFragmentWithSurplus();
+        });
+    }
+
+    // TODO
+    // this is to show the DailyTarget fragment, this is just temporary
+    // and will be removed
+    private void buttonShowDailyTargetFragmentNotReached() {
+        Button button = findViewById(R.id.btn_show_daily_target_not_reached_fragment);
+        button.setOnClickListener(v -> {
+            System.out.println("show DailyTarget fragment");
+            showDailyTargetFragmentNotReached();
+        });
+    }
+
+    private void showDailyTargetFragmentWithSurplus() {
+        DailyTargetFragment.showDailyTargetWithSurplus(this);
+    }
+
+    private void showDailyTargetFragmentNotReached() {
+        DailyTargetFragment.showDailyTargetNotReached(this);
     }
 }
