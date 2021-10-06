@@ -744,5 +744,7 @@
     <string name="onboarding_slide_2">Dapatkan penawaran kerja yang sesuai dengan keahlian</string>
     <string name="onboarding_slide_3">Terima uang setelah kerjaan berhasil dikirim</string>
     <string name="onboarding_slide_final">Siap Gawe,\nSiap Gajian!</string>
+    <string name="profile_title_target_harian">Target Harian</string>
+    <string name="profile_title_gawean">Gawean</string>
 
 </resources>

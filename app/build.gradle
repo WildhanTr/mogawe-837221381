@@ -1,7 +1,8 @@
-apply plugin: 'com.android.application'
-apply plugin: 'com.jakewharton.hugo'
-apply plugin: 'com.google.gms.google-services'
-
+plugins {
+    id 'com.android.application'
+    id 'com.jakewharton.hugo'
+    id 'com.google.gms.google-services'
+}
 
 android {
     compileSdkVersion 30
