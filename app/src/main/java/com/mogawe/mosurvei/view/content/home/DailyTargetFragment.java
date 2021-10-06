@@ -13,10 +13,15 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.google.gson.Gson;
 import com.mogawe.mosurvei.R;
+import com.mogawe.mosurvei.model.network.response.DailyTargetResponse;
 import com.mogawe.mosurvei.view.BaseActivity;
 import com.mogawe.mosurvei.view.BaseFragment;
 import com.mogawe.mosurvei.view.shared.map.LocationFragment;
+
+import java.text.NumberFormat;
+import java.util.Locale;
 
 public class DailyTargetFragment extends BaseFragment {
     // indicate if daily target has surplus
@@ -28,7 +33,26 @@ public class DailyTargetFragment extends BaseFragment {
     // daily target indicator, value is (STATUS_SURPLUS, STATUS_REACHED, STATUS_NOT_REACHED)
     private static int STATUS;
 
+    // daily target dividen
+    private static Double dailyTargetRemainder;
+    // daily target progress (percentage)
+    private static Double dailyTargetPercentage;
+
     public static final String TAG = DailyTargetFragment.class.getSimpleName();
+
+    // mock data to induce STATUS_NOT_REACHED
+    private static String mockJsonDataDailyTargetNotReached =
+            "{\n" +
+            "  \"targetRevenue\": 120000,\n" +
+            "  \"todayRevenue\": 100000\n" +
+            "}";
+
+    // mock data to induce STATUS_SURPLUS (should be STATUS_REACHED tho...)
+    private static  String mockJsonDataDailyTargetSurplus =
+            "{\n" +
+            "  \"targetRevenue\": 120000,\n" +
+            "  \"todayRevenue\": 200000\n" +
+            "}";
 
     @Override
     protected int layout() {
@@ -65,14 +89,16 @@ public class DailyTargetFragment extends BaseFragment {
 
     public static void showDailyTargetWithSurplus(BaseActivity baseActivity) {
         showFragment(baseActivity);
-
-        STATUS = STATUS_SURPLUS;
+        // induce STATUS_SURPLUS
+        DailyTargetResponse dailyTargetResponse = mockDataDailyTarget(mockJsonDataDailyTargetSurplus);
+        calculateDailyTarget(dailyTargetResponse);
     }
 
     public static void showDailyTargetNotReached(BaseActivity baseActivity) {
         showFragment(baseActivity);
-
-        STATUS = STATUS_NOT_REACHED;
+        // induce STATUS_NOT_REACHED
+        DailyTargetResponse dailyTargetResponse = mockDataDailyTarget(mockJsonDataDailyTargetNotReached);
+        calculateDailyTarget(dailyTargetResponse);
     }
 
     // set layout for surplus daily target
@@ -93,11 +119,16 @@ public class DailyTargetFragment extends BaseFragment {
 
         // set progress bar text
         TextView progressBarText = view.findViewById(R.id.progress_bar_text);
-        progressBarText.setText("125%");
+        if (dailyTargetPercentage == 100) {
+            progressBarText.setText("100%");
+        } else {
+            Double roundedDailyTargetPercentage = Double.valueOf(round(dailyTargetPercentage.doubleValue(), 1));
+            progressBarText.setText( roundedDailyTargetPercentage.toString()+"%");
+        }
 
         // set amount and its text color
         TextView amount = view.findViewById(R.id.amount);
-        amount.setText("+Rp. 50.000");
+        amount.setText("+"+formatNumberToRupiah(dailyTargetRemainder));
         amount.setTextColor(getResources().getColor(R.color.green_600, null));
     }
 
@@ -107,17 +138,51 @@ public class DailyTargetFragment extends BaseFragment {
         TextView detailsMessage = view.findViewById(R.id.message);
         detailsMessage.setText("Kejar sisa target hari ini:");
 
-        // set progress bar value to 20
+        // set progress bar value
         ProgressBar progressBar = view.findViewById(R.id.progress_bar);
-        progressBar.setProgress(20);
+        progressBar.setProgress(dailyTargetPercentage.intValue());
 
         // set progress bar text
+        Double roundedDailyTargetPercentage = Double.valueOf(round(dailyTargetPercentage.doubleValue(), 1));
         TextView progressBarText = view.findViewById(R.id.progress_bar_text);
-        progressBarText.setText("20%");
+        progressBarText.setText( roundedDailyTargetPercentage.toString()+"%");
 
         // set amount and its text color
         TextView amount = view.findViewById(R.id.amount);
-        amount.setText("Rp. 50.000");
+        amount.setText(formatNumberToRupiah(dailyTargetRemainder));
         amount.setTextColor(getResources().getColor(R.color.red_700, null));
+    }
+
+    // mocking the json response
+    private static DailyTargetResponse mockDataDailyTarget(String jsonString) {
+        return new Gson().fromJson(jsonString, DailyTargetResponse.class);
+    }
+
+    // calculate target remainder and completion percentage, and also will set STATUS
+    // depending on the result
+    private static void calculateDailyTarget(DailyTargetResponse dailyTargetResponse) {
+        Double targetRevenue = dailyTargetResponse.getTargetRevenue();
+        Double todayRevenue = dailyTargetResponse.getTodayRevenue();
+        dailyTargetRemainder = targetRevenue - todayRevenue;
+        dailyTargetPercentage = todayRevenue / targetRevenue * 100;
+
+        if (dailyTargetPercentage < 100 || dailyTargetRemainder > 0) {
+            STATUS = STATUS_NOT_REACHED;
+        } else {
+            STATUS = STATUS_SURPLUS;
+        }
+    }
+
+    // for rounding double to n decimal place
+    private static double round (double value, int precision) {
+        int scale = (int) Math.pow(10, precision);
+        return (double) Math.round(value * scale) / scale;
+    }
+
+    // format number to rupiah
+    private String formatNumberToRupiah(Double number) {
+        Locale indonesianLocale = new Locale("in", "ID");
+        NumberFormat numberFormat = NumberFormat.getCurrencyInstance(indonesianLocale);
+        return numberFormat.format(number).replace("Rp", "Rp. ").replace("-", "");
     }
 }
