@@ -1,13 +1,21 @@
 package com.mogawe.mosurvei.view.content.profile;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 import com.google.android.material.appbar.AppBarLayout;
+import com.google.android.material.bottomnavigation.BottomNavigationItemView;
+import com.google.android.material.bottomnavigation.BottomNavigationMenuView;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.mogawe.mosurvei.R;
 import com.mogawe.mosurvei.view.BaseActivity;
 import com.mogawe.mosurvei.view.content.home.HomeV2Activity;
@@ -52,5 +60,7 @@ public class ProfileV2Activity extends BaseActivity {
         );
         params.setMargins(0, getStatusBarHeight(), 0, 0);
         appBar.setLayoutParams(params);
+
+        ProfileNavBar profileNavBar = new ProfileNavBar(this);
     }
 }

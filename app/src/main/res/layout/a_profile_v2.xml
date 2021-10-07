@@ -10,4 +10,84 @@
         android:id="@+id/appBar"
         layout="@layout/appbar_light" />
 
+    <LinearLayout
+        android:id="@+id/nav_bar"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/profile_fragment_nav_bg"
+        android:layout_below="@+id/appBar"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="20dp">
+
+        <LinearLayout
+            android:id="@+id/menu_history"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginHorizontal="10dp"
+            android:orientation="horizontal"
+            android:background="@drawable/round_corner_20dip_red_600">
+
+            <ImageView
+                android:id="@+id/menu_history_icon"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_history_svg"
+                app:tint="@color/white"
+                android:layout_marginStart="10dp"/>
+
+            <TextView
+                android:id="@+id/menu_history_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_gravity="end|center_vertical"
+                android:text="History"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/menu_foo"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginHorizontal="10dp"
+            android:orientation="horizontal"
+            android:background="@drawable/round_corner_20dip_red_600">
+
+            <ImageView
+                android:id="@+id/menu_foo_icon"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_home"
+                app:tint="@color/white"
+                android:layout_marginStart="10dp"/>
+
+            <TextView
+                android:id="@+id/menu_foo_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_gravity="end|center_vertical"
+                android:text="Foo"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/nav_bar"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="20dp"
+        android:id="@+id/frame_history_fragment"/>
+
 </RelativeLayout>
