@@ -14,7 +14,8 @@
         android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/abc_ratingbar_small_white" />
+        app:srcCompat="@drawable/ic_star_white_24dp"
+        app:tint="@color/black" />
 
     <com.mogawe.mosurvei.util.ui.GalanoTextView
         android:id="@+id/txvTitleSkill"

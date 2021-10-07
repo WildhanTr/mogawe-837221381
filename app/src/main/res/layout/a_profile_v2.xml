@@ -4,10 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     android:fitsSystemWindows="true"
     tools:context=".view.content.profile.ProfileV2Activity">
 
     <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fitsSystemWindows="true"
@@ -26,8 +28,8 @@
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="180dp"
-                android:background="@drawable/bg_primary_datar" />
+                android:layout_height="150dp"
+                android:background="@color/colorPrimary" />
 
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar_profile"
@@ -49,8 +51,8 @@
 
                     <androidx.appcompat.widget.AppCompatImageView
                         android:id="@+id/iv_menu_wallet"
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
                         android:layout_marginStart="15dp"
                         android:layout_marginEnd="5dp"
                         android:src="@drawable/ic_wallet_new"
@@ -60,13 +62,15 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:text="RP. 350.000"
                         android:textColor="@color/white"
-                        android:textSize="17sp" />
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
 
                     <androidx.appcompat.widget.AppCompatImageView
                         android:id="@+id/iv_menu_chat"
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
                         android:layout_marginStart="5dp"
                         android:layout_marginEnd="5dp"
                         android:padding="2dp"
@@ -75,8 +79,8 @@
 
                     <androidx.appcompat.widget.AppCompatImageView
                         android:id="@+id/iv_menu_notification"
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
                         android:layout_marginStart="5dp"
                         android:layout_marginEnd="5dp"
                         android:padding="2dp"
@@ -85,8 +89,8 @@
 
                     <androidx.appcompat.widget.AppCompatImageView
                         android:id="@+id/iv_menu_profile"
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
                         android:layout_marginStart="5dp"
                         android:layout_marginEnd="15dp"
                         android:padding="2dp"
@@ -101,16 +105,60 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_anchor="@id/app_bar"
+        android:orientation="vertical"
+        app:layout_anchorGravity="bottom|right|end">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/ic_coin"
+                android:tint="@color/white" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_profile_pts"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:includeFontPadding="false"
+                android:text="200 pts"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/vp_profile_menu"
+            android:layout_width="match_parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_height="140dp" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
     <!--        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout-->
-    <!--            android:id="@+id/view_home_swipe_refresh_layout"-->
+    <!--            android:id="@+id/swipe_refresh_profile"-->
     <!--            android:layout_width="match_parent"-->
     <!--            android:layout_height="match_parent"-->
     <!--            android:fitsSystemWindows="true">-->
 
     <androidx.core.widget.NestedScrollView
+        android:id="@+id/nested_scroll_profile"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/white"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <androidx.appcompat.widget.LinearLayoutCompat
@@ -118,25 +166,18 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <!--            <androidx.viewpager2.widget.ViewPager2-->
-            <!--                android:id="@+id/rv_image_slider"-->
-            <!--                android:layout_width="match_parent"-->
-            <!--                android:layout_height="@dimen/_145sdp"-->
-            <!--                android:orientation="horizontal"-->
-            <!--                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"-->
-            <!--                tools:listitem="@layout/image_slider_item" />-->
-
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="70dp"
                 android:orientation="vertical">
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
-                    android:layout_marginEnd="16dp"
                     android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
                     android:text="@string/profile_title_target_harian"
                     android:textColor="@color/black"
                     android:textSize="14sp"
@@ -150,8 +191,9 @@
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="5dp"
                     android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="16dp"
                     android:layout_weight="1"
-                    android:background="@color/tw__light_gray"
+                    android:background="@color/tw__composer_deep_gray"
                     app:cardCornerRadius="10dp">
 
                     <androidx.appcompat.widget.LinearLayoutCompat
@@ -162,12 +204,22 @@
 
                         <RelativeLayout
                             android:id="@+id/iv_percent_bar"
-                            android:layout_width="45dp"
-                            android:layout_height="90dp"
-                            android:layout_marginStart="10dp"
-                            android:layout_marginEnd="15dp"
-                            android:background="@color/green_50"
-                            android:padding="2dp">
+                            android:layout_width="150dp"
+                            android:layout_height="170dp"
+                            android:layout_marginStart="-35dp"
+                            android:layout_marginEnd="15dp">
+
+                            <com.google.android.material.progressindicator.LinearProgressIndicator
+                                android:id="@+id/lpi_progress_bar"
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:progress="120"
+                                android:rotation="90"
+                                app:indicatorColor="#38C01C"
+                                app:trackColor="@color/white"
+                                app:trackCornerRadius="10dp"
+                                app:trackThickness="60dp" />
 
                             <androidx.appcompat.widget.AppCompatTextView
                                 android:layout_width="wrap_content"
@@ -175,7 +227,7 @@
                                 android:layout_centerInParent="true"
                                 android:text="125%"
                                 android:textColor="@color/black"
-                                android:textSize="12sp"
+                                android:textSize="14sp"
                                 android:textStyle="bold" />
 
                         </RelativeLayout>
@@ -183,7 +235,7 @@
                         <androidx.appcompat.widget.LinearLayoutCompat
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:layout_marginStart="10dp"
+                            android:layout_marginStart="-35dp"
                             android:layout_marginEnd="10dp"
                             android:orientation="vertical">
 
@@ -192,43 +244,102 @@
                                 android:layout_height="wrap_content"
                                 android:text="Selamat kamu melebihi target :"
                                 android:textColor="@color/black"
-                                android:textSize="12sp" />
+                                android:textSize="16sp" />
 
                             <androidx.appcompat.widget.LinearLayoutCompat
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="10dp"
-                                android:layout_marginBottom="10dp"
+                                android:layout_height="0dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:layout_weight="1"
                                 android:gravity="center_vertical">
 
                                 <androidx.appcompat.widget.AppCompatTextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:textStyle="bold"
                                     android:text="+Rp. 50.000"
                                     android:textColor="@color/green_900"
-                                    android:textSize="19sp" />
+                                    android:textSize="21sp"
+                                    android:textStyle="bold" />
 
                                 <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/iv_target_harian_view_more"
                                     android:layout_width="25dp"
                                     android:layout_height="25dp"
-                                    android:padding="2dp"
                                     android:layout_marginStart="5dp"
                                     android:layout_marginEnd="5dp"
+                                    android:padding="2dp"
                                     android:src="@drawable/ic_keyboard_arrow_right_black_24dp"
                                     android:tint="@color/black" />
 
                             </androidx.appcompat.widget.LinearLayoutCompat>
 
                             <androidx.appcompat.widget.AppCompatButton
+                                android:id="@+id/btn_target_harian_add_gawean"
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                                android:layout_height="35dp"
                                 android:background="@drawable/button_primary"
+                                android:paddingTop="5dp"
+                                android:paddingStart="20dp"
+                                android:paddingEnd="20dp"
+                                android:paddingBottom="5dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
                                 android:text="Tambah Gawean"
-                                android:textColor="@color/white"
                                 android:textAllCaps="false"
-                                android:paddingEnd="15dp"
-                                android:paddingStart="15dp"/>
+                                android:textColor="@color/white" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Kompetensi :"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_marginTop="5dp"
+                                android:gravity="center_vertical">
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:layout_width="35dp"
+                                    android:layout_height="35dp"
+                                    android:background="@drawable/bg_circle_green"
+                                    android:src="@drawable/ic_bell_normal"
+                                    android:padding="7dp"
+                                    android:tint="@color/white" />
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:layout_width="35dp"
+                                    android:layout_height="35dp"
+                                    android:layout_marginStart="-7dp"
+                                    android:background="@drawable/bg_circle_green"
+                                    android:src="@drawable/ic_bell_normal"
+                                    android:padding="7dp"
+                                    android:tint="@color/white" />
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:layout_width="35dp"
+                                    android:layout_height="35dp"
+                                    android:layout_marginStart="-7dp"
+                                    android:background="@drawable/bg_circle_green"
+                                    android:src="@drawable/ic_bell_normal"
+                                    android:padding="7dp"
+                                    android:tint="@color/white" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="+12"
+                                    android:textColor="@color/black"
+                                    android:textSize="21sp"
+                                    android:textStyle="bold"
+                                    android:layout_marginStart="10dp"/>
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
 
                         </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -236,35 +347,97 @@
 
                 </androidx.cardview.widget.CardView>
 
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
                 <androidx.appcompat.widget.AppCompatTextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
                     android:text="@string/profile_title_gawean"
                     android:textColor="@color/black"
                     android:textSize="14sp"
-                    android:textStyle="bold"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginEnd="16dp"
-                    android:layout_marginTop="16dp" />
+                    android:textStyle="bold" />
 
                 <androidx.appcompat.widget.LinearLayoutCompat
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
-                    android:layout_marginEnd="16dp">
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/bg_menu_off">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_gawean_menu_penugasan"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_menu_on_left"
+                        android:gravity="center"
+                        android:padding="15dp"
+                        android:text="Penugasan"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_gawean_menu_etalase"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="15dp"
+                        android:text="Etalase"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
 
                 </androidx.appcompat.widget.LinearLayoutCompat>
 
                 <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/view_home_collection_recyclerview"
+                    android:id="@+id/rv_proflie_gawean"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingTop="10dp"
                     android:layout_marginStart="16dp"
-                    android:layout_marginEnd="16dp" />
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="16dp"
+                    android:nestedScrollingEnabled="true"
+                    android:paddingTop="10dp"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/item_profile_gawean_penugasan" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/ll_gawean_view_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center_vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Lihat Semua"
+                        android:textColor="@color/colorPrimary"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginStart="5dp"
+                        android:padding="2dp"
+                        android:src="@drawable/ic_keyboard_arrow_right_black_24dp"
+                        android:tint="@color/colorPrimary" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
 
             </androidx.appcompat.widget.LinearLayoutCompat>
-
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 
