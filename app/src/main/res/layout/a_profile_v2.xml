@@ -88,6 +88,6 @@
         android:layout_below="@+id/nav_bar"
         android:layout_marginTop="20dp"
         android:layout_marginHorizontal="20dp"
-        android:id="@+id/frame_history_fragment"/>
+        android:id="@+id/frame_fragment"/>
 
 </RelativeLayout>

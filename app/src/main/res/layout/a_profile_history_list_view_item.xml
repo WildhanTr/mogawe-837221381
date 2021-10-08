@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
+    android:id="@+id/list_view_container"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
@@ -9,9 +10,12 @@
     <TextView
         android:id="@+id/date"
         android:layout_width="0dp"
-        android:layout_height="0dp" />
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:gravity="center"/>
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
@@ -32,7 +36,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="MO1922 - Teknisi EDC PT. Mahapay di Cibubur"
-                android:textSize="20sp"
+                android:textSize="15sp"
                 android:textStyle="bold"
                 android:textColor="@color/black"
                 android:gravity="center_vertical" />
@@ -54,9 +58,10 @@
                         android:layout_height="match_parent"
                         android:text="Approved"
                         android:textColor="@color/white"
-                        android:background="@drawable/round_corner_5dip_green_400"
+                        android:background="@drawable/round_corner_5dip"
+                        android:backgroundTint="@color/green_400"
                         android:paddingHorizontal="10dp"
-                        android:textAlignment="center"/>
+                        android:gravity="center"/>
 
                     <TextView
                         android:id="@+id/category"
@@ -66,11 +71,12 @@
                         android:background="@drawable/round_corner_5dip_grey_200"
                         android:paddingHorizontal="10dp"
                         android:layout_marginStart="10dp"
-                        android:textAlignment="center"/>
+                        android:gravity="center"/>
 
                 </LinearLayout>
 
                 <TextView
+                    android:id="@+id/amount"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
@@ -80,13 +86,14 @@
                     android:textStyle="bold"
                     android:textColor="@color/green_400"
                     android:layout_alignParentTop="true"
-                    android:layout_alignParentBottom="true"/>
+                    android:layout_alignParentBottom="true"
+                    android:gravity="center"/>
 
             </RelativeLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="2dp"
+                android:layout_height="1dp"
                 android:layout_marginTop="10dp"
                 android:background="@color/grey_200">
 

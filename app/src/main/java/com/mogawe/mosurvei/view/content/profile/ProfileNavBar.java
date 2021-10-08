@@ -63,6 +63,8 @@ public class ProfileNavBar {
                 unSelectMenuHistory();
 
                 selectMenuFoo();
+
+                FooFragment.showFragment(baseActivity);
             }
         });
     }

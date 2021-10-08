@@ -18,6 +18,11 @@ import com.mogawe.mosurvei.view.BaseFragment;
 
 public class HistoryFragment extends BaseFragment {
     public static final String TAG = HistoryFragment.class.getSimpleName();
+    private BaseActivity baseActivity;
+
+    public HistoryFragment(BaseActivity baseActivity) {
+        this.baseActivity = baseActivity;
+    }
 
     @Override
     protected int layout() {
@@ -26,7 +31,7 @@ public class HistoryFragment extends BaseFragment {
 
     public static void showFragment(BaseActivity baseActivity) {
         FragmentTransaction fragmentTransaction = baseActivity.getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.replace(R.id.frame_history_fragment, new HistoryFragment(), TAG);
+        fragmentTransaction.replace(R.id.frame_fragment, new HistoryFragment(baseActivity), TAG);
         fragmentTransaction.commit();
     }
 
@@ -59,7 +64,7 @@ public class HistoryFragment extends BaseFragment {
 //        listView.setAdapter(historyListViewAdapter);
 
         RecyclerView recyclerView = view.findViewById(R.id.history_list);
-        HistoryRecyclerViewAdapter historyRecyclerViewAdapter = new HistoryRecyclerViewAdapter();
+        HistoryRecyclerViewAdapter historyRecyclerViewAdapter = new HistoryRecyclerViewAdapter(baseActivity);
         recyclerView.setAdapter(historyRecyclerViewAdapter);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(view.getContext());
         recyclerView.setLayoutManager(linearLayoutManager);
