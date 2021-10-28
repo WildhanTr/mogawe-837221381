@@ -34,15 +34,15 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".view.content.profile.ProfileV2Activity">
-        </activity>
-        <activity android:name=".view.content.home.HomeV2Activity">
+        <activity android:name=".view.content.hire_me.instant.InstantActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
+        <activity android:name=".view.content.hire_me.bundled.BundleActivity">
+        </activity>
         <receiver
             android:name=".service.SmsReceiver"
             android:enabled="true"
@@ -72,8 +72,7 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".view.content.intro.SplashActivity"
-            android:screenOrientation="portrait">
-        </activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".playground.CameraTestActivity"
             android:screenOrientation="portrait" />
@@ -93,9 +92,7 @@
 
                 <data android:scheme="@string/fb_login_protocol_scheme" />
             </intent-filter>
-        </activity>
-
-        <!-- FACEBOOK LOGIN -->
+        </activity> <!-- FACEBOOK LOGIN -->
         <activity
             android:name=".view.shared.map.MapActivity"
             android:screenOrientation="portrait" />
