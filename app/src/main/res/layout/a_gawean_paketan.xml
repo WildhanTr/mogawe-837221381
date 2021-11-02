@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E5E5E5"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/appBar"
+        layout="@layout/appbar_light" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="28dp"
+                    android:layout_marginRight="28dp"
+                    android:layout_marginTop="30dp"
+                    app:cardCornerRadius="@dimen/font_small"
+                    app:cardBackgroundColor="#EA2327">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/font_xmedium"
+                        android:orientation="vertical">
+
+                        <com.mogawe.mosurvei.util.ui.LatoTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:maxLines="2"
+                            android:id="@+id/txvFactName"
+                            android:text="Cari Gawean"
+                            android:textSize="@dimen/font_xmedium"
+                            android:textColor="@color/white"/>
+
+                        <androidx.appcompat.widget.AppCompatSeekBar
+                            android:id="@+id/seekBar"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/font_xmedium"
+                            android:maxHeight="8dp"
+                            android:progressDrawable="@drawable/seekbar_progress_drawable"
+                            android:thumb="@drawable/drawable_thumb_seekbar"
+                            android:thumbOffset="0dp"/>
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <com.mogawe.mosurvei.util.ui.LatoTextView
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:maxLines="2"
+                                android:id="@+id/txtMinValue"
+                                android:text="Rp. 0"
+                                android:textSize="@dimen/font_small"
+                                android:textColor="@color/white"/>
+
+                            <com.mogawe.mosurvei.util.ui.LatoTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:maxLines="2"
+                                android:id="@+id/txtMaxValue"
+                                android:text="Rp. 0"
+                                android:textSize="@dimen/font_small"
+                                android:textColor="@color/white"/>
+
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <com.mogawe.mosurvei.util.ui.LatoTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:maxLines="2"
+                            android:text="Rp. 200.000"
+                            android:layout_gravity="right"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/font_xbig"
+                            android:layout_marginTop="@dimen/font_xxxbig"
+                            android:textColor="@color/white"/>
+
+
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </androidx.cardview.widget.CardView>
+
+                <com.mogawe.mosurvei.util.ui.LatoTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="2"
+                    android:text="Gawean yang ditawarkan"
+                    android:layout_marginLeft="@dimen/font_xxbig"
+                    android:layout_gravity="left"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/font_medium"
+                    android:layout_marginTop="@dimen/font_xxxbig"
+                    android:textColor="@color/black"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/listGawean"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/font_big"
+                    android:layout_marginLeft="@dimen/font_xxbig"
+                    android:layout_marginRight="@dimen/font_xxbig"
+                    tools:itemCount="3"
+                    tools:listitem="@layout/paket_gawean_item_layout"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@color/white"
+                android:paddingLeft="@dimen/font_xxbig"
+                android:paddingRight="@dimen/font_xxbig"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:maxLines="2"
+                        android:text="Fee"
+                        android:layout_gravity="left"
+                        android:textSize="@dimen/font_small"
+                        android:textColor="@color/grey_600"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLines="2"
+                        android:text="Rp 191.000"
+                        android:layout_marginLeft="@dimen/font_xxbig"
+                        android:layout_gravity="left"
+                        android:textSize="@dimen/font_small"
+                        android:textColor="@color/black"/>
+
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:maxLines="2"
+                        android:text="Incentive"
+                        android:layout_gravity="left"
+                        android:textSize="@dimen/font_small"
+                        android:textColor="@color/grey_600"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLines="2"
+                        android:text="Rp 191.000"
+                        android:layout_marginLeft="@dimen/font_xxbig"
+                        android:layout_gravity="left"
+                        android:textSize="@dimen/font_small"
+                        android:textColor="@color/black"/>
+
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#F3F2F2"
+                    android:layout_marginTop="11dp"/>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:maxLines="2"
+                        android:text="Total"
+                        android:layout_gravity="left"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/font_medium"
+                        android:textColor="@color/black"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLines="2"
+                        android:text="Rp. 206.000"
+                        android:layout_gravity="left"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/font_medium"
+                        android:textColor="@color/colorPrimary"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <Button
+                    android:id="@+id/btnTerima"
+                    style="@style/GenericRaisedButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Terima Semua"
+                    android:textStyle="bold"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="2"
+                    android:text="Batal"
+                    android:layout_marginBottom="19dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="6dp"
+                    android:textSize="@dimen/font_medium"
+                    android:textColor="@color/black"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

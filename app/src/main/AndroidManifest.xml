@@ -36,7 +36,7 @@
         android:usesCleartextTraffic="true">
         <activity android:name=".view.content.hire_me.instant.InstantActivity">
         </activity>
-        <activity android:name=".view.content.hire_me.bundled.BundleActivity">
+        <activity android:name=".view.shared.gawean.PaketGaweanActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
