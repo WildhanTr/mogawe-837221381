@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
 import android.widget.SeekBar;
+import android.widget.TextView;
 
 import androidx.appcompat.widget.AppCompatSeekBar;
 import androidx.recyclerview.widget.DefaultItemAnimator;
@@ -37,6 +38,7 @@ public class PaketGaweanActivity extends BaseActivity {
 
     RecyclerView listGawean;
     AppCompatSeekBar seekBar;
+    TextView txtMinValue, txtMaxValue;
     Button btnTerima;
     PaketGaweanAdapter adapter;
     ArrayList<GaweanListResponseItem> items = new ArrayList<>();
@@ -68,6 +70,8 @@ public class PaketGaweanActivity extends BaseActivity {
         listGawean = findViewById(R.id.listGawean);
         seekBar = findViewById(R.id.seekBar);
         btnTerima = findViewById(R.id.btnTerima);
+        txtMinValue = findViewById(R.id.txtMinValue);
+        txtMaxValue = findViewById(R.id.txtMaxValue);
 
         adapter = new PaketGaweanAdapter(items);
         RecyclerView.LayoutManager mLayoutManagerRow = new LinearLayoutManager(getApplicationContext());
@@ -102,6 +106,8 @@ public class PaketGaweanActivity extends BaseActivity {
                         //
                         // if progress = 13 -> value = 3 + (13 * 0.1) = 4.3
                         double value = min + (progress * step);
+                        txtMinValue.setText("Rp. " + min);
+                        txtMaxValue.setText("Rp. " + value);
 
                     }
                 }

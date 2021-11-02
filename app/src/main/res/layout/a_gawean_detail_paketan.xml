@@ -191,7 +191,7 @@
                         android:gravity="center"
                         android:drawablePadding="10dp"
                         android:layout_gravity="center"
-                        android:drawableLeft="@drawable/ic_instagram"/>
+                        android:drawableLeft="@drawable/ic_vector_instagram"/>
 
 
                 </androidx.appcompat.widget.LinearLayoutCompat>
@@ -219,12 +219,31 @@
                         android:gravity="center"
                         android:drawablePadding="10dp"
                         android:layout_gravity="center"
-                        android:drawableLeft="@drawable/ic_twitter_toonmdpi"/>
+                        android:drawableLeft="@drawable/ic_vector_twitter"/>
 
 
                 </androidx.appcompat.widget.LinearLayoutCompat>
 
             </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Maps"
+                android:layout_marginLeft="@dimen/font_xxbig"
+                android:layout_gravity="left"
+                android:textSize="@dimen/font_small"
+                android:layout_marginTop="@dimen/space_xdouble"
+                android:textColor="@color/grey_600"/>
+            
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="375dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/grey_600"
+                android:layout_marginLeft="@dimen/font_xxbig"
+                android:layout_marginRight="@dimen/font_xxbig"
+                />
 
             <Button
                 android:id="@+id/btnSimpan"
