@@ -130,6 +130,10 @@ public class MoSurveiApplication extends MultiDexApplication {
         return service.getApiSalesService();
     }
 
+    public Service.ApiNaufalService getApiNaufalService() {
+        return service.getApiNaufalService();
+    }
+
     private void setupSharedPreferences() {
         this.sharedPreferences = getSharedPreferences(MoSurveiApplication.class.getSimpleName(), Context.MODE_PRIVATE);
     }

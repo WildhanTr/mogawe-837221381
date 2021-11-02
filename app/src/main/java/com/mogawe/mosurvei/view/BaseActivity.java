@@ -886,6 +886,10 @@ public abstract class BaseActivity extends AppCompatActivity {
         return getService().getApiSectionService();
     }
 
+    public Service.ApiNaufalService getApiNaufalService() {
+        return getService().getApiNaufalService();
+    }
+
     public String minutesToHourMinutes(Integer minutes) {
         Integer hourperminutes = 60;
 

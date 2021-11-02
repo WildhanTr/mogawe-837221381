@@ -41,7 +41,7 @@
                         android:padding="@dimen/font_xmedium"
                         android:orientation="vertical">
 
-                        <TextView
+                        <com.mogawe.mosurvei.util.ui.LatoTextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:maxLines="2"
@@ -51,11 +51,43 @@
                             android:textColor="@color/white"/>
 
                         <androidx.appcompat.widget.AppCompatSeekBar
+                            android:id="@+id/seekBar"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/font_xmedium"/>
+                            android:layout_marginTop="@dimen/font_xmedium"
+                            android:maxHeight="8dp"
+                            android:progressDrawable="@drawable/seekbar_progress_drawable"
+                            android:thumb="@drawable/drawable_thumb_seekbar"
+                            android:thumbOffset="0dp"/>
 
-                        <TextView
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <com.mogawe.mosurvei.util.ui.LatoTextView
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:maxLines="2"
+                                android:id="@+id/txtMinValue"
+                                android:text="Rp. 0"
+                                android:textSize="@dimen/font_small"
+                                android:textColor="@color/white"/>
+
+                            <com.mogawe.mosurvei.util.ui.LatoTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:maxLines="2"
+                                android:id="@+id/txtMaxValue"
+                                android:text="Rp. 0"
+                                android:textSize="@dimen/font_small"
+                                android:textColor="@color/white"/>
+
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <com.mogawe.mosurvei.util.ui.LatoTextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:maxLines="2"
@@ -72,7 +104,7 @@
 
                 </androidx.cardview.widget.CardView>
 
-                <TextView
+                <com.mogawe.mosurvei.util.ui.LatoTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:maxLines="2"
@@ -85,6 +117,7 @@
                     android:textColor="@color/black"/>
 
                 <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/listGawean"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/font_big"
@@ -198,7 +231,7 @@
                 </androidx.appcompat.widget.LinearLayoutCompat>
 
                 <Button
-                    android:id="@+id/btnSimpan"
+                    android:id="@+id/btnTerima"
                     style="@style/GenericRaisedButtonStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
