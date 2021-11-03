@@ -3,6 +3,7 @@ package com.mogawe.mosurvei.model.network;
 import androidx.room.Update;
 
 import com.mogawe.mosurvei.model.bean.Order;
+import com.mogawe.mosurvei.model.bean.gawean.GaweanListResponse;
 import com.mogawe.mosurvei.model.db.entity.Catalog;
 import com.mogawe.mosurvei.model.db.entity.Supplier;
 import com.mogawe.mosurvei.model.db.entity.User;
@@ -135,6 +136,7 @@ public class Service {
     private ApiProjectService apiProjectService;
     private ApiSearchService apiSearchService;
     private ApiSalesService apiSalesService;
+    private ApiNaufalService apiNaufalService;
 
     public Service() {
         Retrofit retrofitUserService = new Retrofit.Builder()
@@ -192,6 +194,14 @@ public class Service {
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
         this.apiSalesService = retrofitSalesService.create(ApiSalesService.class);
+
+        Retrofit retrofitNaufalService = new Retrofit.Builder()
+                .client(provideOkHttpClient())
+                .baseUrl("https://kitadakwah.com/")
+                .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+        this.apiNaufalService = retrofitNaufalService.create(ApiNaufalService.class);
     }
 
     private OkHttpClient provideOkHttpClient() {
@@ -230,6 +240,10 @@ public class Service {
 
     public ApiSalesService getApiSalesService() {
         return apiSalesService;
+    }
+
+    public ApiNaufalService getApiNaufalService() {
+        return apiNaufalService;
     }
 
     //    public interface Api {
@@ -808,5 +822,10 @@ public class Service {
         @DELETE("api/supplier/product/image/delete/{uuid}")
         Observable<SupplierResponse> supplierDeleteImageProduct(@Header("token") String token, @Path(value = "uuid", encoded = true) String uuidJob);
 
+    }
+
+    public interface ApiNaufalService {
+        @GET("gawean.json")
+        Observable<GaweanListResponse> getGaweanList();
     }
 }
