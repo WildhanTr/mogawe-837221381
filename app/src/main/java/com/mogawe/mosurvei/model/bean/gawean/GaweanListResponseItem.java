@@ -1,6 +1,8 @@
 package com.mogawe.mosurvei.model.bean.gawean;
 
-public class GaweanListResponseItem{
+import java.io.Serializable;
+
+public class GaweanListResponseItem implements Serializable {
 	private double jobFee;
 	private String pictureUrl;
 	private String name;

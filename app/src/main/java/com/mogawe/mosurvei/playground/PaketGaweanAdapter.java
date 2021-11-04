@@ -77,6 +77,6 @@ public class PaketGaweanAdapter extends RecyclerView.Adapter<PaketGaweanAdapter.
     }
 
     public interface OnSelectedListener {
-        void onSelected(GaweanListResponseItem address);
+        void onSelected(GaweanListResponseItem item);
     }
 }

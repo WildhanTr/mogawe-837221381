@@ -4,6 +4,7 @@ import androidx.room.Update;
 
 import com.mogawe.mosurvei.model.bean.Order;
 import com.mogawe.mosurvei.model.bean.gawean.GaweanListResponse;
+import com.mogawe.mosurvei.model.bean.gawean.GaweanListResponseItem;
 import com.mogawe.mosurvei.model.db.entity.Catalog;
 import com.mogawe.mosurvei.model.db.entity.Supplier;
 import com.mogawe.mosurvei.model.db.entity.User;
@@ -826,6 +827,6 @@ public class Service {
 
     public interface ApiNaufalService {
         @GET("gawean.json")
-        Observable<GaweanListResponse> getGaweanList();
+        Observable<List<GaweanListResponseItem>> getGaweanList();
     }
 }

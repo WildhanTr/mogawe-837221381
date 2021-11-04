@@ -4,15 +4,20 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.util.Pair;
 import android.widget.Button;
 import android.widget.SeekBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.widget.AppCompatSeekBar;
+import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 import com.google.zxing.Result;
 import com.mogawe.mosurvei.R;
 import com.mogawe.mosurvei.model.bean.gawean.GaweanListResponse;
@@ -28,6 +33,7 @@ import com.mogawe.mosurvei.view.BaseActivity;
 import com.mogawe.mosurvei.view.shared.planogram.AdapterFacingRow;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import me.dm7.barcodescanner.zxing.ZXingScannerView;
 import rx.Observer;
@@ -40,12 +46,12 @@ public class PaketGaweanActivity extends BaseActivity {
     AppCompatSeekBar seekBar;
     TextView txtMinValue, txtMaxValue;
     Button btnTerima;
+    Toolbar toolbar;
     PaketGaweanAdapter adapter;
     ArrayList<GaweanListResponseItem> items = new ArrayList<>();
     int step = 1;
     int max = 1000000;
     int min = 10000;
-
 
     private static final String TAG = "QRScannerActivity";
 
@@ -72,15 +78,23 @@ public class PaketGaweanActivity extends BaseActivity {
         btnTerima = findViewById(R.id.btnTerima);
         txtMinValue = findViewById(R.id.txtMinValue);
         txtMaxValue = findViewById(R.id.txtMaxValue);
+        toolbar = findViewById(R.id.toolbar);
+
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("Gawean Paketan");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         adapter = new PaketGaweanAdapter(items);
         RecyclerView.LayoutManager mLayoutManagerRow = new LinearLayoutManager(getApplicationContext());
+        adapter.setOnSelectedListener(item -> {
+            DetailPaketGaweanActivity.startActivity(this, item);
+
+        });
         listGawean.setLayoutManager(mLayoutManagerRow);
         listGawean.setItemAnimator(new DefaultItemAnimator());
         listGawean.setAdapter(adapter);
 
         btnTerima.setOnClickListener(v -> {
-            DetailPaketGaweanActivity.startActivity(this, 1);
         });
 
         loadData();
@@ -119,7 +133,7 @@ public class PaketGaweanActivity extends BaseActivity {
         mMyApp.getApiNaufalService().getGaweanList()
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new Observer<GaweanListResponse>() {
+                .subscribe(new Observer<List<GaweanListResponseItem>>() {
                     @Override
                     public void onCompleted() {
                     }
@@ -131,9 +145,9 @@ public class PaketGaweanActivity extends BaseActivity {
                     }
 
                     @Override
-                    public void onNext(GaweanListResponse response) {
-                        if (!response.getGaweanListResponse().isEmpty()) {
-                            adapter.updateData((ArrayList<GaweanListResponseItem>) response.getGaweanListResponse());
+                    public void onNext(List<GaweanListResponseItem> response) {
+                        if (!response.isEmpty()) {
+                            adapter.updateData((ArrayList<GaweanListResponseItem>) response);
                         }
                     }
                 });
