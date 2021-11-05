@@ -15,6 +15,8 @@ import com.mogawe.mosurvei.R;
 import com.mogawe.mosurvei.model.bean.gawean.GaweanListResponse;
 import com.mogawe.mosurvei.model.bean.gawean.GaweanListResponseItem;
 
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
 import java.util.ArrayList;
 
 public class PaketGaweanAdapter extends RecyclerView.Adapter<PaketGaweanAdapter.MyViewHolder> {
@@ -45,7 +47,9 @@ public class PaketGaweanAdapter extends RecyclerView.Adapter<PaketGaweanAdapter.
         holder.txtDeskripsi.setText(mDataset.get(position).getDescription());
         holder.txtSosmed.setText(mDataset.get(position).getLocationTrip());
         holder.txtJmlGawean.setText(mDataset.get(position).getGaweanCount()+" Gawean");
-        holder.txtHargaGawean.setText(mDataset.get(position).getJobFee()+"");
+        NumberFormat formatter = new DecimalFormat("#,###");
+        String formattedNumber = formatter.format(mDataset.get(position).getJobFee());
+        holder.txtHargaGawean.setText("Rp. " + formattedNumber+"");
         holder.container.setOnClickListener(v -> {
             if (onSelectedListener != null) onSelectedListener.onSelected(mDataset.get(position));
         });
