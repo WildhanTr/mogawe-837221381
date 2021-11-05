@@ -44,7 +44,7 @@ public class PaketGaweanAdapter extends RecyclerView.Adapter<PaketGaweanAdapter.
         holder.txtJudulGawean.setText(mDataset.get(position).getName());
         holder.txtDeskripsi.setText(mDataset.get(position).getDescription());
         holder.txtSosmed.setText(mDataset.get(position).getLocationTrip());
-        holder.txtJmlGawean.setText(mDataset.get(position).getGaweanCount()+"");
+        holder.txtJmlGawean.setText(mDataset.get(position).getGaweanCount()+" Gawean");
         holder.txtHargaGawean.setText(mDataset.get(position).getJobFee()+"");
         holder.container.setOnClickListener(v -> {
             if (onSelectedListener != null) onSelectedListener.onSelected(mDataset.get(position));
