@@ -48,6 +48,7 @@
                         android:textColor="@color/black"/>
 
                     <androidx.constraintlayout.utils.widget.ImageFilterView
+                        android:id="@+id/imgMore"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/ic_more"/>
@@ -78,7 +79,7 @@
             <com.mogawe.mosurvei.util.ui.LatoTextView
                 android:id="@+id/txtSosmed"
                 android:layout_width="0dp"
-                android:layout_weight="1"
+                android:layout_weight="1.5"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/font_tiny"
                 android:layout_gravity="center"

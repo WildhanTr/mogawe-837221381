@@ -40,7 +40,7 @@ import rx.Observer;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
 
-public class PaketGaweanActivity extends BaseActivity {
+public class PaketGaweanActivity extends BaseActivity implements PaketGaweanAdapter.OnSelectedListener {
 
     RecyclerView listGawean;
     AppCompatSeekBar seekBar;
@@ -84,12 +84,9 @@ public class PaketGaweanActivity extends BaseActivity {
         getSupportActionBar().setTitle("Gawean Paketan");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        adapter = new PaketGaweanAdapter(items);
+        adapter = new PaketGaweanAdapter(this, items);
         RecyclerView.LayoutManager mLayoutManagerRow = new LinearLayoutManager(getApplicationContext());
-        adapter.setOnSelectedListener(item -> {
-            DetailPaketGaweanActivity.startActivity(this, item);
-
-        });
+        adapter.setOnSelectedListener(this);
         listGawean.setLayoutManager(mLayoutManagerRow);
         listGawean.setItemAnimator(new DefaultItemAnimator());
         listGawean.setAdapter(adapter);
@@ -163,5 +160,15 @@ public class PaketGaweanActivity extends BaseActivity {
     @Override
     public void onPause() {
         super.onPause();
+    }
+
+    @Override
+    public void onSelected(GaweanListResponseItem item) {
+        DetailPaketGaweanActivity.startActivity(this, item);
+    }
+
+    @Override
+    public void onDeleted(GaweanListResponseItem item) {
+
     }
 }
